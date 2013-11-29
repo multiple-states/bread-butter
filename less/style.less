@@ -1,12 +1,12 @@
-
-@import 'bootstrap.less';
+@import 'bootstrap/dist/css/bootstrap.css';
+@import 'bootstrap/less/bootstrap.less';
 
 /* Base */
 
 body{
 	color: #000;
 	background-color: #FFF;
-	font-family: 'Courier New', Courier, monospace;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 img{
@@ -30,26 +30,28 @@ img{
 
 /* Layout */
 
+@import 'layout.less';
 
 /* Modules */
 
+@import 'module.less';
 
 /* States */
 
+@import 'state.less';
 
 /* Theme */
 
+@import 'theme.less';
 
 /* Media queries */
 
-@media (min-width: 768px){
-	
-}
+/* min-width:768 */
+@import 'media-768.less';
 
-@media (min-width: 992px) {
+/* min-width:992 */
+@import 'media-992.less';
 
-}
+/* min-width:1200 */
+@import 'media-1200.less';
 
-@media (min-width: 1200px) {
-
-}
