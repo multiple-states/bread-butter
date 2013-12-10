@@ -3,7 +3,7 @@ php-starter-template
 
 A php starter template.
 
-Uses fitgrid: https://github.com/jayalai/fitgrd
+Uses bootstrap for the grid: http://getbootstrap.com/
 
 Set .less files to compile to the css folder in your chosen compiler.
 
