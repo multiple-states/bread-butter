@@ -11,7 +11,8 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
 			},
 			my_target: {
 				files: {
-				'app/js/custom.min.js': ['src/js/custom.js']
+				'app/js/custom.min.js': ['src/js/custom.js'],
+				'app/js/modernizer.min.js': ['src/js/modernizer.js']
 				}
 			}
 		},
