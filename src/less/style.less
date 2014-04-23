@@ -3,7 +3,7 @@
 
 /* Base */
 
-body{
+html{
 	color: #000;
 	background-color: #FFF;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -14,19 +14,21 @@ img{
 	height:auto;
 }
 
-/* Group styles */
+/*
+ * Clearfix
+ * from nicolasgallagher.com/micro-clearfix-hack/
+ */
 
-.group:before,
-.group:after {
-    content: "";
-    display: table;
-} 
-.group:after {
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
     clear: both;
 }
-.group {
-    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
-}
+
 
 /* Layout */
 
