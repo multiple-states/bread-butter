@@ -37,7 +37,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
 		copy: {
 			main:{
 				src: 'node_modules/normalize.css/normalize.css',
-				dest: 'app/css/normailze.css',
+				dest: 'app/css/normalize.css',
 			}
 		},
 		

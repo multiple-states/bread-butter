@@ -17,7 +17,7 @@
 	<link rel="apple-touch-icon" sizes="196x196" href="<?php echo $site_url ?>/your-icon.png">
 	
 	<link rel="stylesheet" href="<?php echo $site_url ?>/css/normalize.css" >
-	<link rel="stylesheet" href="<?php echo $site_url ?>/css/style.css" >
+	<link rel="stylesheet" href="<?php echo $site_url ?>/css/style.min.css" >
 
 	</head>
 	<body>
