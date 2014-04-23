@@ -19,6 +19,8 @@ grunt-contrib-watch
 
 AND install normalize ( 'npm install normalize.css' in the terminal).
 
+Once you have done that run 'grunt setup' in the terminal to move normalize into the 'app' folder.
+
 Set your local and remote urls in functions.php
 
 Includes a rewrite rule in the .htaccess file that allows for clean urls.
