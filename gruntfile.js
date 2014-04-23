@@ -34,13 +34,6 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
 			}
 		},
 		
-		copy: {
-			main:{
-				src: 'node_modules/normalize.css/normalize.css',
-				dest: 'app/css/normalize.css',
-			}
-		},
-		
 		watch: { // Configure the watch task
 			scripts: {
 				files: ['**/*.less', '<%= jshint.files %>'],
@@ -54,14 +47,10 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
 		grunt.loadNpmTasks('grunt-contrib-uglify');
 		grunt.loadNpmTasks('grunt-contrib-jshint');
 		grunt.loadNpmTasks('grunt-contrib-less');
-		grunt.loadNpmTasks('grunt-contrib-copy');
 		grunt.loadNpmTasks('grunt-contrib-watch');
 		
 		// Register a test task for jshint. This can be run just by typing "grunt test" on the command line
 		grunt.registerTask('test', ['jshint'])
-		
-		// Register a task copying latest normalize over from the node_modules folder
-		grunt.registerTask('setup', ['copy'])
 		
 		// And register the default task. This can be run just by typing "grunt" on the command line
 		grunt.registerTask('default', ['uglify', 'less']);
