@@ -3,9 +3,18 @@ php-starter-template
 
 A php starter template.
 
+Uses less.
+
 Uses bootstrap for the grid: http://getbootstrap.com/
 
-Uses less.
+Bootstrap is added as a submodule within src>less>bootstrap
+
+Use:
+
+$ git submodule init
+$ git submodule update
+
+when cloning this for the first time.
 
 Uses grunt to compile the less files, minify the css and js and compile into the 'app' folder. The gruntfile.js has pretty decent comments.
 
