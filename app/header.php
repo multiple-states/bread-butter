@@ -23,9 +23,9 @@
 		
 		<header>
 			
-			<div>Header</div>
+			<div class="the-head">Header</div>
 			
-			<div><a href="<?php echo $site_url ?>">Index</a> <a href="<?php echo $site_url ?>/page">page 1</a></div>
+			<div class="primary-menu"><a href="<?php echo $site_url ?>">Index</a> <a href="<?php echo $site_url ?>/page">page 1</a></div>
 			
 		</header>
 
