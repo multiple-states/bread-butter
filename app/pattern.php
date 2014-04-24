@@ -12,7 +12,7 @@
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod, est sit amet lobortis pulvinar, libero magna congue ligula, sit amet dignissim nisl tellus non tortor. Donec nisl purus, convallis quis erat ac, posuere blandit nunc. Vivamus ornare purus ac adipiscing fermentum. <a href="#">Here is a link within a paragraph</a> <span class="p-highlight">Try hovering over it!</span>. Vestibulum feugiat pretium lectus ut fermentum. Integer quis felis nec nisi dictum faucibus. Nulla sed malesuada enim, consequat euismod tortor. Sed tempus, risus eu tempor placerat, felis mauris placerat ipsum, eget auctor magna sapien eu nisl. Nam adipiscing pellentesque semper.
 
 Nullam rutrum nunc mauris. Proin eu gravida turpis. Phasellus congue nisi a pellentesque porttitor. Duis facilisis ullamcorper nunc, sed pellentesque quam. Quisque tempor at lorem in faucibus. Donec elementum accumsan ante, tincidunt pretium lorem tincidunt et. Nunc in lorem lacinia, eleifend risus quis, sodales ante. Maecenas et ullamcorper elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean convallis, nisl eget aliquam fermentum, neque neque consequat velit, ut tincidunt enim arcu a erat. Ut ut nunc nulla. Pellentesque sit amet dictum risus, a elementum dolor.</p>
-				<div class="button">A button</div>
+				<a class="button" href="#">A button</a>
 			</div>
 		</div>
 	</div>

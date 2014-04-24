@@ -21,10 +21,14 @@
 	</head>
 	<body>
 		
+		<!--[if lt IE 8]>
+			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+		
 		<header>
 			
 			<div class="l-head-inner">
-				<div class="the-head">Header</div>
+				<div class="the-head"><p>Header</p></div>
 				<div class="primary-menu"><a href="<?php echo $site_url ?>">Index</a> | <a href="<?php echo $site_url ?>/page">A page</a> | <a href="<?php echo $site_url ?>/pattern">The pattern</a></div>
 			</div>
 

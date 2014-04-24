@@ -3,7 +3,7 @@
 
 <footer>
 	<div class="l-foot-inner">
-		<div class="the-foot">footer</div>
+		<div class="the-foot"><p>footer</p></div>
 	</div>
 </footer>
 
