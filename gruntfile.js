@@ -44,8 +44,8 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
 				tasks: ['less'],
 			},
 			livereload: {
-				// Here we watch the files the sass task will compile to
-				// These files are sent to the live reload server after sass compiles to them
+				// Here we watch the files the css task will compile to
+				// These files are sent to the live reload server after css compiles to them
 				options: { livereload: true },
 				files: ['app/**/*'],
 			},

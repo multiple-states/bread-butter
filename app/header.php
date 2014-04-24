@@ -25,7 +25,7 @@
 			
 			<div class="l-head-inner">
 				<div class="the-head">Header</div>
-				<div class="primary-menu"><a href="<?php echo $site_url ?>">Index</a> <a href="<?php echo $site_url ?>/page">page 1</a></div>
+				<div class="primary-menu"><a href="<?php echo $site_url ?>">Index</a> | <a href="<?php echo $site_url ?>/page">A page</a> | <a href="<?php echo $site_url ?>/pattern">The pattern</a></div>
 			</div>
 
 		</header>

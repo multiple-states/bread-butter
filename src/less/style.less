@@ -1,5 +1,16 @@
-@import 'bootstrap/dist/css/bootstrap.css';
-@import 'bootstrap/less/bootstrap.less';
+// Import a custom build of bootstrap css by using there less files
+// Core variables and mixins
+@import "bootstrap/less/variables.less";
+@import "bootstrap/less/mixins.less";
+
+// Reset and dependencies
+@import "bootstrap/less/normalize.less";
+@import "bootstrap/less/print.less";
+
+// Core css
+@import "bootstrap/less/grid.less";
+
+/* -------------------------------------------------------------------*/
 
 /* Base */
 
@@ -13,6 +24,21 @@ img{
 	width:100%;
 	height:auto;
 }
+
+h1, h2, h3, h4, h5, h6{
+	font-weight:bold;
+	a{
+		text-decoration: none;
+	}
+	a:hover{
+		text-decoration: none;
+	}
+}
+
+p{
+	font-size:1em;
+}
+
 
 
 /* Layout */
