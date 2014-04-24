@@ -2,7 +2,9 @@
 </div><!--main-content-->
 
 <footer>
-	<div>footer</div>
+	<div class="l-foot-inner">
+		<div class="the-foot">footer</div>
+	</div>
 </footer>
 
 
