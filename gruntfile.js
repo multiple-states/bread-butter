@@ -36,8 +36,18 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
 		
 		watch: { // Configure the watch task
 			scripts: {
-				files: ['**/*.less', '<%= jshint.files %>'],
-				tasks: ['less', 'jshint'],
+				files: ['<%= jshint.files %>'],
+				tasks: ['jshint'],
+			},
+			css: {
+				files: ['**/*.less'],
+				tasks: ['less'],
+			},
+			livereload: {
+				// Here we watch the files the sass task will compile to
+				// These files are sent to the live reload server after sass compiles to them
+				options: { livereload: true },
+				files: ['app/**/*'],
 			},
 		}
 		

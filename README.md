@@ -26,6 +26,9 @@ grunt-contrib-less
 grunt-contrib-copy
 grunt-contrib-watch
 
+Use "grunt watch" when developing as this will automatically compile your less. There is a livereload option set in the watch task but you need to install an extension on your browser for it to work. 
+<a href="http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-">Get them here.</a>
+
 Set your local and remote urls in functions.php
 
 Includes a rewrite rule in the .htaccess file that allows for clean urls.
