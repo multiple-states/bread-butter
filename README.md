@@ -21,7 +21,8 @@ You will have to install these dependencies (as well as node package manager and
 grunt-contrib-uglify
 grunt-contrib-jshint
 grunt-contrib-less
-grunt-contrib-copy
+grunt-autoprefixer
+grunt-contrib-cssmin
 grunt-contrib-watch
 
 Use "grunt watch" when developing as this will automatically compile your less. There is a livereload option set in the watch task but you need to install an extension on your browser for it to work. 

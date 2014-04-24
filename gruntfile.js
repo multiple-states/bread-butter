@@ -25,11 +25,31 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
 			development: {
 				options: {
 					paths: "src/less",
-					cleancss: true, //Lets minify the css while we are at it
 				},
 				files: {
 					// target.css file: source.less file
-					"app/css/style.min.css": "src/less/style.less"
+					"src/css/style.css": "src/less/style.less"
+				}
+			}
+		},
+		
+		autoprefixer: { // Configure the autoprefixer task
+			options: {
+				browsers: ['last 3 versions'] // More options available for this see https://github.com/ai/autoprefixer#browsers
+			},
+			files: {
+				src: 'src/css/style.css',
+				dest: 'src/css/style.css' // Put the autoprefixed version right back over its original
+			},
+		},
+		
+		cssmin: { // Now we can minify the auto-prefixed version of the code
+			minify: {
+				options: {
+					banner: '/* <%= pkg.name %>.css minified <%= grunt.template.today("dd-mm-yyyy") %> */' // Give it a nice banner
+				},
+				files: {
+					'app/css/style.min.css': ['src/css/style.css']
 				}
 			}
 		},
@@ -42,6 +62,14 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
 			css: {
 				files: ['**/*.less'],
 				tasks: ['less'],
+			},
+			autoprefix: {
+				files: ['src/css/style.css'],
+				tasks: ['autoprefixer'],
+			},
+			cssmin: {
+				files: ['src/css/style.css'],
+				tasks: ['cssmin'],
 			},
 			livereload: {
 				// Here we watch the files the css task will compile to
@@ -57,12 +85,14 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
 		grunt.loadNpmTasks('grunt-contrib-uglify');
 		grunt.loadNpmTasks('grunt-contrib-jshint');
 		grunt.loadNpmTasks('grunt-contrib-less');
+		grunt.loadNpmTasks('grunt-autoprefixer');
+		grunt.loadNpmTasks('grunt-contrib-cssmin');
 		grunt.loadNpmTasks('grunt-contrib-watch');
 		
 		// Register a test task for jshint. This can be run just by typing "grunt test" on the command line
 		grunt.registerTask('test', ['jshint'])
 		
 		// And register the default task. This can be run just by typing "grunt" on the command line
-		grunt.registerTask('default', ['uglify', 'less']);
+		grunt.registerTask('default', ['uglify', 'less', 'autoprefixer', 'cssmin']);
 		
 };
