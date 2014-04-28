@@ -138,6 +138,7 @@ input {
 }
 input[type="checkbox"],
 input[type="radio"] {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
 }
@@ -148,7 +149,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 input[type="search"]::-webkit-search-cancel-button,
@@ -986,6 +986,7 @@ a {
   text-decoration: none;
 }
 .button {
+  -webkit-transition: background-color 0.5s ease;
   transition: background-color 0.5s ease;
   padding: 0.2em 10px;
   color: #FFF;
@@ -1260,7 +1261,8 @@ footer {
     background: #a0a0a0;
   }
   .page-holder {
-    /* top:54px; Set this to ensure the top of your content shows. */
+    top: 32px;
+    /* Set this to ensure the top of your content shows. */
   }
 }
 /* States */
