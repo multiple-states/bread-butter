@@ -16,8 +16,6 @@
 	min-height: 100vh;
 	z-index: 500;
 	background: @white;
-	border-left:3px @base-clr solid;
-	margin-left: -3px;
 }
 
 .page-holder.open{
@@ -32,8 +30,7 @@
 	left: 0px;
 	top: 0px;
 	z-index: 0;
-	background: @white;
-	border-right:3px @base-clr solid;
+	background: @2-clr;
 }
 
 
@@ -52,9 +49,15 @@
 .m-first-nav ul li{
 	width:100%;
 	float:left;
-	background: @white;
-	border-bottom: 3px solid @base-clr;
 	line-height: 30px;
+}
+
+.m-first-nav>ul>li{
+	background: @2-clr;
+}
+
+.m-first-nav>ul>li:nth-child(odd){
+	background: @3-clr;
 }
 	
 .m-first-nav ul li a{
@@ -66,7 +69,7 @@
 }
 
 .m-first-nav ul li ul{
-	border-top: 3px solid @base-clr;
+	background: @4-clr;
 }
 
 .m-first-nav ul li ul li:nth-last-of-type(1){
