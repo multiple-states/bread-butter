@@ -1,6 +1,6 @@
 <?php include('header.php')?>
 
-	<div>Index</div>
+	<div><p>Index</p></div>
 	
 <?php include('footer.php')?>
 	
