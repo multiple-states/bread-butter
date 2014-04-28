@@ -73,12 +73,8 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
 				tasks: ['jshint'],
 			},
 			css: {
-				files: ['**/*.less'],
+				files: ['src/**/*.less'],
 				tasks: ['less'],
-			},
-			autoprefix: {
-				files: ['src/css/style.css'],
-				tasks: ['autoprefixer'],
 			},
 			cssmin: {
 				files: ['src/css/style.css'],
@@ -106,7 +102,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
 		// Register a test task for jshint. This can be run just by typing "grunt test" on the command line
 		grunt.registerTask('test', ['jshint'])
 		
-		// And register the default task. This can be run just by typing "grunt" on the command line
+		// And register the default task. This can be run just by typing "grunt" on the command line. This should be done before production.
 		grunt.registerTask('default', ['copy', 'uglify', 'less', 'autoprefixer', 'cssmin']);
 		
 };
