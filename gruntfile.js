@@ -8,7 +8,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
 				files: [{
 					expand: true,
 					cwd: 'src/snippets/',
-					src: ['menu-open-btn.php','fly-out-menu.php'],
+					src: ['menu-open-btn.php','fly-out-menu.php', 'sticky-menu.php'],
 					dest: 'app/snippets/'
 				}]
 			}
