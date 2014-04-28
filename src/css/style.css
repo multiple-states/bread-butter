@@ -1149,6 +1149,7 @@ footer {
   border-bottom: none;
   letter-spacing: 0.1em;
 }
+/* Fly out menu */
 /* Relies on: menu-open-btn */
 /* First level navigation */
 .first-nav {
@@ -1208,6 +1209,59 @@ footer {
 }
 .m-first-nav ul li ul li:nth-last-of-type(1) {
   border-bottom: none;
+}
+/* Sticky menu */
+.first-nav {
+  display: none;
+}
+@media (min-width: 768px) {
+  /* Mobile menu */
+  .m-nav-holder,
+  .m-menu-open {
+    display: none;
+  }
+  /* First level navigation */
+  .first-nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1200;
+    background: #c8c8c8;
+    width: 100%;
+  }
+  .first-nav ul {
+    display: inline-block;
+    margin: 0;
+    width: 100%;
+  }
+  .first-nav ul li {
+    float: right;
+    padding: 10px 20px;
+  }
+  .first-nav ul li a {
+    display: block;
+  }
+  .first-nav ul li ul {
+    display: none;
+    background: #f0f0f0;
+    position: absolute;
+    width: auto;
+    margin-top: 10px;
+  }
+  .first-nav ul li ul > li {
+    float: left;
+    clear: both;
+  }
+  .first-nav ul li:hover > ul {
+    display: block;
+  }
+  .first-nav ul li ul > li:hover {
+    background: #a0a0a0;
+  }
+  .page-holder {
+    /* top:54px; Set this to ensure the top of your content shows. */
+  }
 }
 /* States */
 /* Theme */

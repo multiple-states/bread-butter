@@ -29,6 +29,8 @@
 		
 		<div class="l-page-holder page-holder">
 		
+		<?php include('snippets/sticky-menu.php')?>
+		
 		<div class="l-strip">
 			<header>
 				<div class="l-inner">
