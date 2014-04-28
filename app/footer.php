@@ -1,12 +1,13 @@
 
 </div><!--main-content-->
 
-<footer>
-	<div class="l-foot-inner">
-		<div class="the-foot"><p>footer</p></div>
+	<div class="l-strip">
+		<footer>
+			<div class="l-inner">
+				<div class="the-foot"><p>footer</p></div>
+			</div>
+		</footer>
 	</div>
-</footer>
-
 
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

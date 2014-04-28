@@ -27,12 +27,13 @@
 		
 		<?php include('snippets/fly-out-menu.php')?>
 		
-		<header>
-			<div class="l-head-inner">
-				<div class="the-head"><p>Header</p></div>
-				<div class="primary-menu"><a href="<?php echo $site_url ?>">Index</a> | <a href="<?php echo $site_url ?>/page">A page</a> | <a href="<?php echo $site_url ?>/pattern">The pattern</a></div>
-			</div>
-
-		</header>
+		<div class="l-strip">
+			<header>
+				<div class="l-inner">
+					<div class="the-head"><p>Header</p></div>
+					<div class="primary-menu"><a href="<?php echo $site_url ?>">Index</a> | <a href="<?php echo $site_url ?>/pattern">The pattern</a></div>
+				</div>
+			</header>
+		</div>
 
 	

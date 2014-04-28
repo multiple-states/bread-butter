@@ -998,6 +998,27 @@ p {
 .l-strip {
   width: 100%;
 }
+.l-holder {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .l-holder {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .l-holder {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .l-holder {
+    width: 1170px;
+  }
+}
 .l-inner {
   margin-left: -15px;
   margin-right: -15px;
@@ -1006,11 +1027,25 @@ p {
 /* Module */
 /* Header */
 header {
-  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
-.l-head-inner {
-  margin-left: -15px;
-  margin-right: -15px;
+@media (min-width: 768px) {
+  header {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  header {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  header {
+    width: 1170px;
+  }
 }
 .the-head {
   position: relative;
@@ -1033,11 +1068,25 @@ header {
 }
 /* Footer */
 footer {
-  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
-.l-foot-inner {
-  margin-left: -15px;
-  margin-right: -15px;
+@media (min-width: 768px) {
+  footer {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  footer {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  footer {
+    width: 1170px;
+  }
 }
 .the-foot {
   position: relative;
