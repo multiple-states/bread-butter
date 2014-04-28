@@ -1,5 +1,4 @@
 <div class="first-nav">
-	<div class="container">
 		<ul>
 			<li><a href="#">Menu item 1</a></li>
 			<li>
@@ -16,5 +15,4 @@
 			<li><a href="#">Menu item 6</a></li>
 			<li><a href="#">Menu item 7</a></li>
 		</ul>
-	</div>
 </div>

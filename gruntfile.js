@@ -3,6 +3,15 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
 	grunt.initConfig({ // Initialize our configuration object
 		pkg: grunt.file.readJSON('package.json'), // Read project settings from package.json
 		
+		copy: {
+			snippets: { // List your snippets here. This is what copies your selected snippets from the src folder to the app folder.
+				files: [{
+					src: 'src/snippets/fly-out-menu.php',
+					dest: 'app/snippets/fly-out-menu.php'
+				}]
+			}
+		},
+		
 		uglify: {
 			options: {
 				mangle: false,
@@ -55,6 +64,10 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
 		},
 		
 		watch: { // Configure the watch task
+			snippets: {
+				files: ['src/snippets/*.php'],
+				tasks: ['copy'],
+			},
 			scripts: {
 				files: ['<%= jshint.files %>'],
 				tasks: ['jshint'],
@@ -82,6 +95,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
 	});
 	
 		// Load the tasks
+		grunt.loadNpmTasks('grunt-contrib-copy');
 		grunt.loadNpmTasks('grunt-contrib-uglify');
 		grunt.loadNpmTasks('grunt-contrib-jshint');
 		grunt.loadNpmTasks('grunt-contrib-less');
@@ -93,6 +107,6 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
 		grunt.registerTask('test', ['jshint'])
 		
 		// And register the default task. This can be run just by typing "grunt" on the command line
-		grunt.registerTask('default', ['uglify', 'less', 'autoprefixer', 'cssmin']);
+		grunt.registerTask('default', ['copy', 'uglify', 'less', 'autoprefixer', 'cssmin']);
 		
 };
