@@ -1056,6 +1056,33 @@ footer {
   padding-left: 15px;
   padding-right: 15px;
 }
+/* Primary navigation */
+/* Fly out menu snippet styles */
+.first-nav {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .first-nav {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .first-nav {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .first-nav {
+    width: 1170px;
+  }
+}
+ul {
+  list-style: none;
+  padding-left: none;
+}
 /* States */
 /* Theme */
 /* Media queries */
