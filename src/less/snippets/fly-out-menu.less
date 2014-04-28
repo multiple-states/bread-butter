@@ -1,10 +1,74 @@
-/* Fly out menu snippet styles */
+/* Relies on: menu-open-btn */
+
+/* First level navigation */
 
 .first-nav{
-	.container;
+	display:none;
 }
 
-ul{
-	list-style:none;
-	padding-left:none;
+
+/* Mobile slide out menu */
+
+.page-holder{
+	position: relative;
+	left: 0;
+	min-width: 300px;
+	min-height: 100vh;
+	z-index: 500;
+	background: @white;
+	border-left:3px @base-clr solid;
+	margin-left: -3px;
+}
+
+.page-holder.open{
+	left:300px;
+}
+
+.m-nav-holder{
+	height: 100%;
+	display: block;
+	position: absolute;
+	width: 300px;
+	left: 0px;
+	top: 0px;
+	z-index: 0;
+	background: @white;
+	border-right:3px @base-clr solid;
+}
+
+
+/* Mobile first level nav */
+
+.m-first-nav{
+	width:100%;
+}
+
+.m-first-nav ul{
+	display:inline-block;
+	float:left;
+	width:100%;
+}
+
+.m-first-nav ul li{
+	width:100%;
+	float:left;
+	background: @white;
+	border-bottom: 3px solid @base-clr;
+	line-height: 30px;
+}
+	
+.m-first-nav ul li a{
+	display:block;
+	text-decoration: none;
+	border-bottom: none;
+	text-align: center;
+	padding:10px 0;
+}
+
+.m-first-nav ul li ul{
+	border-top: 3px solid @base-clr;
+}
+
+.m-first-nav ul li ul li:nth-last-of-type(1){
+	border-bottom: none;
 }

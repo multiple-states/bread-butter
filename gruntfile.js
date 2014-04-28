@@ -6,8 +6,10 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
 		copy: {
 			snippets: { // List your snippets here. This is what copies your selected snippets from the src folder to the app folder.
 				files: [{
-					src: 'src/snippets/fly-out-menu.php',
-					dest: 'app/snippets/fly-out-menu.php'
+					expand: true,
+					cwd: 'src/snippets/',
+					src: ['menu-open-btn.php','fly-out-menu.php'],
+					dest: 'app/snippets/'
 				}]
 			}
 		},
@@ -20,7 +22,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
 			},
 			my_target: {
 				files: {
-				'app/js/custom.min.js': ['src/js/custom.js'],
+				'app/js/custom.min.js': ['src/js/custom.js', 'src/js/snippets/fly-out-menu.js'],
 				'app/js/modernizer.min.js': ['src/js/modernizer.js']
 				}
 			}

@@ -49,7 +49,9 @@ When adding a snippet you will need to
 1. Import the default styles into your modules.less file
 2. Include the php file within your markup
 3. Include the .js file (still working on this)
-4. Add your file to the copy task in gruntfile.js and run the default grunt task. (This will ensure your snippet will be included in your production)
+4. Add your file to the copy task in gruntfile.js
+5. Add your snippet.js file to the ugilfy task in gruntfile.js
+6. Run the default grunt task
 
 Other useful stuff:
 

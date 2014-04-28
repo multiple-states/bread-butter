@@ -25,7 +25,9 @@
 			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
 		
-		<?php include('snippets/fly-out-menu.php')?>
+		<?php include('snippets/menu-open-btn.php')?>
+		
+		<div class="l-page-holder page-holder">
 		
 		<div class="l-strip">
 			<header>
