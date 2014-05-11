@@ -39,7 +39,7 @@ Get them here: http://feedback.livereload.com/knowledgebase/articles/86242-how-d
 
 Snippets:
 
-A snippets system has been started to include more common elements of code (like menus). 
+A snippets system has been started to include more common elements of code (like menus). Some snippets currently rely on others so make sure to look at the beginning of the php or less file for the snippet you want to use for notes on this.
 
 The styles for can be found in src>less>snippets
 The mark-up can be found in src>snippets
@@ -52,6 +52,11 @@ When adding a snippet you will need to
 4. Add your file to the copy task in gruntfile.js
 5. Add your snippet.js file to the ugilfy task in gruntfile.js
 6. Run the default grunt task
+
+The default setup uses three snippets:
+1. Sticky menu (for desktop)
+2. Fly-out menu (For mobile)
+3. Open button (Which is a requirement for the fly-out menu)
 
 Other useful stuff:
 
