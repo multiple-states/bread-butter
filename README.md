@@ -1,5 +1,6 @@
 php-starter-template
 ====================
+Version 3.0
 
 A php starter template.
 
