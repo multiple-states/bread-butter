@@ -5,7 +5,7 @@ A php starter template.
 
 Stlying:
 
-Uses less and tries to follow the SMACCS methodology documneted <a href="http://smacss.com/">here</a>.
+Uses less and tries to follow the SMACCS methodology documneted here: http://smacss.com/
 
 A default structure 
 
@@ -19,7 +19,7 @@ $ git submodule init
 $ git submodule update
 when cloning this for the first time.
 
-Because I don't want all of bootstrap just the grid (I want my designs and builds to have a personality of their own) I have built my own custom version by importing only the less files I want at the top of my style.less file. 
+Because I don't want all of bootstrap just the grid I have built my own custom version by importing only the less files I want at the top of my style.less file. 
 
 The Grunt build setup:
 
@@ -35,7 +35,7 @@ grunt-contrib-cssmin
 grunt-contrib-watch
 
 Use "grunt watch" when developing as this will automatically compile your less. There is a livereload option set in the watch task but you need to install an extension on your browser for it to work. 
-<a href="http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-">Get them here.</a>
+Get them here: http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-
 
 Snippets:
 
