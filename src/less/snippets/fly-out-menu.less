@@ -1,11 +1,9 @@
 /* Relies on: menu-open-btn */
 
-/* First level navigation */
-
+/* Sticky menu */
 .first-nav{
 	display:none;
 }
-
 
 /* Mobile slide out menu */
 
@@ -22,6 +20,12 @@
 	left:300px;
 }
 
+@media (min-width: @break-1){
+	.page-holder{
+		top:3em; /* Set this to ensure the top of your content shows. */
+	}	
+}
+
 .m-nav-holder{
 	height: 100%;
 	display: block;
@@ -32,7 +36,11 @@
 	z-index: 0;
 	background: @2-clr;
 }
-
+@media (min-width: @break-1){
+	.m-nav-holder{
+		display: none;
+	}
+}
 
 /* Mobile first level nav */
 
@@ -53,11 +61,11 @@
 }
 
 .m-first-nav>ul>li{
-	background: @2-clr;
+	background: @3-clr;
 }
 
-.m-first-nav>ul>li:nth-child(odd){
-	background: @3-clr;
+.m-first-nav>ul>li:nth-child(even){
+	background: @2-clr;
 }
 	
 .m-first-nav ul li a{
@@ -69,9 +77,6 @@
 }
 
 .m-first-nav ul li ul{
-	background: @4-clr;
+	display:none;
 }
 
-.m-first-nav ul li ul li:nth-last-of-type(1){
-	border-bottom: none;
-}

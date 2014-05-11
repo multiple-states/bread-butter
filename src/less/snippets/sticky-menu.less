@@ -4,61 +4,61 @@
 
 @media (min-width: 768px){
 
-/* Mobile menu */
-	.m-nav-holder,
-	.m-menu-open{
-		display: none;
-	}
-
 /* First level navigation */
-	
-	.first-nav{
-		display:block;
+	.l-first-nav-strip{
 		position:fixed;
-		top:0;
 		left:0;
 		z-index: 1200;
 		background: @3-clr;
+	}
+	
+	.first-nav{
+		display:block;
 		width:100%;
 	}
 	
 	.first-nav ul{
-		display:inline-block;
+		display:block;
 		margin:0;
 		width: 100%;
 	}
 	
 	.first-nav ul li{
-		float:right;
-		padding:10px 20px;
+		float:left;
 	}
 	
 	.first-nav ul li a{
 		display:block;
+		padding:10px 20px;
+		background: @3-clr;
 	}
 	
+	.first-nav ul li a:hover{
+		background: @2-clr;
+	}
+	
+	/* Drop down styles */
 	.first-nav ul li ul{
 		display:none;
-		background: @2-clr;
 		position: absolute;
 		width:auto;
-		margin-top:10px;
 	}
 	.first-nav ul li ul>li{
 		float:left;
 		clear: both;
+		width:100%;
 	}
 	
 	.first-nav ul li:hover>ul{
 		display:block;
 	}
 	
-	.first-nav ul li ul>li:hover{
+	.first-nav ul li ul li a{
 		background: @4-clr;
 	}
 	
-	.page-holder{
-		top:32px; /* Set this to ensure the top of your content shows. */
+	.first-nav ul li ul li a:hover{
+		background: @2-clr;
 	}
 	
 }

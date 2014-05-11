@@ -918,6 +918,8 @@ th {
 }
 /* -------------------------------------------------------------------*/
 /* Variables */
+/* Breakpoints */
+/* These use the bootstrap varibles for the grid system */
 /* -------------------------------------------------------------------*/
 /* Base */
 html {
@@ -1151,9 +1153,14 @@ footer {
   border-bottom: none;
   letter-spacing: 0.1em;
 }
+@media (min-width: 768px) {
+  .m-menu-open {
+    display: none;
+  }
+}
 /* Fly out menu */
 /* Relies on: menu-open-btn */
-/* First level navigation */
+/* Sticky menu */
 .first-nav {
   display: none;
 }
@@ -1169,6 +1176,12 @@ footer {
 .page-holder.open {
   left: 300px;
 }
+@media (min-width: 768px) {
+  .page-holder {
+    top: 3em;
+    /* Set this to ensure the top of your content shows. */
+  }
+}
 .m-nav-holder {
   height: 100%;
   display: block;
@@ -1178,6 +1191,11 @@ footer {
   top: 0px;
   z-index: 0;
   background: #f0f0f0;
+}
+@media (min-width: 768px) {
+  .m-nav-holder {
+    display: none;
+  }
 }
 /* Mobile first level nav */
 .m-first-nav {
@@ -1194,10 +1212,10 @@ footer {
   line-height: 30px;
 }
 .m-first-nav > ul > li {
-  background: #f0f0f0;
-}
-.m-first-nav > ul > li:nth-child(odd) {
   background: #c8c8c8;
+}
+.m-first-nav > ul > li:nth-child(even) {
+  background: #f0f0f0;
 }
 .m-first-nav ul li a {
   display: block;
@@ -1207,63 +1225,59 @@ footer {
   padding: 10px 0;
 }
 .m-first-nav ul li ul {
-  background: #a0a0a0;
-}
-.m-first-nav ul li ul li:nth-last-of-type(1) {
-  border-bottom: none;
+  display: none;
 }
 /* Sticky menu */
 .first-nav {
   display: none;
 }
 @media (min-width: 768px) {
-  /* Mobile menu */
-  .m-nav-holder,
-  .m-menu-open {
-    display: none;
-  }
   /* First level navigation */
-  .first-nav {
-    display: block;
+  .l-first-nav-strip {
     position: fixed;
-    top: 0;
     left: 0;
     z-index: 1200;
     background: #c8c8c8;
+  }
+  .first-nav {
+    display: block;
     width: 100%;
   }
   .first-nav ul {
-    display: inline-block;
+    display: block;
     margin: 0;
     width: 100%;
   }
   .first-nav ul li {
-    float: right;
-    padding: 10px 20px;
+    float: left;
   }
   .first-nav ul li a {
     display: block;
+    padding: 10px 20px;
+    background: #c8c8c8;
   }
+  .first-nav ul li a:hover {
+    background: #f0f0f0;
+  }
+  /* Drop down styles */
   .first-nav ul li ul {
     display: none;
-    background: #f0f0f0;
     position: absolute;
     width: auto;
-    margin-top: 10px;
   }
   .first-nav ul li ul > li {
     float: left;
     clear: both;
+    width: 100%;
   }
   .first-nav ul li:hover > ul {
     display: block;
   }
-  .first-nav ul li ul > li:hover {
+  .first-nav ul li ul li a {
     background: #a0a0a0;
   }
-  .page-holder {
-    top: 32px;
-    /* Set this to ensure the top of your content shows. */
+  .first-nav ul li ul li a:hover {
+    background: #f0f0f0;
   }
 }
 /* States */
