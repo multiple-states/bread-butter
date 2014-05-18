@@ -1,7 +1,7 @@
 
 </div><!--main-content-->
 
-	<div class="l-strip">
+  <div class="l-strip">
 		<footer>
 			<div class="l-inner">
 				<div class="the-foot"><p>footer</p></div>
