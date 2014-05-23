@@ -1163,6 +1163,11 @@ a {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  clear: both;
+  overflow: hidden;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-bottom: 2px solid #000;
 }
 .pattern-module {
   margin-left: -15px;

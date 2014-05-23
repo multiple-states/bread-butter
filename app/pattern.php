@@ -3,17 +3,7 @@
   <div class="l-strip">
     <div class="l-holder">
       <div class="l-inner">
-        <style>
-        /* These styles ensure separation between elements and modules */
-        .pattern {
-            clear: both;
-            overflow: hidden;
-            padding-top: 25px;
-            padding-bottom: 25px;
-            
-            border-bottom: 2px solid #FFF;
-        }
-        </style>
+
         <h1>HTML Elements</h1>
         <?php
         $files = array();
@@ -65,6 +55,5 @@
       echo '</div>';
   endforeach;
   ?>
-  
   
 <?php include('footer.php')?>
