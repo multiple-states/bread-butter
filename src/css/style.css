@@ -1149,7 +1149,34 @@ a {
 }
 /* Modules */
 /* Module */
-/* Header */
+/* ---------------------------------------------------------  Wireframe styles - Remove for production*/
+.wireframe-label {
+  background: #f0f0f0;
+  text-align: center;
+  padding: 8em 0;
+}
+/* ---------------------------------------------------------  Pattern - Remove for production*/
+.pattern {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.pattern-module {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.pattern-module .source {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/*  ---------------------------------------------------------  Header */
 header {
   margin-right: auto;
   margin-left: auto;
@@ -1190,7 +1217,7 @@ header {
 .primary-menu a {
   font-size: 1.6em;
 }
-/* Index */
+/*  ---------------------------------------------------------  Index */
 .index-content {
   position: relative;
   float: left;
@@ -1199,7 +1226,7 @@ header {
   padding-left: 15px;
   padding-right: 15px;
 }
-/* Footer */
+/*  ---------------------------------------------------------  Footer */
 footer {
   margin-right: auto;
   margin-left: auto;
@@ -1229,17 +1256,8 @@ footer {
   padding-left: 15px;
   padding-right: 15px;
 }
-/* Pattern */
-.pattern-typography {
-  position: relative;
-  float: left;
-  width: 100%;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-/* Primary navigation */
-/* Mobile menu open button */
+/*  ---------------------------------------------------------  Primary navigation */
+/*  ---------------------------------------------------------  Mobile menu open button */
 .m-menu-open {
   position: fixed;
   left: 0;
@@ -1260,7 +1278,7 @@ footer {
     display: none;
   }
 }
-/* Fly out menu */
+/*  ---------------------------------------------------------  Fly out menu */
 /* Relies on: menu-open-btn */
 /* Sticky menu */
 .first-nav {
@@ -1329,7 +1347,7 @@ footer {
 .m-first-nav ul li ul {
   display: none;
 }
-/* Sticky menu */
+/*  ---------------------------------------------------------  Sticky menu */
 .first-nav {
   display: none;
 }

@@ -1,6 +1,28 @@
 /* Module */
 
-/* Header */
+/* ---------------------------------------------------------  Wireframe styles - Remove for production*/
+
+.wireframe-label{
+  background: @2-clr;
+  text-align: center;
+  padding:8em 0;
+}
+
+/* ---------------------------------------------------------  Pattern - Remove for production*/
+
+.pattern{
+  .make-xs-column(12);
+}
+
+.pattern-module{
+  .make-row();
+  .source{
+    .make-xs-column(12);
+  }
+}
+
+
+/*  ---------------------------------------------------------  Header */
 header{
 	.container;
 }
@@ -16,13 +38,13 @@ header{
 	font-size:1.6em;
 }
 
-/* Index */
+/*  ---------------------------------------------------------  Index */
 
 .index-content{
 	.make-xs-column(12);
 }
 
-/* Footer */
+/*  ---------------------------------------------------------  Footer */
 footer{
 	.container;
 }
@@ -31,19 +53,13 @@ footer{
 	.make-xs-column(12);
 }
 
-/* Pattern */
+/*  ---------------------------------------------------------  Primary navigation */
 
-.pattern-typography{
-	.make-xs-column(12);
-}
-
-/* Primary navigation */
-
-/* Mobile menu open button */
+/*  ---------------------------------------------------------  Mobile menu open button */
 @import "snippets/menu-open-btn.less";
 
-/* Fly out menu */
+/*  ---------------------------------------------------------  Fly out menu */
 @import "snippets/fly-out-menu.less";
 
-/* Sticky menu */
+/*  ---------------------------------------------------------  Sticky menu */
 @import "snippets/sticky-menu.less";
