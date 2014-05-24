@@ -1264,7 +1264,7 @@ footer {
 /*  ---------------------------------------------------------  Primary navigation */
 /*  ---------------------------------------------------------  Mobile menu open button */
 .m-menu-open {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   z-index: 999;
@@ -1285,11 +1285,7 @@ footer {
 }
 /*  ---------------------------------------------------------  Fly out menu */
 /* Relies on: menu-open-btn */
-/* Sticky menu */
-.first-nav {
-  display: none;
-}
-/* Mobile slide out menu */
+/* ------------------------------------------------------------------ Mobile slide out menu */
 .page-holder {
   position: relative;
   left: 0;
@@ -1322,7 +1318,18 @@ footer {
     display: none;
   }
 }
-/* Mobile first level nav */
+/* ------------------------------------------------------------------ Mobile first level nav */
+.m-menu-close {
+  float: left;
+  background: #000;
+}
+.m-menu-close a {
+  display: block;
+  padding: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
 .m-first-nav {
   width: 100%;
 }

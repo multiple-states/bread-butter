@@ -2,6 +2,10 @@
 
 <div class="m-nav-holder">
   
+  <div class="m-menu-close">
+    <a>X</a>
+  </div>
+  
   <div class="m-first-nav">
     <ul>
       <li><a href="#">Menu item 1</a></li>

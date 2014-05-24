@@ -1,82 +1,93 @@
 /* Relies on: menu-open-btn */
 
-/* Sticky menu */
-.first-nav{
-	display:none;
-}
-
-/* Mobile slide out menu */
+/* ------------------------------------------------------------------ Mobile slide out menu */
 
 .page-holder{
-	position: relative;
-	left: 0;
-	min-width: 300px;
-	min-height: 100vh;
-	z-index: 500;
-	background: @white;
+  position: relative;
+  left: 0;
+  min-width: 300px;
+  min-height: 100vh;
+  z-index: 500;
+  background: @white;
 }
 
 .page-holder.open{
-	left:300px;
+  left:300px;
 }
 
 @media (min-width: @break-1){
-	.page-holder{
-		top:3em; /* Set this to ensure the top of your content shows. */
-	}	
+  .page-holder{
+    top:3em; /* Set this to ensure the top of your content shows. */
+  } 
 }
 
 .m-nav-holder{
-	height: 100%;
-	display: block;
-	position: absolute;
-	width: 300px;
-	left: 0px;
-	top: 0px;
-	z-index: 0;
-	background: @2-clr;
+  height: 100%;
+  display: block;
+  position: absolute;
+  width: 300px;
+  left: 0px;
+  top: 0px;
+  z-index: 0;
+  background: @2-clr;
 }
 @media (min-width: @break-1){
-	.m-nav-holder{
-		display: none;
-	}
+  .m-nav-holder{
+    display: none;
+  }
 }
 
-/* Mobile first level nav */
+/* ------------------------------------------------------------------ Mobile first level nav */
+
+.m-menu-close{
+  float:left;
+  
+  background: #000;
+}
+
+.m-menu-close a{
+  display: block;
+  padding:1rem;
+  
+  color: @white;
+  text-decoration: none;
+  
+  cursor: pointer;
+}
 
 .m-first-nav{
-	width:100%;
+  width:100%;
 }
 
 .m-first-nav ul{
-	display:inline-block;
-	float:left;
-	width:100%;
+  display:inline-block;
+  float:left;
+  width:100%;
 }
 
 .m-first-nav ul li{
-	width:100%;
-	float:left;
-	line-height: 30px;
+  width:100%;
+  float:left;
+  line-height: 30px;
 }
 
 .m-first-nav>ul>li{
-	background: @3-clr;
+  background: @3-clr;
 }
 
 .m-first-nav>ul>li:nth-child(even){
-	background: @2-clr;
+  background: @2-clr;
 }
-	
+  
 .m-first-nav ul li a{
-	display:block;
-	text-decoration: none;
-	border-bottom: none;
-	text-align: center;
-	padding:10px 0;
+  display:block;
+  text-decoration: none;
+  border-bottom: none;
+  text-align: center;
+  padding:10px 0;
 }
 
 .m-first-nav ul li ul{
-	display:none;
+  display:none;
 }
 
