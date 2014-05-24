@@ -11,6 +11,17 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
           src: ['menu-open-btn.php','fly-out-menu.php', 'sticky-menu.php'],
           dest: 'app/snippets/'
         }]
+      },
+      
+      fontcopy:{ //This task will find the nessessary files in the webkit folder and move them to the app folder
+        files: [
+          {
+            expand: true,
+            cwd: 'src/fonts/',
+            src: ['**/*.eot', '**/*.svg', '**/*.ttf', '**/*.woff'],
+            dest: 'app/fonts/'
+          }
+        ]
       }
     },
     
@@ -62,6 +73,17 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
         files: {
           'app/css/style.min.css': ['src/css/style.css']
         }
+      },
+      fontmin: { //This task will find the stylesheet in the webkit folder, minify it and move it to the app folder
+        files: [
+          {
+            expand: true,
+            cwd: 'src/fonts/',
+            src: ['**/*/stylesheet.css'],
+            dest: 'app/fonts/',
+            ext: '.min.css'
+          }
+        ]
       }
     },
     
@@ -107,6 +129,9 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
     
     // Register a test task for jshint. This can be run just by typing "grunt test" on the command line
     grunt.registerTask('test', ['jshint'])
+    
+    //Register a task for setting up the webkit fonts when picking up the project
+    grunt.registerTask('fontload', ['copy:fontcopy', 'cssmin:fontmin'])
     
     // And register the default task. This can be run just by typing "grunt" on the command line. This should be done before production.
     grunt.registerTask('default', ['copy', 'uglify', 'less', 'autoprefixer', 'cssmin']);
