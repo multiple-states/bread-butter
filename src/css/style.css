@@ -138,6 +138,7 @@ input {
 }
 input[type="checkbox"],
 input[type="radio"] {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
 }
@@ -148,7 +149,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 input[type="search"]::-webkit-search-cancel-button,
@@ -250,13 +250,11 @@ th {
   }
 }
 * {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -314,7 +312,6 @@ img {
   border: 1px solid #dddddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   display: inline-block;
   max-width: 100%;
@@ -1092,6 +1089,7 @@ a {
   text-decoration: none;
 }
 .button {
+  -webkit-transition: background-color 0.5s ease;
   transition: background-color 0.5s ease;
   padding: 0.2em 10px;
   color: #FFF;
@@ -1359,21 +1357,18 @@ footer {
 .m-first-nav ul li ul {
   display: none;
 }
-/*  ---------------------------------------------------------  Sticky menu */
+/*  ---------------------------------------------------------  Float menu */
 .first-nav {
   display: none;
 }
 @media (min-width: 768px) {
   /* First level navigation */
-  .l-first-nav-strip {
-    position: fixed;
-    left: 0;
-    z-index: 1200;
-    background: #c8c8c8;
-  }
   .first-nav {
     display: block;
-    width: 100%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .first-nav ul {
     display: block;
@@ -1410,6 +1405,12 @@ footer {
   }
   .first-nav ul li ul li a:hover {
     background: #f0f0f0;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .first-nav {
+    float: left;
+    width: 100%;
   }
 }
 /* States */

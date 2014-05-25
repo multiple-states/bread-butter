@@ -28,7 +28,6 @@
     <div class="l-page-holder page-holder">
     
     <?php include('snippets/menu-open-btn.php')?>
-    <?php include('snippets/sticky-menu.php')?>
     
     <div class="l-strip">
       <header>
@@ -38,5 +37,5 @@
         </div>
       </header>
     </div>
-
-  
+    
+    <?php include('snippets/float-menu.php')?>
