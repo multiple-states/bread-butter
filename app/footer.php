@@ -1,6 +1,3 @@
-
-</div><!--main-content-->
-
   <div class="l-strip">
     <footer>
       <div class="l-inner">

@@ -32,7 +32,10 @@
     <div class="l-strip">
       <header>
         <div class="l-inner">
-          <div class="the-head"><p>Header</p></div>
+          <div class="the-head">
+            <a class="the-head-link" href="<?php echo $site_url ?>"><?php include ('images/logo.svg') ?></a>
+            <h1 class="the-head-title">Site Title</h1>
+          </div>
         </div>
       </header>
     </div>

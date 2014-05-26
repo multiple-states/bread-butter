@@ -138,7 +138,6 @@ input {
 }
 input[type="checkbox"],
 input[type="radio"] {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
 }
@@ -149,6 +148,7 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 input[type="search"]::-webkit-search-cancel-button,
@@ -250,11 +250,13 @@ th {
   }
 }
 * {
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 *:before,
 *:after {
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -312,6 +314,7 @@ img {
   border: 1px solid #dddddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   display: inline-block;
   max-width: 100%;
@@ -1029,11 +1032,17 @@ html {
 body {
   font-size: 62.5%;
 }
-img {
+img,
+svg {
   display: block;
   /* This is to stop the default img behaviour being inline and therefore adding 2px below the image to allow for type descenders. */
   width: 100%;
   height: auto;
+}
+svg {
+  max-height: 100%;
+  /* This is to address a webkit bug on svg heights - https://bugs.webkit.org/show_bug.cgi?id=82489 */
+  max-width: 100%;
 }
 h1 {
   font-size: 2.2em;
@@ -1089,7 +1098,6 @@ a {
   text-decoration: none;
 }
 .button {
-  -webkit-transition: background-color 0.5s ease;
   transition: background-color 0.5s ease;
   padding: 0.2em 10px;
   color: #FFF;
@@ -1209,16 +1217,15 @@ header {
   padding-left: 15px;
   padding-right: 15px;
 }
-.primary-menu {
-  position: relative;
+.the-head svg {
   float: left;
-  width: 100%;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
+  clear: both;
+  height: 10rem;
+  width: auto;
 }
-.primary-menu a {
-  font-size: 1.6em;
+.the-head-title {
+  float: left;
+  clear: both;
 }
 /*  ---------------------------------------------------------  Index */
 .index-content {
