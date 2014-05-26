@@ -4,6 +4,17 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
     pkg: grunt.file.readJSON('package.json'), // Read project settings from package.json
     
     copy: {
+      includes: { 
+      // This is what copies the includes from the src folder to the app folder. 
+      //At the moment this adds all includes from the src folder however you should list your include files below if you don't need all of them.
+        files: [{
+          expand: true,
+          cwd: 'src/includes/',
+          src: ['*.php'],
+          dest: 'app/includes/'
+        }]
+      },
+      
       snippets: { // List your snippets here. This is what copies your selected snippets from the src folder to the app folder.
         files: [{
           expand: true,
@@ -87,9 +98,11 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
       }
     },
     
-    watch: { // Configure the watch task
+    watch: { 
+    // Configure the watch task
+    // You should adapt this to your specific needs on a per project basis
       snippets: {
-        files: ['src/snippets/*.php'],
+        files: ['src/snippets/*.php', 'src/includes/*.php'],
         tasks: ['copy'],
       },
       scripts: {
