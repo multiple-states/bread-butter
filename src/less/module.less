@@ -37,11 +37,22 @@ header{
 	.make-xs-column(12);
 }
 
-.primary-menu{
-	.make-xs-column(12);
+.the-head svg{
+  float:left;
+  clear: both;
+  height: 10rem;
+  width:auto;
 }
-.primary-menu a{
-	font-size:1.6em;
+
+.the-head-title{
+  float:left;
+  clear: both;
+}
+
+/*  ---------------------------------------------------------  Page title */
+
+.page-title{
+  .make-xs-column(12);
 }
 
 /*  ---------------------------------------------------------  Index */
@@ -67,5 +78,5 @@ footer{
 /*  ---------------------------------------------------------  Fly out menu */
 @import "snippets/fly-out-menu.less";
 
-/*  ---------------------------------------------------------  Sticky menu */
-@import "snippets/sticky-menu.less";
+/*  ---------------------------------------------------------  Float menu */
+@import "snippets/float-menu.less";

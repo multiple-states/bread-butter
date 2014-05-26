@@ -4,7 +4,7 @@
     <div class="l-holder">
       <div class="l-inner">
 
-        <h1>HTML Elements</h1>
+        <h1 class="page-title">HTML Elements</h1>
         <?php
         $files = array();
         $handle=opendir('patterns');

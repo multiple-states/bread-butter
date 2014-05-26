@@ -1032,11 +1032,17 @@ html {
 body {
   font-size: 62.5%;
 }
-img {
+img,
+svg {
   display: block;
   /* This is to stop the default img behaviour being inline and therefore adding 2px below the image to allow for type descenders. */
   width: 100%;
   height: auto;
+}
+svg {
+  max-height: 100%;
+  /* This is to address a webkit bug on svg heights - https://bugs.webkit.org/show_bug.cgi?id=82489 */
+  max-width: 100%;
 }
 h1 {
   font-size: 2.2em;
@@ -1211,16 +1217,24 @@ header {
   padding-left: 15px;
   padding-right: 15px;
 }
-.primary-menu {
+.the-head svg {
+  float: left;
+  clear: both;
+  height: 10rem;
+  width: auto;
+}
+.the-head-title {
+  float: left;
+  clear: both;
+}
+/*  ---------------------------------------------------------  Page title */
+.page-title {
   position: relative;
   float: left;
   width: 100%;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-}
-.primary-menu a {
-  font-size: 1.6em;
 }
 /*  ---------------------------------------------------------  Index */
 .index-content {
@@ -1359,21 +1373,18 @@ footer {
 .m-first-nav ul li ul {
   display: none;
 }
-/*  ---------------------------------------------------------  Sticky menu */
+/*  ---------------------------------------------------------  Float menu */
 .first-nav {
   display: none;
 }
 @media (min-width: 768px) {
   /* First level navigation */
-  .l-first-nav-strip {
-    position: fixed;
-    left: 0;
-    z-index: 1200;
-    background: #c8c8c8;
-  }
   .first-nav {
     display: block;
-    width: 100%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .first-nav ul {
     display: block;
@@ -1410,6 +1421,12 @@ footer {
   }
   .first-nav ul li ul li a:hover {
     background: #f0f0f0;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .first-nav {
+    float: left;
+    width: 100%;
   }
 }
 /* States */

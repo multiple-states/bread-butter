@@ -51,10 +51,16 @@ body{
 	font-size:62.5%;
 }
 
-img{
+img,
+svg{
 	display:block; /* This is to stop the default img behaviour being inline and therefore adding 2px below the image to allow for type descenders. */
 	width:100%;
 	height:auto;
+}
+
+svg{
+  max-height: 100%; /* This is to address a webkit bug on svg heights - https://bugs.webkit.org/show_bug.cgi?id=82489 */
+  max-width: 100%;
 }
 
 h1{font-size:2.2em}

@@ -28,15 +28,16 @@
     <div class="l-page-holder page-holder">
     
     <?php include('snippets/menu-open-btn.php')?>
-    <?php include('snippets/sticky-menu.php')?>
     
     <div class="l-strip">
       <header>
         <div class="l-inner">
-          <div class="the-head"><p>Header</p></div>
-          <div class="primary-menu"><a href="<?php echo $site_url ?>">Index</a> | <a href="<?php echo $site_url ?>/pattern">The pattern</a></div>
+          <div class="the-head">
+            <a class="the-head-link" href="<?php echo $site_url ?>"><?php include ('images/logo.svg') ?></a>
+            <h1 class="the-head-title">Site Title</h1>
+          </div>
         </div>
       </header>
     </div>
-
-  
+    
+    <?php include('snippets/float-menu.php')?>
