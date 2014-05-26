@@ -33,7 +33,6 @@
       <header>
         <div class="l-inner">
           <div class="the-head"><p>Header</p></div>
-          <div class="primary-menu"><a href="<?php echo $site_url ?>">Index</a> | <a href="<?php echo $site_url ?>/pattern">The pattern</a></div>
         </div>
       </header>
     </div>
