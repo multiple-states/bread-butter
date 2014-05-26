@@ -1227,6 +1227,15 @@ header {
   float: left;
   clear: both;
 }
+/*  ---------------------------------------------------------  Page title */
+.page-title {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 /*  ---------------------------------------------------------  Index */
 .index-content {
   position: relative;
