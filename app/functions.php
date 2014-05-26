@@ -6,6 +6,6 @@
 
 //local
 
-$site_url="http://localhost:8888/php-starter-template/app"
+$site_url='http://localhost:8888/php-starter-template/app'
 
 ?>
