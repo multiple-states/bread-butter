@@ -1,6 +1,6 @@
 <ul>
   <li><a href="<?php echo $site_url ?>">Index</a></li>
-  <li><a href="<?php echo $site_url ?>/pattern">Pattern</a></li>
+  <li><a href="<?php echo $site_url ?>pattern">Pattern</a></li>
   <li>
     <a href="#">Menu item 3</a>
     <ul>
