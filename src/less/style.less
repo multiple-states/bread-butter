@@ -45,18 +45,33 @@
 
 /* -------------------------------------------------------------------*/
 
+/* Mixins */
+
+/* Setting font sizes with rem and px for <IE8- source: http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/ */
+.font-size(@sizeValue) {
+  @remValue: @sizeValue;
+  @pxValue: (@sizeValue * 14);
+  font-size: ~"@{pxValue}px"; 
+  font-size: ~"@{remValue}rem";
+}
+
+/* -------------------------------------------------------------------*/
+
 /* Base */
 
 html {
+  /* Set font base sizes - source: http://css-tricks.com/rems-ems/ */ 
+  font-size: 12px;
 	font-family: @body-font;
 	color: #000;
 	
 	background-color: #fff;
 }
 
-body {
-  font-size: 62.5%;
-}
+@media (min-width: @break-1){
+  /* setting font base sizes - source: http://css-tricks.com/rems-ems/ */
+  html { font-size: 14px; }
+} 
 
 img,
 svg {
@@ -70,12 +85,12 @@ svg {
   max-width: 100%;
 }
 
-h1 { font-size: 2.2em }
-h2 { font-size: 2em }
-h3 { font-size: 1.8em }
-h4 { font-size: 1.6em }
-h5 { font-size: 1.4em }
-h6 { font-size: 1.2em }
+h1 { .font-size(2.2) }
+h2 { .font-size(2) }
+h3 { .font-size(1.8) }
+h4 { .font-size(1.6) }
+h5 { .font-size(1.4) }
+h6 { .font-size(1.2) }
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
@@ -88,7 +103,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-	font-size: 1.6em;
+	.font-size(1.6);
 }
 
 ul {
@@ -104,7 +119,7 @@ a {
 .button {
 	padding: 0.2em 10px;
 	
-	font-size: 1.6em;
+	.font-size(1.6);
 	color: #fff;
 	text-decoration: none;
 	
