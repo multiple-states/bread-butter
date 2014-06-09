@@ -1025,7 +1025,7 @@ hr {
 /* -------------------------------------------------------------------*/
 /* Base */
 html {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Arial';
   color: #000;
   background-color: #fff;
 }
@@ -1035,7 +1035,7 @@ body {
 img,
 svg {
   display: block;
-  /* This is to stop the default img behaviour being inline and therefore adding 2px below the image to allow for type descenders. */
+  /* This is to stop the default img behaviour being inline and therefore adding 2px below the image for type descenders. */
   width: 100%;
   height: auto;
 }

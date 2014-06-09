@@ -22,27 +22,33 @@
 @break-3: @screen-lg-min;
 
 /* Verticle spacing */
-@base-pad: 60px;
-@base-mar: 60px;
+@v-space: 60px;
 
 /* Colours */
-@white: #fff;
-@base-clr: #000;
-@2-clr: #f0f0f0;
-@3-clr: #c8c8c8;
-@4-clr: #a0a0a0;
+@primary-dark: #000;
+@secondary-dark: #333;
+
+@primary-light: #fff;
+@secondary-light: #f0f0f0;
+
+@highlight-1: #c8c8c8;
+@highlight-2: #a0a0a0;
+@highlight-3: #999999;
 
 /* Fonts */
-@a-font: 'Arial';
-@b-font: 'Arial';
-@c-font: 'Arial';
+@body-font: 'Arial';
+@body-font-italic: 'Arial';
+@body-font-bold: 'Arial';
+
+@head-font: 'Arial';
+@head-font-bold: 'Arial';
 
 /* -------------------------------------------------------------------*/
 
 /* Base */
 
 html {
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: @body-font;
 	color: #000;
 	
 	background-color: #fff;
@@ -54,7 +60,7 @@ body {
 
 img,
 svg {
-	display: block; /* This is to stop the default img behaviour being inline and therefore adding 2px below the image to allow for type descenders. */
+	display: block; /* This is to stop the default img behaviour being inline and therefore adding 2px below the image for type descenders. */
 	width: 100%;
 	height: auto;
 }
