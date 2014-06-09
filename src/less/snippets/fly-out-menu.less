@@ -6,13 +6,10 @@
   position: relative;
   left: 0;
   min-width: 300px;
-  min-height: 100vh;
+  min-height: 100vh; /* Sole purpose for styling when there is NO page content. Remove for production */
   z-index: 500;
-  background: @white;
-}
-
-.page-holder.open {
-  left: 300px;
+  
+  background-color: @white;
 }
 
 @media (min-width: @break-1) {
@@ -21,15 +18,20 @@
   } 
 }
 
+.page-holder.open {
+  left: 300px;
+}
+
 .m-nav-holder {
-  height: 100%;
   display: block;
   position: absolute;
   width: 300px;
+  height: 100%;
   left: 0px;
   top: 0px;
   z-index: 0;
-  background: @2-clr;
+  
+  background-color: @2-clr;
 }
 @media (min-width: @break-1){
   .m-nav-holder {
@@ -42,7 +44,7 @@
 .m-menu-close {
   float: left;
   
-  background: #000;
+  background-color: #000;
 }
 
 .m-menu-close a {
@@ -68,6 +70,7 @@
 .m-first-nav ul li {
   width: 100%;
   float: left;
+  
   line-height: 30px;
 }
 
@@ -81,10 +84,12 @@
   
 .m-first-nav ul li a {
   display: block;
-  text-decoration: none;
-  border-bottom: none;
-  text-align: center;
   padding: 10px 0;
+  
+  text-align: center;
+  text-decoration: none;
+  
+  border-bottom: none;
 }
 
 .m-first-nav ul li ul {

@@ -1025,9 +1025,9 @@ hr {
 /* -------------------------------------------------------------------*/
 /* Base */
 html {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #000;
   background-color: #fff;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 body {
   font-size: 62.5%;
@@ -1098,21 +1098,21 @@ a {
   text-decoration: none;
 }
 .button {
-  transition: background-color 0.5s ease;
   padding: 0.2em 10px;
-  color: #fff;
-  background-color: #000;
   font-size: 1.6em;
+  color: #fff;
   text-decoration: none;
+  background-color: #000;
+  transition: background-color 0.5s ease;
 }
 .button:hover {
   background-color: #888;
 }
 .browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
   padding: 0.2em 0;
+  margin: 0.2em 0;
+  color: #000;
+  background-color: #ccc;
 }
 /* Layout */
 /* Layout */
@@ -1157,7 +1157,7 @@ a {
 /* Module */
 /* ---------------------------------------------------------  Wireframe styles - Remove for production*/
 .wireframe-label {
-  background: #f0f0f0;
+  background-color: #f0f0f0;
   text-align: center;
   padding: 8em 0;
 }
@@ -1282,15 +1282,15 @@ footer {
   left: 0;
   top: 0;
   z-index: 999;
+  padding: 5px 10px;
   font-size: 2em;
   text-transform: uppercase;
-  padding: 5px 10px;
-  background: #000000;
+  background-color: #000000;
 }
 .m-menu-open a {
   color: #fff;
-  border-bottom: none;
   letter-spacing: 0.1em;
+  border-bottom: none;
 }
 @media (min-width: 768px) {
   .m-menu-open {
@@ -1305,11 +1305,9 @@ footer {
   left: 0;
   min-width: 300px;
   min-height: 100vh;
+  /* Sole purpose for styling when there is NO page content. Remove for production */
   z-index: 500;
-  background: #ffffff;
-}
-.page-holder.open {
-  left: 300px;
+  background-color: #ffffff;
 }
 @media (min-width: 768px) {
   .page-holder {
@@ -1317,15 +1315,18 @@ footer {
     /* Set this to ensure the top of your content shows. */
   }
 }
+.page-holder.open {
+  left: 300px;
+}
 .m-nav-holder {
-  height: 100%;
   display: block;
   position: absolute;
   width: 300px;
+  height: 100%;
   left: 0px;
   top: 0px;
   z-index: 0;
-  background: #f0f0f0;
+  background-color: #f0f0f0;
 }
 @media (min-width: 768px) {
   .m-nav-holder {
@@ -1335,7 +1336,7 @@ footer {
 /* ------------------------------------------------------------------ Mobile first level nav */
 .m-menu-close {
   float: left;
-  background: #000;
+  background-color: #000;
 }
 .m-menu-close a {
   display: block;
@@ -1365,10 +1366,10 @@ footer {
 }
 .m-first-nav ul li a {
   display: block;
+  padding: 10px 0;
+  text-align: center;
   text-decoration: none;
   border-bottom: none;
-  text-align: center;
-  padding: 10px 0;
 }
 .m-first-nav ul li ul {
   display: none;
@@ -1378,7 +1379,6 @@ footer {
   display: none;
 }
 @media (min-width: 768px) {
-  /* First level navigation */
   .first-nav {
     display: block;
     position: relative;
@@ -1386,10 +1386,18 @@ footer {
     padding-left: 15px;
     padding-right: 15px;
   }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .first-nav {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
   .first-nav ul {
     display: block;
-    margin: 0;
     width: 100%;
+    margin: 0;
   }
   .first-nav ul li {
     float: left;
@@ -1397,10 +1405,10 @@ footer {
   .first-nav ul li a {
     display: block;
     padding: 10px 20px;
-    background: #c8c8c8;
+    background-color: #c8c8c8;
   }
   .first-nav ul li a:hover {
-    background: #f0f0f0;
+    background-color: #f0f0f0;
   }
   /* Drop down styles */
   .first-nav ul li ul {
@@ -1417,16 +1425,10 @@ footer {
     display: block;
   }
   .first-nav ul li ul li a {
-    background: #a0a0a0;
+    background-color: #a0a0a0;
   }
   .first-nav ul li ul li a:hover {
-    background: #f0f0f0;
-  }
-}
-@media (min-width: 768px) and (min-width: 768px) {
-  .first-nav {
-    float: left;
-    width: 100%;
+    background-color: #f0f0f0;
   }
 }
 /* States */
