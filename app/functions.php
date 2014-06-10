@@ -1,7 +1,8 @@
 <?php
 
   // A function to check an IP address and then set the site root variable to the relevant url
-  
+  // To get your IP create a test.php page and run: $host = gethostname(); $ip = gethostbyname($host); echo  $ip;
+
   // source: http://stackoverflow.com/a/7614272/1202344
   
   $host = gethostname();
@@ -14,8 +15,16 @@
     $site_url = "http://localhost/00-php-starter-template/app/";
     
   } 
-  
+
   // Test for the second contributers ip address
+  elseif ($ip == '192.168.20.179') 
+  {
+    // Then they can set their site root variable
+    $site_url = "http://localhost/php-starter-template/app/";
+    
+  } 
+  
+  // Test for the additional contributers ip address
   elseif ($ip == '192.168.0.4') 
   {
     // Then they can set their site root variable
