@@ -66,29 +66,50 @@
 <!-- Form Elements -->
 <div class="pattern">
   <div class="display">
-    <form>
-      <label><input type="checkbox"> Label text</label>
+    <form id="your-contact-form" action="" method="post">
+      <fieldset>
+      <legend>This is your Legend</legend>
+      <ol>
+        <li>
+          <label for=""><input type="checkbox" name="" id=""> Label text</label>
+        </li>
       
-      <label>Label text</label>
-      <input type="email">
+        <li>
+          <label for="">Label text</label>
+          <input type="email"  name="" id="">
+        </li>
 
-      <label>Label text</label>
-      <input type="number">
+        <li>
+          <label for="">Label text</label>
+          <input type="number"  name="" id="">
+        </li>
 
-      <select>
-      <option>option text</option>
-      </select>
+        <li>
+          <select>
+          <option>option text</option>
+          </select>
+        </li>
 
-      <label>Label text</label>
-      <input type="text">
+        <li>
+          <label for="">Label text</label>
+          <input type="text"  name="" id="">
+        </li>
 
-      <label>Label text</label>
-      <textarea rows="5" cols="20"></textarea>
+        <li>
+          <label for="">Label text</label>
+          <textarea rows="5" cols="20" name="" id=""></textarea>
+        </li>
 
-      <label>Label text</label>
-      <input type="url">
+        <li>
+          <label for="">Label text</label>
+          <input type="url"  name="" id="">
+        </li>
 
-      <input type="submit" value="Submit button">
+        <li>
+          <input type="submit" value="Submit button">
+        </li>
+      </ol>
+      </fieldset>
     </form>
   </div>
 </div>
