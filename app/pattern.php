@@ -11,6 +11,6 @@
 	</div>
 
   <!-- Modules should be included as seperate includes -->
-  <?php include('modules/module.html') ?>
+  <?php include('modules/module.php') ?>
 
 <?php include('footer.php') ?>
