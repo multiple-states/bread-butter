@@ -57,7 +57,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
     less: { // Configure the less task
       development: {
         options: {
-          paths: "src/less",
+          paths: ["src/less"],
         },
         files: {
           // target.css file: source.less file
