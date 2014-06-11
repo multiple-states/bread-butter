@@ -15,15 +15,6 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
         }]
       },
       
-      snippets: { // List your snippets here. This is what copies your selected snippets from the src folder to the app folder.
-        files: [{
-          expand: true,
-          cwd: 'src/snippets/',
-          src: ['menu-open-btn.php','fly-out-menu.php', 'float-menu.php'],
-          dest: 'app/snippets/'
-        }]
-      },
-      
       fontcopy:{ //This task will find the nessessary files in the webkit folder and move them to the app folder
         files: [
           {
@@ -44,7 +35,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
       },
       my_target: {
         files: {
-        'app/js/custom.min.js': ['src/js/custom.js', 'src/js/snippets/fly-out-menu.js'],
+        'app/js/custom.min.js': ['src/js/custom.js'],
         'app/js/modernizer.min.js': ['src/js/modernizer.js']
         }
       }
@@ -102,7 +93,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
     // Configure the watch task
     // You should adapt this to your specific needs on a per project basis
       snippets: {
-        files: ['src/snippets/*.php', 'src/includes/*.php'],
+        files: ['src/includes/*.php'],
         tasks: ['copy'],
       },
       scripts: {
@@ -119,7 +110,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
       },
       cssmin: {
         files: ['src/css/style.css'],
-        tasks: ['cssmin'],
+        tasks: ['cssmin:minify'],
       },
       livereload: {
         // Here we watch the files the css task will compile to
@@ -147,6 +138,6 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
     grunt.registerTask('fontload', ['copy:fontcopy', 'cssmin:fontmin'])
     
     // And register the default task. This can be run just by typing "grunt" on the command line. This should be done before production.
-    grunt.registerTask('default', ['copy', 'uglify', 'less', 'autoprefixer', 'cssmin']);
+    grunt.registerTask('default', ['copy:includes', 'uglify', 'less', 'autoprefixer', 'cssmin']);
     
 };
