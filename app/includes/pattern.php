@@ -7,12 +7,11 @@
     <h4>Heading h4</h4>
     <h5>Heading h5</h5>
     <h6>Heading h6</h6>
-    <p>Paragraph - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Paragraph - <em>officia deserunt</em> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquip ex <a href="#" title="">Ut enim ad minim</a> veniam,
+    quis nostrud exercitation ullamco laboris nisi ut ea commodo consequat. <strong>Duis aute irure dolor</strong> in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui mollit anim id est laborum.</p> 
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquip ex veniam, quis nostrud exercitation ullamco laboris nisi ut ea commodo
+    consequat. In reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui mollit anim id est laborum.</p>
     <ol>
     <li>First list item</li>
     <li>Second item in a list of ordered items</li>

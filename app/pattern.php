@@ -12,7 +12,6 @@ This helps testing for conflicts and allows for a quicker build.
   <div class="l-strip">
     <div class="l-holder">
       <div class="l-inner">
-        <h1 class="page-title">HTML Elements</h1>
         <?php include('includes/pattern.php') ?>
 			</div>
 		</div>
