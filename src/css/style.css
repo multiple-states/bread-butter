@@ -138,7 +138,6 @@ input {
 }
 input[type="checkbox"],
 input[type="radio"] {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
 }
@@ -149,6 +148,7 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 input[type="search"]::-webkit-search-cancel-button,
@@ -250,11 +250,13 @@ th {
   }
 }
 * {
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 *:before,
 *:after {
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -312,6 +314,7 @@ img {
   border: 1px solid #dddddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   display: inline-block;
   max-width: 100%;
@@ -1287,164 +1290,6 @@ footer {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-}
-/*  ---------------------------------------------------------  Primary navigation */
-/*  ---------------------------------------------------------  Mobile menu open button */
-.m-menu-open {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 999;
-  padding: 5px 10px;
-  font-size: 28px;
-  font-size: 2rem;
-  text-transform: uppercase;
-  background-color: #000000;
-}
-.m-menu-open a {
-  color: #fff;
-  letter-spacing: 0.1em;
-  border-bottom: none;
-}
-@media (min-width: 768px) {
-  .m-menu-open {
-    display: none;
-  }
-}
-/*  ---------------------------------------------------------  Fly out menu */
-/* Relies on: menu-open-btn */
-/* ------------------------------------------------------------------ Mobile slide out menu */
-.page-holder {
-  position: relative;
-  left: 0;
-  min-width: 300px;
-  min-height: 100vh;
-  /* Sole purpose for styling when there is NO page content. Remove for production */
-  z-index: 500;
-  background-color: #ffffff;
-}
-@media (min-width: 768px) {
-  .page-holder {
-    top: 3em;
-    /* Set this to ensure the top of your content shows. */
-  }
-}
-.page-holder.open {
-  left: 300px;
-}
-.m-nav-holder {
-  display: block;
-  position: absolute;
-  width: 300px;
-  height: 100%;
-  left: 0px;
-  top: 0px;
-  z-index: 0;
-  background-color: #f0f0f0;
-}
-@media (min-width: 768px) {
-  .m-nav-holder {
-    display: none;
-  }
-}
-/* ------------------------------------------------------------------ Mobile first level nav */
-.m-menu-close {
-  float: left;
-  background-color: #000;
-}
-.m-menu-close a {
-  display: block;
-  padding: 1rem;
-  color: #ffffff;
-  text-decoration: none;
-  cursor: pointer;
-}
-.m-first-nav {
-  width: 100%;
-}
-.m-first-nav ul {
-  display: inline-block;
-  float: left;
-  width: 100%;
-}
-.m-first-nav ul li {
-  width: 100%;
-  float: left;
-  line-height: 30px;
-}
-.m-first-nav > ul > li {
-  background: #c8c8c8;
-}
-.m-first-nav > ul > li:nth-child(even) {
-  background: #f0f0f0;
-}
-.m-first-nav ul li a {
-  display: block;
-  padding: 10px 0;
-  text-align: center;
-  text-decoration: none;
-  border-bottom: none;
-}
-.m-first-nav ul li ul {
-  display: none;
-}
-/*  ---------------------------------------------------------  Float menu */
-.first-nav {
-  display: none;
-}
-@media (min-width: 768px) {
-  .first-nav {
-    display: block;
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-@media (min-width: 768px) and (min-width: 768px) {
-  .first-nav {
-    float: left;
-    width: 100%;
-  }
-}
-@media (min-width: 768px) {
-  .first-nav ul {
-    display: block;
-    width: 100%;
-    margin: 0;
-  }
-  .first-nav ul li {
-    float: left;
-  }
-  .first-nav ul li a {
-    display: block;
-    padding: 10px 20px;
-    background-color: #c8c8c8;
-  }
-  .first-nav ul li a:hover {
-    background-color: #f0f0f0;
-  }
-  /* Drop down styles */
-  .first-nav ul li ul {
-    display: none;
-    position: absolute;
-    width: auto;
-    z-index: 1200;
-  }
-  .first-nav ul li ul > li {
-    float: left;
-    clear: both;
-    width: 100%;
-  }
-  .first-nav ul li:hover > ul {
-    display: block;
-  }
-  .first-nav ul li ul li a {
-    background-color: #a0a0a0;
-  }
-  .first-nav ul li ul li a:hover {
-    background-color: #f0f0f0;
-  }
 }
 /* States */
 /* Theme */

@@ -1,4 +1,30 @@
-/* Relies on: menu-open-btn */
+/* ------------------------------------------------------------------ The open button */
+
+.m-menu-open {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  padding: 5px 10px;
+  
+  .font-size(2);
+  text-transform: uppercase;
+  
+  background-color: @primary-dark;
+}
+
+.m-menu-open a {
+  color: #fff;
+  letter-spacing: 0.1em;
+  
+  border-bottom: none;
+}
+
+@media (min-width: @break-1) {
+  .m-menu-open {
+    display: none;
+  }
+}
 
 /* ------------------------------------------------------------------ Mobile slide out menu */
 

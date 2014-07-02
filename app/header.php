@@ -10,7 +10,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <?php include('functions.php')?>
+  <?php include('functions.php') ?>
   
   <meta name="mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" sizes="196x196" href="<?php echo $site_url ?>/your-icon.png">
@@ -27,8 +27,6 @@
     
     <div class="l-page-holder page-holder">
     
-    <?php include('snippets/menu-open-btn.php')?>
-    
     <div class="l-strip">
       <header>
         <div class="l-inner">
@@ -39,5 +37,3 @@
         </div>
       </header>
     </div>
-    
-    <?php include('snippets/float-menu.php')?>
