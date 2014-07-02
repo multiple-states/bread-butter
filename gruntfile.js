@@ -4,18 +4,18 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
     pkg: grunt.file.readJSON('package.json'), // Read project settings from package.json
     
     copy: {
-      includes: { 
-      // This is what copies the includes from the src folder to the app folder. 
-      //At the moment this adds all includes from the src folder however you should list your include files below if you don't need all of them.
-        files: [{
-          expand: true,
-          cwd: 'src/includes/',
-          src: ['*.php'],
-          dest: 'app/includes/'
-        }]
+      snippets: { 
+      // This copies snippets from the src/snippets folder to the app/modules folder. 
+      // All snippets are added you just need to uncomment the ones you have included in your markup
+        files: {
+          // 'app/modules/menu-d-float.php': ['src/snippets/menu-d-float.php'],
+          // 'app/modules/menu-d-sticky.php': ['src/snippets/menu-d-sticky.php'],
+          // 'app/modules/menu-m-flyout.php': ['src/snippets/menu-m-flyout.php'],
+        }
       },
       
-      fontcopy:{ //This task will find the nessessary files in the webkit folder and move them to the app folder
+      fontcopy:{ 
+      //This task will find the relevant font files in the font folder and move them to the app folder.
         files: [
           {
             expand: true,
@@ -93,8 +93,8 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
     // Configure the watch task
     // You should adapt this to your specific needs on a per project basis
       snippets: {
-        files: ['src/includes/*.php'],
-        tasks: ['copy'],
+        files: ['src/snippets/*.php'],
+        tasks: ['copy:snippets'],
       },
       scripts: {
         files: ['<%= jshint.files %>'],
@@ -138,6 +138,6 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
     grunt.registerTask('fontload', ['copy:fontcopy', 'cssmin:fontmin'])
     
     // And register the default task. This can be run just by typing "grunt" on the command line. This should be done before production.
-    grunt.registerTask('default', ['copy:includes', 'uglify', 'less', 'autoprefixer', 'cssmin']);
+    grunt.registerTask('default', ['copy:snippets', 'uglify', 'less', 'autoprefixer', 'cssmin']);
     
 };

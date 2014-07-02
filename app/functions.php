@@ -33,10 +33,10 @@
   } 
   
   // Test for the additional contributers ip address ( Will Home )
-  elseif ($ip == '192.168.0.4') 
+  elseif ($ip == '192.168.0.3') 
   {
     // Then they can set their site root variable
-    $site_url = "http://localhost:8888/php-starter-template/app/";
+    $site_url = "http://localhost/php-starter-template/app/";
   
   } 
   
