@@ -11,6 +11,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
           // 'app/modules/menu-d-float.php': ['src/snippets/menu-d-float.php'],
           // 'app/modules/menu-d-sticky.php': ['src/snippets/menu-d-sticky.php'],
           // 'app/modules/menu-m-flyout.php': ['src/snippets/menu-m-flyout.php'],
+          // 'app/modules/holding-page-head.php': ['src/snippets/holding-page-head.php'],
         }
       },
       
