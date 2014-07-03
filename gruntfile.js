@@ -34,8 +34,8 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
       base: {
         options: {
           mangle: false,
-          // the banner is inserted at the top of the output
-          banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+          // If you want to add banners to your minified css uncomment the below. This currently is commented out in order to clean up commits in development.
+          // banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
         },
         files: {
         'app/js/custom.min.js': ['src/js/custom.js'],
@@ -47,8 +47,8 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
       snippets: {
         options: {
           mangle: false,
-          // the banner is inserted at the top of the output
-          banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+          // If you want to add banners to your minified css uncomment the below. This currently is commented out in order to clean up commits in development.
+          // banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
         },
         files: {
         // 'app/js/google-map.min.js': ['src/snippets/google-map.js'],
@@ -94,7 +94,8 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
     cssmin: { // Now we can minify the auto-prefixed version of the code
       minify: {
         options: {
-          banner: '/* <%= pkg.name %>.css minified <%= grunt.template.today("dd-mm-yyyy") %> */' // Give it a nice banner
+          // If you want to add banners to your minified css uncomment the below. This currently is commented out in order to clean up commits in development.
+          // banner: '/* <%= pkg.name %>.css minified <%= grunt.template.today("dd-mm-yyyy") %> */' // Give it a nice banner
         },
         files: {
           'app/css/style.min.css': ['src/css/style.css']
