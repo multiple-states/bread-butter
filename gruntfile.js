@@ -64,7 +64,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
 
       //The snippets
       // All snippets are listed below you just need to uncomment the ones you have included in order to have them tested when running "grunt test"
-      
+
       //'src/snippets/google-map.js',
       ] 
     },
@@ -157,6 +157,9 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
     
     // Register a test task for jshint. This can be run just by typing "grunt test" on the command line
     grunt.registerTask('test', ['jshint'])
+
+    //Register a task for setting the snippets the first time
+    grunt.registerTask('snippetload', ['copy:snippets', 'uglify:snippets'])
     
     //Register a task for setting up the webkit fonts when picking up the project
     grunt.registerTask('fontload', ['copy:fontcopy', 'cssmin:fontmin'])
