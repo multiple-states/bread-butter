@@ -47,13 +47,7 @@
 
 /* Mixins */
 
-/* Setting font sizes with rem and px for <IE8- source: http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/ */
-.font-size(@sizeValue) {
-  @remValue: @sizeValue;
-  @pxValue: (@sizeValue * 14);
-  font-size: ~"@{pxValue}px"; 
-  font-size: ~"@{remValue}rem";
-}
+@import "mixins/rem-units.less";
 
 /* -------------------------------------------------------------------*/
 
