@@ -8,32 +8,16 @@
   $host = gethostname();
   $ip = gethostbyname($host);
   
-  // Test for the first contributers ip address ( Kevin Home )
-  if ($ip == '192.168.1.32') 
-  {
-    // Then they can set their site root variable
-    $site_url = "http://localhost/php-starter-template/app/";
-    
-  } 
-
-  // Test for the second contributers ip address ( Kevin PW )
-  elseif ($ip == '192.168.20.179') 
-  {
-    // Then they can set their site root variable
-    $site_url = "http://localhost/php-starter-template/app/";
-    
-  } 
-
-  // Test for the second contributers ip address ( Kevin Office )
-  elseif ($ip == '192.168.1.38') 
+  // Test for the first contributers possible ip address ( KB )
+  if ( $ip == '192.168.1.32' || $ip == '192.168.20.179' || $ip == '192.168.1.38' ) 
   {
     // Then they can set their site root variable
     $site_url = "http://localhost/php-starter-template/app/";
     
   } 
   
-  // Test for the additional contributers ip address ( Will Home )
-  elseif ($ip == '192.168.0.3') 
+  // Test for the second contributers possible ip addresses ( WM )
+  elseif ( $ip == '192.168.0.2' || $ip == '192.168.0.3' || $ip == '192.168.0.4' || $ip == '192.168.0.6' || $ip == '192.168.0.7' ) 
   {
     // Then they can set their site root variable
     $site_url = "http://localhost/php-starter-template/app/";
