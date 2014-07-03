@@ -4,7 +4,10 @@
 
   <head>
   <meta charset="UTF-8">
+
+  <!--The below makes sure the latest version of IE is used in versions of IE that contain multiple rendering engines but it break w3c validation. If you don't want to break validation then add it to your .htaccess file. src - https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/html.md -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
   <title><?php echo $page_title ?></title>
   
   <meta name="description" content="">
