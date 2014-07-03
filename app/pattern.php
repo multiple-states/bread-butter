@@ -6,7 +6,12 @@ This helps testing for conflicts and allows for a quicker build.
 
 -->
 
-<?php include('header.php') ?>
+<?php 
+  // Set the name of the current page before including the header
+  $page_title = 'Home';
+  // Include the header
+  include('header.php') 
+?>
 
   <!-- Pattern's included to save space -->
   <div class="l-strip">
