@@ -13,35 +13,27 @@
   background-color: @primary-dark;
 }
 
-.m-menu-open a {
-  color: #fff;
-  letter-spacing: 0.1em;
-  
-  border-bottom: none;
-}
-
 @media (min-width: @break-1) {
   .m-menu-open {
     display: none;
   }
 }
 
+.m-menu-open a {
+  color: @primary-light;
+  
+  border-bottom: none;
+}
+
+
 /* ------------------------------------------------------------------ Mobile slide out menu */
 
 .page-holder {
   position: relative;
   left: 0;
-  min-width: 300px;
-  min-height: 100vh; /* Sole purpose for styling when there is NO page content. Remove for production */
   z-index: 500;
   
   background-color: @primary-light;
-}
-
-@media (min-width: @break-1) {
-  .page-holder {
-    top: 3em; /* Set this to ensure the top of your content shows. */
-  } 
 }
 
 .page-holder.open {
@@ -52,13 +44,11 @@
   display: block;
   position: absolute;
   width: 300px;
-  height: 100%;
   left: 0px;
   top: 0px;
   z-index: 0;
-  
-  background-color: @secondary-light;
 }
+
 @media (min-width: @break-1){
   .m-nav-holder {
     display: none;
@@ -70,12 +60,12 @@
 .m-menu-close {
   float: left;
   
-  background-color: #000;
+  background-color: @primary-dark;
 }
 
 .m-menu-close a {
   display: block;
-  padding: 1rem;
+  .padding( 1 );
   
   color: @primary-light;
   text-decoration: none;
@@ -96,8 +86,6 @@
 .m-first-nav ul li {
   width: 100%;
   float: left;
-  
-  line-height: 30px;
 }
 
 .m-first-nav>ul>li {
@@ -110,12 +98,11 @@
   
 .m-first-nav ul li a {
   display: block;
-  padding: 10px 0;
+  .pad-top( 1 );
+  .pad-bottom( 1 );
   
   text-align: center;
   text-decoration: none;
-  
-  border-bottom: none;
 }
 
 .m-first-nav ul li ul {
