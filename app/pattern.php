@@ -22,7 +22,17 @@ This helps testing for conflicts and allows for a quicker build.
 		</div>
 	</div>
 
-  <!-- Modules should be included as seperate includes with their own strip and holder -->
-  <?php include('modules/module.php') ?>
+  <div class="modules">
+    <!-- Modules should be included with their variable defined as documented in the modules section of the wiki -->
+    
+    <?php 
+      $postTitle = 'Post Title';
+      $postImg = $site_url . 'images/dummy.jpg';
+      $postContent = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.';
+      $postLink = $site_url;
+      include('modules/post-preview.php') 
+    ?>
+
+  </div> <!-- END modules -->
 
 <?php include('footer.php') ?>

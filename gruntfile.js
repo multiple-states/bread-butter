@@ -15,6 +15,12 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
           // 'app/modules/google-map.php': ['src/snippets/google-map.php'],
         }
       },
+
+      modules: {
+        files: {
+          'app/modules/post-preview.php': ['src/modules/post-preview.php']
+        }
+      },
       
       fontcopy:{ 
       //This task will find the relevant font files in the font folder and move them to the app folder.
@@ -121,6 +127,10 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
         files: ['src/snippets/*.php'],
         tasks: ['copy:snippets'],
       },
+      modules: {
+        files: ['src/modules/*.php'],
+        tasks: ['copy:modules'],
+      },
       scripts: {
         files: ['<%= jshint.files %>'],
         tasks: ['jshint'],
@@ -161,11 +171,14 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
 
     //Register a task for setting the snippets the first time
     grunt.registerTask('snippetload', ['copy:snippets', 'uglify:snippets'])
+
+    //Register a task for setting the snippets the first time
+    grunt.registerTask('moduleload', ['copy:modules'])
     
     //Register a task for setting up the webkit fonts when picking up the project
     grunt.registerTask('fontload', ['copy:fontcopy', 'cssmin:fontmin'])
     
     // And register the default task. This can be run just by typing "grunt" on the command line. This should be done before production.
-    grunt.registerTask('default', ['copy:snippets', 'uglify', 'less', 'autoprefixer', 'cssmin']);
+    grunt.registerTask('default', ['copy:snippets', 'copy:modules', 'uglify', 'less', 'autoprefixer', 'cssmin']);
     
 };

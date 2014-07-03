@@ -18,19 +18,17 @@
 
 .pattern {
   .make-xs-column(12);
-  clear: both;
-  overflow: hidden;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  .pad-bottom( @v-space );
+  .mar-bottom( @v-space );
   
   border-bottom: 2px solid #000;
 }
 
-.pattern-module {
-  .make-row();
-  .source {
-    .make-xs-column(12);
-  }
+.modules .l-inner {
+  .pad-bottom( @v-space );
+  .mar-bottom( @v-space );
+  
+  border-bottom: 2px solid #000;
 }
 
 
