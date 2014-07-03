@@ -6,7 +6,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
     copy: {
       snippets: { 
       // This copies snippets from the src/snippets folder to the app/modules folder. 
-      // All snippets are added you just need to uncomment the ones you have included in your markup
+      // All snippets are added you just need to uncomment the ones you have included in your markup.
         files: {
           // 'app/modules/menu-d-float.php': ['src/snippets/menu-d-float.php'],
           // 'app/modules/menu-d-sticky.php': ['src/snippets/menu-d-sticky.php'],
@@ -30,21 +30,43 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
     },
     
     uglify: {
-      options: {
-        mangle: false,
-        // the banner is inserted at the top of the output
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
-      },
-      my_target: {
+      // The base uglify task
+      base: {
+        options: {
+          mangle: false,
+          // the banner is inserted at the top of the output
+          banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+        },
         files: {
         'app/js/custom.min.js': ['src/js/custom.js'],
         'app/js/modernizer.min.js': ['src/js/modernizer.js']
         }
+      },
+      // The snippets uglify task for snippets with js files.
+      // All snippets are added you just need to uncomment the ones you have included in your markup.
+      snippets: {
+        options: {
+          mangle: false,
+          // the banner is inserted at the top of the output
+          banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+        },
+        files: {
+        // 'app/js/google-map.min.js': ['src/snippets/google-map.js'],
+        }
       }
+
     },
     
     jshint: {
-      files: ['src/js/custom.js'] // Just watch the src js file not the minified one
+      // The jshint task. 
+      files: [
+      'src/js/custom.js', // Just watch the src js file not the minified one
+
+      //The snippets
+      // All snippets are listed below you just need to uncomment the ones you have included in order to have them tested when running "grunt test"
+      
+      //'src/snippets/google-map.js',
+      ] 
     },
     
     less: { // Configure the less task
