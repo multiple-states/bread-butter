@@ -1052,29 +1052,41 @@ svg {
   /* This is to address a webkit bug on svg heights - https: //bugs.webkit.org/show_bug.cgi?id=82489 */
   max-width: 100%;
 }
-h1 {
+h1,
+.h1 {
   font-size: 30.800000000000004px;
   font-size: 2.2rem;
+  line-height: 1.4;
 }
-h2 {
+h2,
+.h2 {
   font-size: 28px;
   font-size: 2rem;
+  line-height: 1.4;
 }
-h3 {
+h3,
+.h3 {
   font-size: 25.2px;
   font-size: 1.8rem;
+  line-height: 1.4;
 }
-h4 {
+h4,
+.h4 {
   font-size: 22.400000000000002px;
   font-size: 1.6rem;
+  line-height: 1.4;
 }
-h5 {
+h5,
+.h5 {
   font-size: 19.599999999999998px;
   font-size: 1.4rem;
+  line-height: 1.4;
 }
-h6 {
+h6,
+.h6 {
   font-size: 16.8px;
   font-size: 1.2rem;
+  line-height: 1.4;
 }
 h1,
 h2,
