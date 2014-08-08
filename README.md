@@ -2,7 +2,7 @@ Bread and butter
 ====================
 Version 0.9.0 (Beta)
 
-When you make a sandwich you don't make the bread, you just add the flavour! A starter templates for website builds maintained by Multiple States. 
+When you make a sandwich you don't make the bread, you just add the flavour! A starter template for website builds. Bread and Butter is maintained by Multiple States. 
 
 General description:
 This starter template is a good place to start for building the type of sites we generally build. It simplifies the setup of a site by including the bare minimum we begin with. Namely it has a custom inclusion of bootstrap for a grid framework and a simple grunt build setup. It also includes snippets for reuseable elements we use in many sites, ie. menus.
