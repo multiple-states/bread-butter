@@ -18,16 +18,22 @@
 </div><!-- end m-nav-holder -->
 
 <script>
+  
+  // Open and close the flyout menu
   $(".m-menu-open a, .m-menu-close a").click(function(){
     $(".page-holder").toggleClass("open", 500, "easeInOutQuart");
 
   });
 
-  $( ".m-first-nav a" ).click( function(){
-    $(".page-holder").removeClass("open", 500, "easeInOutQuart");
+  // When a link is clicked close the flyout menu before navigating to the new page
+  $('.m-primary-menu a').click(function(event) {
+      event.preventDefault();
+      var href = this.href;
+
+      $(".page-holder").removeClass("open", 500,  "easeInOutQuart",
+      function() {
+          window.location = href;
+      });
   });
   
-  $(window).resize(function(){
-    $(".page-holder").removeClass("open", 500, "easeInOutQuart");
-  });
 </script>
