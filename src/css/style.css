@@ -1041,6 +1041,10 @@ svg {
   width: 100%;
   height: auto;
 }
+.inline-img {
+  display: inline;
+  width: auto;
+}
 svg {
   max-height: 100%;
   /* This is to address a webkit bug on svg heights - https: //bugs.webkit.org/show_bug.cgi?id=82489 */
