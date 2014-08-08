@@ -1,13 +1,13 @@
-php-starter-template
+Bread and butter
 ====================
-Version 3.0
+Version 0.9.0 (Beta)
 
-A php starter template maintained by Will McLean - willmcl@gmail.com
+When you make a sandwich you don't make the bread, you just add the flavour! A starter templates for website builds maintained by Multiple States. 
 
 General description:
-This starter template is a good place to start for building the type of sites I generally build. It simplifies the setup of a site by including the bare minimum I begin with. Namely it has a custom inclusion of bootstrap for a grid framework and a simple grunt build setup. It also includes snippets for reuseable elements I use in many sites, ie. menus.
+This starter template is a good place to start for building the type of sites we generally build. It simplifies the setup of a site by including the bare minimum we begin with. Namely it has a custom inclusion of bootstrap for a grid framework and a simple grunt build setup. It also includes snippets for reuseable elements we use in many sites, ie. menus.
 
-More detailed information can be found in the project wiki on github: https://github.com/willmcl/php-starter-template/wiki
+More detailed information can be found in the project wiki on github: https://github.com/willmcl/bread-butter/wiki
 
 Below is a default readme format for your project
 -------------------------------------------------
@@ -27,10 +27,10 @@ Description. They are great.
 
 Team
 --------------
-Design: Eric Gill (eric@multiplestates.co.uk)
-Development: Mark Zuckerburg (mark@multiplestates.co.uk)
-PM: David Cameron (david@multiplestates.co.uk)
-Client Contact: Mark Parker (mark@nike.com)
+Design: Eric Gill (eric@multiplestates.co.uk)  
+Development: Mark Zuckerburg (mark@multiplestates.co.uk)  
+PM: David Cameron (david@multiplestates.co.uk)  
+Client Contact: Mark Parker (mark@nike.com)  
 
 Development Notes
 --------------
