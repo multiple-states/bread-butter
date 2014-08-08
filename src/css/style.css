@@ -1034,12 +1034,6 @@ html {
   color: #000;
   background-color: #fff;
 }
-@media (min-width: 768px) {
-  /* setting font base sizes - source: http://css-tricks.com/rems-ems/ */
-  html {
-    font-size: 62.5%;
-  }
-}
 img,
 svg {
   display: block;
@@ -1054,37 +1048,37 @@ svg {
 }
 h1,
 .h1 {
-  font-size: 30.800000000000004px;
+  font-size: 22px;
   font-size: 2.2rem;
   line-height: 1.4;
 }
 h2,
 .h2 {
-  font-size: 28px;
+  font-size: 20px;
   font-size: 2rem;
   line-height: 1.4;
 }
 h3,
 .h3 {
-  font-size: 25.2px;
+  font-size: 18px;
   font-size: 1.8rem;
   line-height: 1.4;
 }
 h4,
 .h4 {
-  font-size: 22.400000000000002px;
+  font-size: 16px;
   font-size: 1.6rem;
   line-height: 1.4;
 }
 h5,
 .h5 {
-  font-size: 19.599999999999998px;
+  font-size: 14px;
   font-size: 1.4rem;
   line-height: 1.4;
 }
 h6,
 .h6 {
-  font-size: 16.8px;
+  font-size: 12px;
   font-size: 1.2rem;
   line-height: 1.4;
 }
@@ -1113,7 +1107,7 @@ h6 a:hover {
   text-decoration: none;
 }
 p {
-  font-size: 22.400000000000002px;
+  font-size: 16px;
   font-size: 1.6rem;
 }
 ul {
@@ -1126,7 +1120,7 @@ a {
 }
 .button {
   padding: 0.2em 10px;
-  font-size: 22.400000000000002px;
+  font-size: 16px;
   font-size: 1.6rem;
   color: #fff;
   text-decoration: none;
@@ -1230,16 +1224,16 @@ sub {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  padding-bottom: 28px;
+  padding-bottom: 20px;
   padding-bottom: 2rem;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
   margin-bottom: 2rem;
   border-bottom: 2px solid #000;
 }
 .modules .l-inner {
-  padding-bottom: 28px;
+  padding-bottom: 20px;
   padding-bottom: 2rem;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
   margin-bottom: 2rem;
   border-bottom: 2px solid #000;
 }
