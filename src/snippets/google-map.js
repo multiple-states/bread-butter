@@ -3,9 +3,14 @@
   function initialize() {
     // You need to set your latitude and  longitude here
     var myLatlng = new google.maps.LatLng(51.497951, -0.144491);
+    
+    var isDraggable = $(document).width() > 480 ? true : false; // If document is wider than 480px, isDraggable = true, else isDraggable = false SRC - https://coderwall.com/p/pgm8xa
+
     var mapOptions = {
       zoom: 16,
-      center: myLatlng
+      center: myLatlng,
+      draggable: isDraggable,
+      scrollwheel: false
     };
 
     // Insert the map into the div with the id contact-map
