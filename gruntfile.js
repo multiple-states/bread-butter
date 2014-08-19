@@ -8,6 +8,19 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
     path: 'app',
 
     copy: {
+
+      pages: {
+        // This copies the pages from the src/pages folder to the app folder
+        files: [
+          {
+            expand: true,
+            cwd: 'src/pages/',
+            src: ['*.php', '*.html', '.htaccess'],
+            dest: '<%= path %>/'
+          }
+        ]
+      },
+
       snippets: { 
       // This copies snippets from the src/snippets folder to the app/modules folder. 
       // All snippets are added you just need to uncomment the ones you have included in your markup.
@@ -21,7 +34,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
       },
 
       modules: {
-        // This copies the modules from the src folder to the app folder
+        // This copies the modules from the src/modules folder to the app/modules folder
         files: [
           {
             expand: true,
@@ -33,7 +46,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
       },
 
       includes: {
-        // This copies the includes from the src folder to the app folder
+        // This copies the includes from the src/includes folder to the app/includes folder
         files: [
           {
             expand: true,
@@ -44,20 +57,8 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
         ]
       },
 
-      pages: {
-        // This copies the includes from the src folder to the app folder
-        files: [
-          {
-            expand: true,
-            cwd: 'src/pages/',
-            src: ['*.php', '*.html', '.htaccess'],
-            dest: '<%= path %>/'
-          }
-        ]
-      },
-
       images: {
-        // This copies the includes from the src folder to the app folder
+        // This copies the includes from the src/images folder to the app/images folder
         files: [
           {
             expand: true,
@@ -69,7 +70,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
       },
       
       fontcopy:{ 
-      //This task will find the relevant font files in the font folder and move them to the app folder.
+      //This task will find the relevant font files in the src/fonts folder and move them to the app/fonts folder.
         files: [
           {
             expand: true,
@@ -169,6 +170,10 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
     watch: { 
     // Configure the watch task
     // You should adapt this to your specific needs on a per project basis
+      pages: {
+        files: ['src/pages/*.php'],
+        tasks: ['copy:pages'],
+      },
       snippets: {
         files: ['src/snippets/*.php'],
         tasks: ['copy:snippets'],
@@ -176,6 +181,14 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
       modules: {
         files: ['src/modules/*.php'],
         tasks: ['copy:modules'],
+      },
+      includes: {
+        files: ['src/includes/*.php'],
+        tasks: ['copy:includes'],
+      },
+      images: {
+        files: ['src/images/*'],
+        tasks: ['copy:images'],
       },
       scripts: {
         files: ['<%= jshint.files %>'],
