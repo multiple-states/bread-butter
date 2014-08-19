@@ -158,7 +158,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
           {
             expand: true,
             cwd: 'src/fonts/',
-            src: ['**/*/stylesheet.css', 'font-awesome/css/font-awesome.css'],
+            src: ['**/*/stylesheet.css'],
             dest: '<%= path %>/fonts/',
             ext: '.min.css'
           }
