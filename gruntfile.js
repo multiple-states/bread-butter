@@ -3,6 +3,10 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
   grunt.initConfig({ // Initialize our configuration object
     pkg: grunt.file.readJSON('package.json'), // Read project settings from package.json
     
+    //Set a path for the app folder.
+    // The benifit of doing this is that when it comes time to start plugging in a cms we can just alter this to point to a new folder, for example the wordpress theme folder.
+    path: 'app',
+
     copy: {
       snippets: { 
       // This copies snippets from the src/snippets folder to the app/modules folder. 
