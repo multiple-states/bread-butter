@@ -230,14 +230,11 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
 
     //Register a task for setting the snippets the first time
     grunt.registerTask('snippetload', ['copy:snippets', 'uglify:snippets'])
-
-    //Register a task for setting the snippets the first time
-    grunt.registerTask('moduleload', ['copy:modules'])
     
     //Register a task for setting up the webkit fonts when picking up the project
     grunt.registerTask('fontload', ['copy:fontcopy', 'cssmin:fontmin'])
     
     // And register the default task. This can be run just by typing "grunt" on the command line. This should be done before production.
-    grunt.registerTask('default', ['copy:snippets', 'copy:modules', 'uglify', 'less', 'autoprefixer', 'cssmin']);
+    grunt.registerTask('default', ['copy:pages', 'copy:snippets', 'copy:modules', 'copy:includes', 'copy:images', 'uglify', 'less', 'autoprefixer', 'cssmin']);
     
 };
