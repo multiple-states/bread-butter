@@ -10,7 +10,7 @@ This helps testing for conflicts and allows for a quicker build.
   // Set the name of the current page before including the header
   $page_title = 'Home';
   // Include the header
-  include('header.php') 
+  include('includes/header.php') 
 ?>
 
   <!-- Pattern's included to save space -->
@@ -35,4 +35,4 @@ This helps testing for conflicts and allows for a quicker build.
 
   </div> <!-- END modules -->
 
-<?php include('footer.php') ?>
+<?php include('includes/footer.php') ?>

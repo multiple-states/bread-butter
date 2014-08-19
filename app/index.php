@@ -2,7 +2,7 @@
   // Set the name of the current page before including the header
   $page_title = 'Home';
   // Include the header
-  include('header.php') 
+  include('includes/header.php') 
 ?>
 
   <div class="l-strip">
@@ -13,4 +13,4 @@
     </div>
   </div>
 
-<?php include('footer.php') ?>
+<?php include('includes/footer.php') ?>

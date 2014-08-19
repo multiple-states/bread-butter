@@ -19,7 +19,7 @@
   <link rel="shortcut icon" sizes="196x196" href="<?php echo $site_url ?>/your-icon.png">
   <link rel="apple-touch-icon" sizes="196x196" href="<?php echo $site_url ?>/your-icon.png">
   
-  <link rel="stylesheet" href="<?php echo $site_url ?>/css/style.min.css" >
+  <link rel="stylesheet" href="<?php echo $site_url ?>/style.min.css" >
 
   </head>
   <body>
