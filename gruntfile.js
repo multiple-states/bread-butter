@@ -21,9 +21,15 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
       },
 
       modules: {
-        files: {
-          '<%= path %>/modules/post-preview.php': ['src/modules/post-preview.php']
-        }
+        // This copies the modules from the src folder to the app folder
+        files: [
+          {
+            expand: true,
+            cwd: 'src/modules/',
+            src: ['*.php'],
+            dest: '<%= path %>/modules/'
+          }
+        ]
       },
       
       fontcopy:{ 
