@@ -12,17 +12,17 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
       // This copies snippets from the src/snippets folder to the app/modules folder. 
       // All snippets are added you just need to uncomment the ones you have included in your markup.
         files: {
-          // 'app/modules/menu-d-float.php': ['src/snippets/menu-d-float.php'],
-          // 'app/modules/menu-d-sticky.php': ['src/snippets/menu-d-sticky.php'],
-          // 'app/modules/menu-m-flyout.php': ['src/snippets/menu-m-flyout.php'],
-          // 'app/modules/holding-page-head.php': ['src/snippets/holding-page-head.php'],
-          // 'app/modules/google-map.php': ['src/snippets/google-map.php'],
+          // '<%= path %>/modules/menu-d-float.php': ['src/snippets/menu-d-float.php'],
+          // '<%= path %>/modules/menu-d-sticky.php': ['src/snippets/menu-d-sticky.php'],
+          // '<%= path %>/modules/menu-m-flyout.php': ['src/snippets/menu-m-flyout.php'],
+          // '<%= path %>/modules/holding-page-head.php': ['src/snippets/holding-page-head.php'],
+          // '<%= path %>/modules/google-map.php': ['src/snippets/google-map.php'],
         }
       },
 
       modules: {
         files: {
-          'app/modules/post-preview.php': ['src/modules/post-preview.php']
+          '<%= path %>/modules/post-preview.php': ['src/modules/post-preview.php']
         }
       },
       
@@ -33,7 +33,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
             expand: true,
             cwd: 'src/fonts/',
             src: ['**/*.eot', '**/*.svg', '**/*.ttf', '**/*.woff'],
-            dest: 'app/fonts/'
+            dest: '<%= path %>/fonts/'
           }
         ]
       }
@@ -48,8 +48,8 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
           // banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
         },
         files: {
-        'app/js/custom.min.js': ['src/js/custom.js'],
-        'app/js/modernizer.min.js': ['src/js/modernizer.js']
+        '<%= path %>/js/custom.min.js': ['src/js/custom.js'],
+        '<%= path %>/js/modernizer.min.js': ['src/js/modernizer.js']
         }
       },
       // The snippets uglify task for snippets with js files.
@@ -61,7 +61,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
           // banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
         },
         files: {
-        // 'app/js/google-map.min.js': ['src/snippets/google-map.js'],
+        // '<%= path %>/js/google-map.min.js': ['src/snippets/google-map.js'],
         }
       }
 
@@ -108,7 +108,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
           // banner: '/* <%= pkg.name %>.css minified <%= grunt.template.today("dd-mm-yyyy") %> */' // Give it a nice banner
         },
         files: {
-          'app/css/style.min.css': ['src/css/style.css']
+          '<%= path %>/css/style.min.css': ['src/css/style.css']
         }
       },
       fontmin: { //This task will find the stylesheet in the webkit folder, minify it and move it to the app folder
@@ -117,7 +117,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
             expand: true,
             cwd: 'src/fonts/',
             src: ['**/*/stylesheet.css', 'font-awesome/css/font-awesome.css'],
-            dest: 'app/fonts/',
+            dest: '<%= path %>/fonts/',
             ext: '.min.css'
           }
         ]
@@ -155,7 +155,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
         // Here we watch the files the css task will compile to
         // These files are sent to the live reload server after css compiles to them
         options: { livereload: true },
-        files: ['app/**/*'],
+        files: ['<%= path %>/**/*'],
       },
     }
     
