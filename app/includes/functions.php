@@ -12,7 +12,7 @@
   if ( $ip == '192.168.1.32' || $ip == '192.168.20.179' || $ip == '192.168.1.38' ) 
   {
     // Then they can set their site root variable
-    $site_url = "http://localhost/php-starter-template/app/";
+    $site_url = "http://localhost/php-starter-template/app";
     
   } 
   
@@ -20,7 +20,7 @@
   elseif ( $ip == '192.168.0.2' || $ip == '192.168.0.3' || $ip == '192.168.0.4' || $ip == '192.168.0.6' || $ip == '192.168.0.7' ) 
   {
     // Then they can set their site root variable
-    $site_url = "http://localhost/bread-butter/app/";
+    $site_url = "http://localhost/bread-butter/app";
   
   } 
   

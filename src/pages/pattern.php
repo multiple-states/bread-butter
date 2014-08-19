@@ -27,7 +27,7 @@ This helps testing for conflicts and allows for a quicker build.
     
     <?php 
       $postTitle = 'Post Title';
-      $postImg = $site_url . 'images/dummy.jpg';
+      $postImg = $site_url . '/images/dummy.jpg';
       $postContent = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.';
       $postLink = $site_url;
       include('modules/post-preview.php') 
