@@ -7,6 +7,11 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
     // The benifit of doing this is that when it comes time to start plugging in a cms we can just alter this to point to a new folder, for example the wordpress theme folder.
     path: 'app',
 
+    // DANGER ZONE! BE CAREFUL! 
+    // This cleans the destination folder out completely. 
+    // This shouldn't matter if you are using the correct Bread and Butter workflow and only working in the src folder but only you and the lord above know if that is the case.
+    clean: ['<%= path %>/**/*', '<%= path %>/.htaccess'],
+
     copy: {
 
       pages: {
@@ -240,6 +245,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-clean');
     
     // Register a test task for jshint. This can be run just by typing "grunt test" on the command line
     grunt.registerTask('test', ['jshint'])
