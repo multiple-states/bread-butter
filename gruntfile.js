@@ -31,6 +31,42 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
           }
         ]
       },
+
+      includes: {
+        // This copies the includes from the src folder to the app folder
+        files: [
+          {
+            expand: true,
+            cwd: 'src/includes/',
+            src: ['*.php'],
+            dest: '<%= path %>/includes/'
+          }
+        ]
+      },
+
+      pages: {
+        // This copies the includes from the src folder to the app folder
+        files: [
+          {
+            expand: true,
+            cwd: 'src/pages/',
+            src: ['*.php', '*.html', '.htaccess'],
+            dest: '<%= path %>/'
+          }
+        ]
+      },
+
+      images: {
+        // This copies the includes from the src folder to the app folder
+        files: [
+          {
+            expand: true,
+            cwd: 'src/images/',
+            src: ['*.jpg', '*.png', '*.gif'],
+            dest: '<%= path %>/images/'
+          }
+        ]
+      },
       
       fontcopy:{ 
       //This task will find the relevant font files in the font folder and move them to the app folder.
