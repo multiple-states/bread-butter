@@ -221,11 +221,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
       },
       css: {
         files: ['src/**/*.less'],
-        tasks: ['less'],
-      },
-      cssmin: {
-        files: ['src/css/style.css'],
-        tasks: ['cssmin:minify'],
+        tasks: ['less', 'autoprefixer', 'cssmin:minify'],
       },
       livereload: {
         // Here we watch the files the watch task will change.

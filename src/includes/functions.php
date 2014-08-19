@@ -11,7 +11,7 @@
   // Test for the first contributers possible ip address ( KB )
   if ( $ip == '192.168.1.32' || $ip == '192.168.20.179' || $ip == '192.168.1.38' ) 
   {
-    // Then they can set their site root variable
+    // Then they can set their site url variable
     $site_url = "http://localhost/php-starter-template/app";
     
   } 
@@ -19,12 +19,14 @@
   // Test for the second contributers possible ip addresses ( WM )
   elseif ( $ip == '192.168.0.2' || $ip == '192.168.0.3' || $ip == '192.168.0.4' || $ip == '192.168.0.6' || $ip == '192.168.0.7' ) 
   {
-    // Then they can set their site root variable
+    // Then they can set their site url variable
     $site_url = "http://localhost/bread-butter/app";
+
+    define('SITE_ROOT', '/Users/williammclean/WORK/local-sites/bread-butter/app');
   
   } 
   
-  // Then for all else we can set the staging url as the site root variable
+  // Then for all else we can set the staging url as the site url variable
   else 
   {
     $site_url = "http://your-staging-url.com";

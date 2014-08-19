@@ -17,16 +17,20 @@
       
 </div><!-- end m-nav-holder -->
 
+
+<!-- Move the code within the script tags to your custom.js file -->
 <script>
-  
+
   // Open and close the flyout menu
   $(".m-menu-open a, .m-menu-close a").click(function(){
+
     $(".page-holder").toggleClass("open", 500, "easeInOutQuart");
 
   });
 
   // When a link is clicked close the flyout menu before navigating to the new page
   $('.m-primary-menu a').click(function(event) {
+
       event.preventDefault();
       var href = this.href;
 
@@ -34,6 +38,7 @@
       function() {
           window.location = href;
       });
+
   });
   
 </script>
