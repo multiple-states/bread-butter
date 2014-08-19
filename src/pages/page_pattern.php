@@ -8,7 +8,7 @@ This helps testing for conflicts and allows for a quicker build.
 
 <?php 
   // Set the name of the current page before including the header
-  $page_title = 'Home';
+  $page_title = 'Pattern';
   // Include the header
   include('includes/header.php') 
 ?>

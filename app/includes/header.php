@@ -8,7 +8,7 @@
   <!--The below makes sure the latest version of IE is used in versions of IE that contain multiple rendering engines but it break w3c validation. If you don't want to break validation then add it to your .htaccess file. src - https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/html.md -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title><?php echo $page_title ?></title>
+  <title>Bread and Butter - <?php echo $page_title ?></title>
   
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,7 +35,7 @@
       <header>
         <div class="l-inner">
           <div class="the-head">
-            <h1 class="the-head-title">PHP-starter-template</h1>
+            <h1 class="the-head-title">Bread and Butter</h1>
           </div>
         </div>
       </header>
