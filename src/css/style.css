@@ -1122,17 +1122,23 @@ ul {
 a {
   text-decoration: none;
 }
-.button {
+.button,
+input[type=submit],
+button {
+  display: inline-block;
   padding: 0.2em 10px;
   font-size: 16px;
   font-size: 1.6rem;
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   white-space: nowrap;
-  background-color: #000;
+  border: none;
+  background-color: #000000;
 }
-.button:hover {
-  background-color: #888;
+.button:hover,
+input[type=submit]:hover,
+button:hover {
+  background-color: #c8c8c8;
 }
 sup,
 sub {
