@@ -19,6 +19,7 @@
   <link rel="shortcut icon" sizes="196x196" href="<?php echo $site_url ?>/your-icon.png">
   <link rel="apple-touch-icon" sizes="196x196" href="<?php echo $site_url ?>/your-icon.png">
   
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="<?php echo $site_url ?>/style.min.css" >
 
   </head>
