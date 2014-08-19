@@ -122,7 +122,15 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
       ] 
     },
     
-    less: { // Configure the less task
+    less: { 
+      // Configure the less task
+      // The compilation of our css goes through three stages:
+      // 1. We use this less task to compile the less to css in the src folder
+      // 2. We use the auto-prefixer task to put prefixes for various browsers into our css file and move it to the app folder
+      // 3. We use the cssmin task to minify that css file into a new file with the .min.css extension
+
+      // So here we go...
+      // 1. We use this less task to compile the less to css in the src folder
       development: {
         options: {
           paths: ["src/less"],
@@ -134,27 +142,34 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
       }
     },
     
-    autoprefixer: { // Configure the autoprefixer task
+    autoprefixer: { 
+
+      // 2. We use the auto-prefixer task to put prefixes for various browsers into our css file and move it to the app folder
       options: {
         browsers: ['last 3 versions'] // More options available for this see https://github.com/ai/autoprefixer#browsers
       },
       files: {
         src: 'src/css/style.css',
-        dest: 'src/css/style.css' // Put the autoprefixed version right back over its original
+        dest: '<%= path %>/style.css' // Put the autoprefixed version right back over its original
       },
+
     },
     
-    cssmin: { // Now we can minify the auto-prefixed version of the code
+    cssmin: { 
+
+      // 3. We use the cssmin task to minify that css file into a new file with the .min.css extension
       minify: {
         options: {
           // If you want to add banners to your minified css uncomment the below. This currently is commented out in order to clean up commits in development.
           // banner: '/* <%= pkg.name %>.css minified <%= grunt.template.today("dd-mm-yyyy") %> */' // Give it a nice banner
         },
         files: {
-          '<%= path %>/css/style.min.css': ['src/css/style.css']
+          '<%= path %>/style.min.css': ['<%= path %>/style.css']
         }
       },
-      fontmin: { //This task will find the stylesheet in the webkit folder, minify it and move it to the app folder
+
+      //This task will find the stylesheet in the webkit folder, minify it and move it to the app folder
+      fontmin: { 
         files: [
           {
             expand: true,
@@ -165,6 +180,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
           }
         ]
       }
+
     },
     
     watch: { 
@@ -207,8 +223,8 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
         tasks: ['cssmin:minify'],
       },
       livereload: {
-        // Here we watch the files the css task will compile to
-        // These files are sent to the live reload server after css compiles to them
+        // Here we watch the files the watch task will change.
+        // These files are then sent to the live reload server.
         options: { livereload: true },
         files: ['<%= path %>/**/*'],
       },
