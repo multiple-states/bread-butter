@@ -35,7 +35,8 @@ Client Contact: Mark Parker (mark@nike.com)
 Development Notes
 --------------
 
-Development notes
+The build is based on Bread and Butter ( https://github.com/multiple-states/bread-butter ) by Multiple States. 
+The wiki for this build setup can be found here: https://github.com/multiple-states/bread-butter/wiki
 
 Plugins
 --------------
