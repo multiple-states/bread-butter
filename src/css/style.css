@@ -1,3 +1,6 @@
+/* Import custom build of bootstrap css by using their less files */
+/* Core variables and mixins */
+/* Reset and dependencies */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -249,6 +252,7 @@ th {
     border: 1px solid #ddd !important;
   }
 }
+/* Core css */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1023,9 +1027,6 @@ hr {
 /* Colours */
 /* Fonts */
 /* -------------------------------------------------------------------*/
-/* Mixins */
-/* Setting font sizes with rem and px for <IE8- source: http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/ */
-/* -------------------------------------------------------------------*/
 /* Base */
 html {
   /* Set font base sizes - source: http://css-tricks.com/rems-ems/ */
@@ -1052,37 +1053,31 @@ svg {
 }
 h1,
 .h1 {
-  font-size: 22px;
   font-size: 2.2rem;
   line-height: 1.4;
 }
 h2,
 .h2 {
-  font-size: 20px;
   font-size: 2rem;
   line-height: 1.4;
 }
 h3,
 .h3 {
-  font-size: 18px;
   font-size: 1.8rem;
   line-height: 1.4;
 }
 h4,
 .h4 {
-  font-size: 16px;
   font-size: 1.6rem;
   line-height: 1.4;
 }
 h5,
 .h5 {
-  font-size: 14px;
   font-size: 1.4rem;
   line-height: 1.4;
 }
 h6,
 .h6 {
-  font-size: 12px;
   font-size: 1.2rem;
   line-height: 1.4;
 }
@@ -1111,7 +1106,6 @@ h6 a:hover {
   text-decoration: none;
 }
 p {
-  font-size: 16px;
   font-size: 1.6rem;
 }
 ul {
@@ -1127,7 +1121,6 @@ input[type=submit],
 button {
   display: inline-block;
   padding: 0.2em 10px;
-  font-size: 16px;
   font-size: 1.6rem;
   color: #ffffff;
   text-decoration: none;
@@ -1155,6 +1148,7 @@ sub {
   color: #000;
   background-color: #ccc;
 }
+/* Default 16:9 video styling. Wrap you video in a div with a video-holder and video-holder-16-9 class */
 .video-holder {
   position: relative;
   height: 0;
@@ -1234,16 +1228,12 @@ sub {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  padding-bottom: 20px;
   padding-bottom: 2rem;
-  margin-bottom: 20px;
   margin-bottom: 2rem;
   border-bottom: 2px solid #000;
 }
 .modules .l-inner {
-  padding-bottom: 20px;
   padding-bottom: 2rem;
-  margin-bottom: 20px;
   margin-bottom: 2rem;
   border-bottom: 2px solid #000;
 }
