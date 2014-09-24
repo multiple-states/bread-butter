@@ -26,18 +26,6 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
         ]
       },
 
-      snippets: { 
-      // This copies snippets from the src/snippets folder to the app/modules folder. 
-      // All snippets are added you just need to uncomment the ones you have included in your markup.
-        files: {
-          // '<%= path %>/modules/menu-d-float.php': ['src/snippets/menu-d-float.php'],
-          // '<%= path %>/modules/menu-d-sticky.php': ['src/snippets/menu-d-sticky.php'],
-          // '<%= path %>/modules/menu-m-flyout.php': ['src/snippets/menu-m-flyout.php'],
-          // '<%= path %>/modules/holding-page-head.php': ['src/snippets/holding-page-head.php'],
-          // '<%= path %>/modules/google-map.php': ['src/snippets/google-map.php'],
-        }
-      },
-
       modules: {        
         // This copies the modules from the src/modules folder to the app/modules folder
         files: [
@@ -102,18 +90,6 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
         }
       },
 
-      // The snippets uglify task for snippets with js files.
-      // All snippets are added you just need to uncomment the ones you have included in your markup.
-      snippets: {        
-        options: {
-          mangle: false,
-          // If you want to add banners to your minified css uncomment the below. This currently is commented out in order to clean up commits in development.
-          // banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
-        },
-        files: {
-        // '<%= path %>/js/google-map.min.js': ['src/snippets/google-map.js'],
-        }
-      }
     },
     
     jshint: {
@@ -121,11 +97,6 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
       // The jshint task. 
       files: [
       'src/js/custom.js', // Just watch the src js file not the minified one
-
-      // The snippets
-      // All snippets are listed below you just need to uncomment the ones you have included in order to have them tested when running "grunt test"
-
-      // 'src/snippets/google-map.js',
       ] 
     },
     
@@ -208,10 +179,6 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
         files: ['src/pages/*.php'],
         tasks: ['copy:pages'],
       },
-      snippets: {
-        files: ['src/snippets/*.php'],
-        tasks: ['copy:snippets'],
-      },
       modules: {
         files: ['src/modules/*.php'],
         tasks: ['copy:modules'],
@@ -263,14 +230,11 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
     
     // Register a test task for jshint. This can be run just by typing "grunt test" on the command line
     grunt.registerTask('test', ['jshint'])
-
-    //Register a task for setting the snippets the first time
-    grunt.registerTask('snippetload', ['copy:snippets', 'uglify:snippets'])
     
     //Register a task for setting up the webkit fonts when picking up the project
     grunt.registerTask('fontload', ['copy:fontcopy', 'cssmin:fontmin'])
     
     // And register the default task. This can be run just by typing "grunt" on the command line. This should be done before production.
-    grunt.registerTask('default', ['copy:pages', 'copy:snippets', 'copy:modules', 'copy:includes', 'copy:images', 'uglify', 'less', 'autoprefixer', 'cssmin', 'pixrem']);
+    grunt.registerTask('default', ['copy:pages', 'copy:modules', 'copy:includes', 'copy:images', 'uglify', 'less', 'autoprefixer', 'cssmin', 'pixrem']);
     
 };
