@@ -97,6 +97,15 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
         }
       },
 
+      bower: {
+        options: {
+          mangle: true,
+          compress: true
+        },
+        files: {
+          '<%= config.app %>/js/vendor.min.js': '<%= config.src %>/js/vendor.js'
+        }
+      }
     },
     
     jshint: {
@@ -183,7 +192,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
     bower_concat: {
 
       all: {
-        dest: '<%= config.app %>/js/vendor.min.js'
+        dest: '<%= config.src %>/js/vendor.js'
       }
     },
 
@@ -240,16 +249,16 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
       'jshint'
     ]);
     
-    //Register a task for setting up the webkit fonts when picking up the project
+    // Register a task for setting up the webkit fonts when picking up the project
     grunt.registerTask('fontload', [
       'copy:fontcopy', 
       'cssmin:fontmin'
     ]);
 
+    // Registar a build task to concatenate all bower dependencies to one file and minify
     grunt.registerTask('build', [
-        'useminprepare', 
-        'concat', 
-        'uglify'
+      'bower_concat',
+      'uglify:bower'
     ]);
     
     // And register the default task. This can be run just by typing "grunt" on the command line. This should be done before production.
