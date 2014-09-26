@@ -12,9 +12,11 @@
   
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <?php include('functions.php') ?>
   
+  <script type="text/javascript" src="/bower_components/modernizer/modernizer.js"></script>
+
   <meta name="mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" sizes="196x196" href="<?php echo $site_url ?>/your-icon.png">
   <link rel="apple-touch-icon" sizes="196x196" href="<?php echo $site_url ?>/your-icon.png">

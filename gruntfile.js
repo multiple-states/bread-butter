@@ -85,8 +85,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
           // banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
         },
         files: {
-        '<%= path %>/js/custom.min.js': ['src/js/custom.js'],
-        '<%= path %>/js/modernizer.min.js': ['src/js/modernizer.js']
+        '<%= path %>/js/custom.min.js': ['src/js/custom.js']
         }
       },
 
@@ -227,6 +226,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-pixrem');
+    grunt.loadNpmTasks('grunt-usemin');
     
     // Register a test task for jshint. This can be run just by typing "grunt test" on the command line
     grunt.registerTask('test', ['jshint'])
