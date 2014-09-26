@@ -1,16 +1,23 @@
 module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in here
 
+  // Set a path for the app and build folder.
+  // The benifit of doing this is that when it comes time to start plugging in a cms we can just alter this to point to a new folder, for example the wordpress theme folder.
+  var config = {
+    app: 'app',
+    dist: 'dist'
+  };
+
   grunt.initConfig({ // Initialize our configuration object
+
+    // Project settings
+    config: config,
+
     pkg: grunt.file.readJSON('package.json'), // Read project settings from package.json
-    
-    //Set a path for the app folder.
-    // The benifit of doing this is that when it comes time to start plugging in a cms we can just alter this to point to a new folder, for example the wordpress theme folder.
-    path: 'app',
 
     // DANGER ZONE! BE CAREFUL! 
     // This cleans the destination folder out completely. 
     // This shouldn't matter if you are using the correct Bread and Butter workflow and only working in the src folder but only you and the lord above know if that is the case.
-    clean: ['<%= path %>/**/*', '<%= path %>/.htaccess'],
+    clean: ['<%= config.app %>/**/*', '<%= config.app %>/.htaccess'],
 
     copy: {
 
@@ -21,7 +28,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
             expand: true,
             cwd: 'src/pages/',
             src: ['*.php', '*.html', '.htaccess'],
-            dest: '<%= path %>/'
+            dest: '<%= config.app %>/'
           }
         ]
       },
@@ -33,7 +40,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
             expand: true,
             cwd: 'src/modules/',
             src: ['*.php'],
-            dest: '<%= path %>/modules/'
+            dest: '<%= config.app %>/modules/'
           }
         ]
       },
@@ -45,7 +52,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
             expand: true,
             cwd: 'src/includes/',
             src: ['*.php'],
-            dest: '<%= path %>/includes/'
+            dest: '<%= config.app %>/includes/'
           }
         ]
       },
@@ -57,7 +64,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
             expand: true,
             cwd: 'src/images/',
             src: ['*.jpg', '*.png', '*.gif'],
-            dest: '<%= path %>/images/'
+            dest: '<%= config.app %>/images/'
           }
         ]
       },
@@ -69,7 +76,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
             expand: true,
             cwd: 'src/fonts/',
             src: ['**/*.eot', '**/*.svg', '**/*.ttf', '**/*.woff'],
-            dest: '<%= path %>/fonts/'
+            dest: '<%= config.app %>/fonts/'
           }
         ]
       }
@@ -85,7 +92,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
           // banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
         },
         files: {
-        '<%= path %>/js/custom.min.js': ['src/js/custom.js']
+        '<%= config.app %>/js/custom.min.js': ['src/js/custom.js']
         }
       },
 
@@ -128,7 +135,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
       },
       files: {
         src: 'src/css/style.css',
-        dest: '<%= path %>/style.css' // Put the autoprefixed version right back over its original
+        dest: '<%= config.app %>/style.css' // Put the autoprefixed version right back over its original
       }
     },    
     
@@ -141,7 +148,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
           // banner: '/* <%= pkg.name %>.css minified <%= grunt.template.today("dd-mm-yyyy") %> */' // Give it a nice banner
         },
         files: {
-          '<%= path %>/style.min.css': ['<%= path %>/style.css']
+          '<%= config.app %>/style.min.css': ['<%= config.app %>/style.css']
         }
       },
 
@@ -152,7 +159,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
             expand: true,
             cwd: 'src/fonts/',
             src: ['**/*/stylesheet.css'],
-            dest: '<%= path %>/fonts/',
+            dest: '<%= config.app %>/fonts/',
             ext: '.min.css'
           }
         ]
@@ -166,8 +173,8 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
         rootvalue: '62.5%' // We set this so that the 1 rem unit equals 10px. Easier to understand.
       },
       dist: {
-        src: '<%= path %>/style.min.css',
-        dest: '<%= path %>/style.min.css'
+        src: '<%= config.app %>/style.min.css',
+        dest: '<%= config.app %>/style.min.css'
       }
     },
     
@@ -210,7 +217,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
         // Here we watch the files the watch task will change.
         // These files are then sent to the live reload server.
         options: { livereload: true },
-        files: ['<%= path %>/**/*'],
+        files: ['<%= config.app %>/**/*'],
       },
     }
     
@@ -229,12 +236,27 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
     grunt.loadNpmTasks('grunt-usemin');
     
     // Register a test task for jshint. This can be run just by typing "grunt test" on the command line
-    grunt.registerTask('test', ['jshint'])
+    grunt.registerTask('test', [
+      'jshint'
+    ]);
     
     //Register a task for setting up the webkit fonts when picking up the project
-    grunt.registerTask('fontload', ['copy:fontcopy', 'cssmin:fontmin'])
+    grunt.registerTask('fontload', [
+      'copy:fontcopy', 
+      'cssmin:fontmin'
+    ]);
     
     // And register the default task. This can be run just by typing "grunt" on the command line. This should be done before production.
-    grunt.registerTask('default', ['copy:pages', 'copy:modules', 'copy:includes', 'copy:images', 'uglify', 'less', 'autoprefixer', 'cssmin', 'pixrem']);
+    grunt.registerTask('default', [
+      'copy:pages', 
+      'copy:modules', 
+      'copy:includes', 
+      'copy:images', 
+      'uglify', 
+      'less', 
+      'autoprefixer', 
+      'cssmin', 
+      'pixrem'
+    ]);
     
 };
