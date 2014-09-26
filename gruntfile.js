@@ -179,13 +179,13 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
       }
     },
     
+    // This grabs all the listed bower dependancies and adds them to once vendor.js file
+    bower_concat: {
 
-    useminPrepare: {
-        options: {
-            dest: '<%= config.dist %>',
-        }
+      all: {
+        dest: '<%= config.app %>/js/vendor.min.js'
+      }
     },
-
 
     watch: { 
     // Configure the watch task
@@ -262,7 +262,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
       'less', 
       'autoprefixer', 
       'cssmin', 
-      'pixrem'
+      //'pixrem'
     ]);
     
 };
