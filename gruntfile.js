@@ -1,10 +1,11 @@
 module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in here
 
-  // Set a path for the app and build folder.
+  // Set a path for the development, staging and build folders.
   // The benifit of doing this is that when it comes time to start plugging in a cms we can just alter this to point to a new folder, for example the wordpress theme folder.
   var config = {
-    app: 'app',
-    dist: 'dist'
+    src: 'src', // Devlopment files
+    app: 'app', // Staging files
+    dist: 'dist' // Build files
   };
 
   grunt.initConfig({ // Initialize our configuration object
@@ -26,7 +27,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
         files: [
           {
             expand: true,
-            cwd: 'src/pages/',
+            cwd: '<%= config.src %>/pages/',
             src: ['*.php', '*.html', '.htaccess'],
             dest: '<%= config.app %>/'
           }
@@ -38,7 +39,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
         files: [
           {
             expand: true,
-            cwd: 'src/modules/',
+            cwd: '<%= config.src %>/modules/',
             src: ['*.php'],
             dest: '<%= config.app %>/modules/'
           }
@@ -50,7 +51,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
         files: [
           {
             expand: true,
-            cwd: 'src/includes/',
+            cwd: '<%= config.src %>/includes/',
             src: ['*.php'],
             dest: '<%= config.app %>/includes/'
           }
@@ -62,7 +63,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
         files: [
           {
             expand: true,
-            cwd: 'src/images/',
+            cwd: '<%= config.src %>/images/',
             src: ['*.jpg', '*.png', '*.gif'],
             dest: '<%= config.app %>/images/'
           }
@@ -74,7 +75,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
         files: [
           {
             expand: true,
-            cwd: 'src/fonts/',
+            cwd: '<%= config.src %>/fonts/',
             src: ['**/*.eot', '**/*.svg', '**/*.ttf', '**/*.woff'],
             dest: '<%= config.app %>/fonts/'
           }
@@ -92,7 +93,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
           // banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
         },
         files: {
-        '<%= config.app %>/js/custom.min.js': ['src/js/custom.js']
+        '<%= config.app %>/js/custom.min.js': ['<%= config.src %>/js/custom.js']
         }
       },
 
@@ -102,7 +103,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
 
       // The jshint task. 
       files: [
-      'src/js/custom.js', // Just watch the src js file not the minified one
+      '<%= config.src %>/js/custom.js', // Just watch the src js file not the minified one
       ] 
     },
     
@@ -118,11 +119,11 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
       // 1. We use this less task to compile the less to css in the src folder
       development: {
         options: {
-          paths: ["src/less"],
+          paths: ["<%= config.src %>/less"],
         },
         files: {
           // target.css file: source.less file
-          "src/css/style.css": "src/less/style.less"
+          "<%= config.src %>/css/style.css": "<%= config.src %>/less/style.less"
         }
       }
     },
@@ -134,7 +135,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
         browsers: ['last 3 versions'] // More options available for this see https://github.com/ai/autoprefixer#browsers
       },
       files: {
-        src: 'src/css/style.css',
+        src: '<%= config.src %>/css/style.css',
         dest: '<%= config.app %>/style.css' // Put the autoprefixed version right back over its original
       }
     },    
@@ -157,7 +158,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
         files: [
           {
             expand: true,
-            cwd: 'src/fonts/',
+            cwd: '<%= config.src %>/fonts/',
             src: ['**/*/stylesheet.css'],
             dest: '<%= config.app %>/fonts/',
             ext: '.min.css'
@@ -178,6 +179,14 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
       }
     },
     
+
+    useminPrepare: {
+        options: {
+            dest: '<%= config.dist %>',
+        }
+    },
+
+
     watch: { 
     // Configure the watch task
     // You should adapt this to your specific needs on a per project basis
@@ -223,17 +232,8 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
     
   });
   
-    // Load the tasks
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-autoprefixer');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-pixrem');
-    grunt.loadNpmTasks('grunt-usemin');
+    // Auto load the grunt tasks
+    require('load-grunt-tasks')(grunt);
     
     // Register a test task for jshint. This can be run just by typing "grunt test" on the command line
     grunt.registerTask('test', [
@@ -244,6 +244,12 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
     grunt.registerTask('fontload', [
       'copy:fontcopy', 
       'cssmin:fontmin'
+    ]);
+
+    grunt.registerTask('build', [
+        'useminprepare', 
+        'concat', 
+        'uglify'
     ]);
     
     // And register the default task. This can be run just by typing "grunt" on the command line. This should be done before production.
