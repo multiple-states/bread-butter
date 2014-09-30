@@ -23,6 +23,7 @@
     "tests"
   ],
   "devDependencies": {
-    "modernizer": "~2.8.2"
+    "modernizer": "~2.8.2",
+    "jquery": "~2.1.1"
   }
 }

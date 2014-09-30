@@ -3,9 +3,9 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
   // Set a path for the development, staging and build folders.
   // The benifit of doing this is that when it comes time to start plugging in a cms we can just alter this to point to a new folder, for example the wordpress theme folder.
   var config = {
-    src: 'src', // Devlopment files
-    app: 'app', // Staging files
-    dist: 'dist' // Build files
+    src:  'src',  // Devlopment 
+    app:  'app',  // Staging 
+    dist: 'dist'  // Build 
   };
 
   grunt.initConfig({ // Initialize our configuration object
@@ -80,6 +80,18 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
             dest: '<%= config.app %>/fonts/'
           }
         ]
+      },
+
+      buildcopy:{ 
+      //This task will find the relevant font files in the src/fonts folder and move them to the app/fonts folder.
+        files: [
+          {
+            cwd: '<%= config.src %>',     // set working folder / root to copy
+            src: '**/*',                  // copy all files and subfolders
+            dest: '<%= config.dist %>',   // destination folder
+            expand: true                  // required when using cwd
+          }
+        ]
       }
     },
     
@@ -139,7 +151,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
     
     autoprefixer: { 
 
-      // We use the auto-prefixer task to put prefixes for various browsers into our css file and move it to the app folder
+      // 2. We use the auto-prefixer task to put prefixes for various browsers into our css file and move it to the app folder
       options: {
         browsers: ['last 3 versions'] // More options available for this see https://github.com/ai/autoprefixer#browsers
       },
@@ -151,7 +163,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
     
     cssmin: {
 
-      // We use the cssmin task to minify that css file into a new file with the .min.css extension
+      // 3. We use the cssmin task to minify that css file into a new file with the .min.css extension
       minify: {
         options: {
           // If you want to add banners to your minified css uncomment the below. This currently is commented out in order to clean up commits in development.
@@ -188,7 +200,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
       }
     },
     
-    // This grabs all the listed bower dependancies and adds them to once vendor.js file
+    // This grabs all the listed bower dependencies and adds them to one vendor.js file
     bower_concat: {
 
       all: {
@@ -241,37 +253,38 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
     
   });
   
-    // Auto load the grunt tasks
-    require('load-grunt-tasks')(grunt);
-    
-    // Register a test task for jshint. This can be run just by typing "grunt test" on the command line
-    grunt.registerTask('test', [
-      'jshint'
-    ]);
-    
-    // Register a task for setting up the webkit fonts when picking up the project
-    grunt.registerTask('fontload', [
-      'copy:fontcopy', 
-      'cssmin:fontmin'
-    ]);
+  // Auto load the grunt tasks
+  require('load-grunt-tasks')(grunt);
+  
+  // Register a test task for jshint. This can be run just by typing "grunt test" on the command line
+  grunt.registerTask('test', [
+    'jshint'
+  ]);
+  
+  // Register a task for setting up the webkit fonts when picking up the project
+  grunt.registerTask('fontload', [
+    'copy:fontcopy', 
+    'cssmin:fontmin'
+  ]);
 
-    // Registar a build task to concatenate all bower dependencies to one file and minify
-    grunt.registerTask('build', [
-      'bower_concat',
-      'uglify:bower'
-    ]);
-    
-    // And register the default task. This can be run just by typing "grunt" on the command line. This should be done before production.
-    grunt.registerTask('default', [
-      'copy:pages', 
-      'copy:modules', 
-      'copy:includes', 
-      'copy:images', 
-      'uglify', 
-      'less', 
-      'autoprefixer', 
-      'cssmin', 
-      //'pixrem'
-    ]);
+  // Registar a build task to concatenate all bower dependencies to one file and minify
+  grunt.registerTask('build', [
+    'bower_concat',
+    'uglify:bower'
+  ]);
+  
+  // And register the default task. This can be run just by typing "grunt" on the command line. This should be done before production.
+  grunt.registerTask('default', [
+    'copy:pages', 
+    'copy:modules', 
+    'copy:includes', 
+    'copy:images', 
+    'uglify', 
+    'less', 
+    'autoprefixer', 
+    'cssmin', 
+    'pixrem',
+    'bower_concat'
+  ]);
     
 };
