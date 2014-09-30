@@ -80,18 +80,14 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
             dest: '<%= config.app %>/fonts/'
           }
         ]
-      },
+      }
+    },
 
-      buildcopy:{ 
-      //This task will find the relevant font files in the src/fonts folder and move them to the app/fonts folder.
-        files: [
-          {
-            cwd: '<%= config.src %>',     // set working folder / root to copy
-            src: '**/*',                  // copy all files and subfolders
-            dest: '<%= config.dist %>',   // destination folder
-            expand: true                  // required when using cwd
-          }
-        ]
+    // This grabs all the listed bower dependencies and adds them to one vendor.js file
+    bower_concat: {
+
+      all: {
+        dest: '<%= config.src %>/js/vendor.js'
       }
     },
     
@@ -105,17 +101,8 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
           // banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
         },
         files: {
-        '<%= config.app %>/js/custom.min.js': ['<%= config.src %>/js/custom.js']
-        }
-      },
-
-      bower: {
-        options: {
-          mangle: true,
-          compress: true
-        },
-        files: {
-          '<%= config.app %>/js/vendor.min.js': '<%= config.src %>/js/vendor.js'
+        '<%= config.app %>/js/custom.min.js': ['<%= config.src %>/js/custom.js'],
+        '<%= config.app %>/js/vendor.min.js': ['<%= config.src %>/js/vendor.js']
         }
       }
     },
@@ -186,7 +173,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
           }
         ]
       }
-    },
+    },  
 
     pixrem: {
 
@@ -198,15 +185,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
         src: '<%= config.app %>/style.min.css',
         dest: '<%= config.app %>/style.min.css'
       }
-    },
-    
-    // This grabs all the listed bower dependencies and adds them to one vendor.js file
-    bower_concat: {
-
-      all: {
-        dest: '<%= config.src %>/js/vendor.js'
-      }
-    },
+    },  
 
     watch: { 
     // Configure the watch task
@@ -239,10 +218,6 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
         files: ['src/**/*.less'],
         tasks: ['less', 'autoprefixer', 'cssmin:minify'],
       },
-      css: {
-        files: ['src/**/*.less'],
-        tasks: ['pixrem'],
-      },
       livereload: {
         // Here we watch the files the watch task will change.
         // These files are then sent to the live reload server.
@@ -266,12 +241,6 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
     'copy:fontcopy', 
     'cssmin:fontmin'
   ]);
-
-  // Registar a build task to concatenate all bower dependencies to one file and minify
-  grunt.registerTask('build', [
-    'bower_concat',
-    'uglify:bower'
-  ]);
   
   // And register the default task. This can be run just by typing "grunt" on the command line. This should be done before production.
   grunt.registerTask('default', [
@@ -279,12 +248,12 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
     'copy:modules', 
     'copy:includes', 
     'copy:images', 
-    'uglify', 
+    'bower_concat',
+    'uglify:base', 
     'less', 
     'autoprefixer', 
-    'cssmin', 
-    'pixrem',
-    'bower_concat'
+    'cssmin',
+    'pixrem'        
   ]);
     
 };

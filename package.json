@@ -13,6 +13,7 @@
     "grunt-contrib-clean": "^0.6.0",
     "grunt-usemin": "^2.4.0",
     "grunt-bower-concat": "^0.3.0",
-    "load-grunt-tasks": "^0.6.0"
+    "load-grunt-tasks": "^0.6.0",
+    "grunt-pixrem": "^0.1.2"
   }
 }
