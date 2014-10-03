@@ -4,8 +4,7 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
   // The benifit of doing this is that when it comes time to start plugging in a cms we can just alter this to point to a new folder, for example the wordpress theme folder.
   var config = {
     src:  'src',  // Devlopment 
-    app:  'app',  // Staging 
-    dist: 'dist'  // Build 
+    app:  'app'  // Staging 
   };
 
   grunt.initConfig({ // Initialize our configuration object
