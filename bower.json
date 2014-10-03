@@ -3,7 +3,8 @@
   "version": "0.9.0",
   "homepage": "https://github.com/multiple-states/bread-butter",
   "authors": [
-    "k33711647 <mail@kevin-beck.co.uk>"
+    "k33711647 <mail@kevin-beck.co.uk>",
+    "Will McLean <willmcl@gmail.com>"
   ],
   "description": "Foundation for your website build.",
   "main": "index.php",
