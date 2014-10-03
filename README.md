@@ -51,3 +51,17 @@ Log
 --------------
 
 20140101 - Started build
+
+Version Log
+--------------
+
+0.9.1
+
+1. Bower introduced to workflow
+2. New Grunt task to concat Jquery and Modernizr that have been added via Bower
+3. Added folders and files to the .gitignore 
+4. Updated the way we set folder paths in our gruntfile.js
+5. Removed all snippets - they are now all GISTs
+
+
+
