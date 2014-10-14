@@ -9,10 +9,12 @@
   $ip = gethostbyname($host);
   
   // Test for the first contributers possible ip address ( KB )
-  if ( $ip == '192.168.1.32' || $ip == '192.168.20.179' || $ip == '192.168.1.38' ) 
+  if ( $ip == '192.168.1.32' || $ip == '192.168.20.179' || $ip == '192.168.1.38' || $ip == '192.168.1.41' ) 
   {
     // Then they can set their site url variable
-    $site_url = "http://localhost/php-starter-template/app";
+    $site_url = "http://localhost/bread-butter/app";
+
+    define('SITE_ROOT', '/Users/kevin/Sites/bread-butter/app');
     
   } 
   
