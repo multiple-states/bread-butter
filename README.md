@@ -4,7 +4,9 @@ Version 0.9.1 (Beta)
 
 When you make a sandwich you don't bake the bread, you just add the flavour! A starter template for website builds. Bread and Butter is maintained by Multiple States. 
 
-General description:
+General description
+--------------
+
 This starter template is a good place to start for building the type of sites we generally build. It simplifies the setup of a site by including the bare minimum we begin with. 
 
 * It uses the task automator Grunt (http://gruntjs.com/) for an easy build setup
@@ -20,18 +22,18 @@ As this template is built with php you need to use MAMP (http://www.mamp.info/en
 Version Log
 --------------
 
-v0.9.1
+*v0.9.1*
 * Bower introduced to workflow
 * New Grunt task to concat Jquery and Modernizr that have been added via Bower
 * Added folders and files to the .gitignore 
 * Updated the way we set folder paths in our gruntfile.js
 * Removed all snippets - they are now all GISTs
 
-v0.9.0
+*v0.9.0*
 * First Beta release
 
 
-Below is a default readme format for your project
+A default readme format for your new project
 -------------------------------------------------
 (You can delete all the crap above as that relates directly to Bread and Butter not your amaaazing new project)
 
