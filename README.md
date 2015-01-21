@@ -1,6 +1,6 @@
 Bread and butter
 ====================
-Version 0.9.1 (Beta)
+Version 0.10.0 (Beta)
 
 When you make a sandwich you don't bake the bread, you just add the flavour! A starter template for website builds. Bread and Butter is maintained by Multiple States. 
 
@@ -21,6 +21,9 @@ As this template is built with php you need to use MAMP (http://www.mamp.info/en
 
 Version Log
 --------------
+
+*v0.10.0*
+* Introduced the grunt-load-config plugin as a way to split our grunt tasks into seperate files and make Bread and Butter more maintainable. 
 
 *v0.9.1*
 * Bower introduced to workflow
