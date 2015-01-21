@@ -23,7 +23,7 @@ Version Log
 --------------
 
 *v0.10.0*
-* Introduced the grunt-load-config plugin as a way to split our grunt tasks into seperate files and make Bread and Butter more maintainable. 
+* Introduced the grunt-load-config plugin as a way to split our grunt tasks into separate files and make Bread and Butter more maintainable. 
 
 *v0.9.1*
 * Bower introduced to workflow
