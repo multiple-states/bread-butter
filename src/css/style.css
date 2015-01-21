@@ -1031,9 +1031,10 @@ hr {
 html {
   /* Set font base sizes - source: http://css-tricks.com/rems-ems/ */
   font-size: 62.5%;
+}
+body {
   font-family: 'Arial';
-  color: #000;
-  background-color: #fff;
+  color: #000000;
 }
 img,
 svg {
