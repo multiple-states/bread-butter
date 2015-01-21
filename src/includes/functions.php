@@ -14,7 +14,7 @@
     // Then they can set their site url variable
     $site_url = "http://localhost/bread-butter/app";
 
-    define('SITE_ROOT', '/Users/kevin/Sites/bread-butter/app');
+    define('SITE_ROOT', '/path/to/bread-butter/app');
     
   } 
   
@@ -24,7 +24,7 @@
     // Then they can set their site url variable
     $site_url = "http://localhost/bread-butter/app";
 
-    define('SITE_ROOT', '/Users/williammclean/WORK/local-sites/bread-butter/app');
+    define('SITE_ROOT', '/path/to/bread-butter/app');
   
   } 
   
