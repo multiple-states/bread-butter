@@ -1,4 +1,6 @@
 RewriteEngine on
+
+# Allow links to work without .php file extensions
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.*)$ $1.php
