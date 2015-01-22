@@ -1,6 +1,6 @@
 Bread and butter
 ====================
-Version 0.10.0 (Beta)
+Version 0.10.1 (Beta)
 
 When you make a sandwich you don't bake the bread, you just add the flavour! A starter template for website builds. Bread and Butter is maintained by Multiple States. 
 
@@ -21,6 +21,10 @@ As this template is built with php you need to use MAMP (http://www.mamp.info/en
 
 Version Log
 --------------
+
+*v0.10.1*
+* Removed styling from the html tag
+* Added default code in .htaccess to allow cross domain font requests in all browsers
 
 *v0.10.0*
 * Introduced the grunt-load-config plugin as a way to split our grunt tasks into separate files and make Bread and Butter more maintainable. 

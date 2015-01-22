@@ -4,3 +4,11 @@ RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.*)$ $1.php
+
+# Allow cross-domain font requests
+# SRC - http://davidwalsh.name/cdn-fonts
+
+# Apache config
+<FilesMatch ".(eot|ttf|otf|woff)">
+	Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
