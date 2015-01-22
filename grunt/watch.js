@@ -21,17 +21,16 @@ module.exports = {
     files: ['<%= src %>/js/*.js'],
     tasks: ['newer:jshint'],
   },
-  uglify: {
+  js: {
     files: ['<%= src %>/js/*.js'],
-    tasks: ['newer:uglify'],
+    tasks: ['newer:uglify:base', 'newer:copy:js'],
   },
   css: {
     files: ['<%= src %>/**/*.less'],
-    tasks: ['less', 'autoprefixer', 'cssmin', 'pixrem'],
+    tasks: ['less', 'autoprefixer', 'pixrem:base'],
   },
   livereload: {
     // Here we watch the files the watch task will change.
-    // These files are then sent to the live reload server.
     options: { livereload: true },
     files: ['<%= app %>/**/*'],
   },
