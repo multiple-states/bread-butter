@@ -21,6 +21,9 @@
   
   <link rel="stylesheet" href="<?php echo $site_url ?>/style.min.css" >
 
+  <!-- Include the minimised modernizer file -->
+  <script type="text/javascript" src="<?php echo $site_url ?>/js/modernizer.min.js"></script>
+
   </head>
   <body>
     

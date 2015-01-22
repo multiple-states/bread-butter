@@ -23,11 +23,12 @@ Version Log
 --------------
 
 *v0.10.1*
-* Removed styling from the html tag
-* Added default code in .htaccess to allow cross domain font requests in all browsers
+* Remove styling from the html tag
+* Adde default code in .htaccess to allow cross domain font requests in all browsers
+* Exclude Modernizer from the bower_concat task and add it to the uglify task and include in header.php
 
 *v0.10.0*
-* Introduced the grunt-load-config plugin as a way to split our grunt tasks into separate files and make Bread and Butter more maintainable. 
+* Introduce the grunt-load-config plugin as a way to split our grunt tasks into separate files and make Bread and Butter more maintainable. 
 
 *v0.9.1*
 * Bower introduced to workflow

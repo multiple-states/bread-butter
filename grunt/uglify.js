@@ -9,7 +9,8 @@ module.exports = {
     },
     files: {
     '<%= app %>/js/custom.min.js': ['<%= src %>/js/custom.js'],
-    '<%= app %>/js/vendor.min.js': ['<%= src %>/js/vendor.js']
+    '<%= app %>/js/vendor.min.js': ['<%= src %>/js/vendor.js'],
+    '<%= app %>/js/modernizr.min.js': ['bower_components/modernizer/modernizr.js']
     }
   }
 
