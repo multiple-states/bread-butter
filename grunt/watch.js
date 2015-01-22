@@ -3,27 +3,27 @@ module.exports = {
   // You should adapt this to your specific needs on a per project basis
   pages: {
     files: ['<%= src %>/pages/*.php'],
-    tasks: ['copy:pages'],
+    tasks: ['newer:copy:pages'],
   },
   modules: {
     files: ['<%= src %>/modules/*.php'],
-    tasks: ['copy:modules'],
+    tasks: ['newer:copy:modules'],
   },
   includes: {
     files: ['<%= src %>/includes/*.php'],
-    tasks: ['copy:includes'],
+    tasks: ['newer:copy:includes'],
   },
   images: {
     files: ['<%= src %>/images/*'],
-    tasks: ['copy:images'],
+    tasks: ['newer:copy:images'],
   },
   scripts: {
     files: ['<%= src %>/js/*.js'],
-    tasks: ['jshint'],
+    tasks: ['newer:jshint'],
   },
   uglify: {
     files: ['<%= src %>/js/*.js'],
-    tasks: ['uglify'],
+    tasks: ['newer:uglify'],
   },
   css: {
     files: ['<%= src %>/**/*.less'],
