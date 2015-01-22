@@ -26,6 +26,7 @@ Version Log
 * Remove styling from the html tag
 * Adde default code in .htaccess to allow cross domain font requests in all browsers
 * Exclude Modernizer from the bower_concat task and add it to the uglify task and include in header.php
+* Remove old SITE_ROOT variable from functions.php
 
 *v0.10.0*
 * Introduce the grunt-load-config plugin as a way to split our grunt tasks into separate files and make Bread and Butter more maintainable. 
