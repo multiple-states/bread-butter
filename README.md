@@ -19,6 +19,10 @@ Make sure you read through this wiki ( https://github.com/willmcl/bread-butter/w
 
 As this template is built with php you need to use MAMP (http://www.mamp.info/en/) to run it on your local machine. You also need to have some experience with Git (http://git-scm.com/). If you don't have any experience with _Git_ then take the time to learn it... Change your life that will.
 
+Installation
+--------------
+Visit https://github.com/multiple-states/bread-butter/wiki/home for installation instructions.
+
 Version Log
 --------------
 
