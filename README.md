@@ -1,6 +1,6 @@
 Bread and butter
 ====================
-Version 0.10.1 (Beta)
+Version 0.11.0 (Beta)
 
 When you make a sandwich you don't bake the bread, you just add the flavour! A starter template for website builds. Bread and Butter is maintained by Multiple States. 
 
@@ -11,7 +11,6 @@ This starter template is a good place to start for building the type of sites we
 
 * It uses the task automator Grunt (http://gruntjs.com/) for an easy build setup
 * It uses the package manager Bower (http://bower.io/) to install dependencies like jquery and modernizer 
-* It uses the Bootstrap (http://getbootstrap.com/) framework for a mobile first responsive grid system
 * It is designed to be used with a module based workflow (https://github.com/multiple-states/bread-butter/wiki/workflow) for all your website elements
 * It uses the css pre-processor Less (http://lesscss.org/) for more powerful styling
 
@@ -26,9 +25,13 @@ Visit https://github.com/multiple-states/bread-butter/wiki/home for installation
 Version Log
 --------------
 
+*v0.11.0*
+* Remove bootstrap as a submodule. 
+* Remove all bootstrap styling and structure from the css and html.
+
 *v0.10.1*
 * Remove styling from the html tag
-* Adde default code in .htaccess to allow cross domain font requests in all browsers
+* Add default code in .htaccess to allow cross domain font requests in all browsers
 * Exclude Modernizer from the bower_concat task and add it to the uglify task and include in header.php
 * Remove old SITE_ROOT variable from functions.php
 * Added grunt-newer plugin to help with grunt-watch speed issues
