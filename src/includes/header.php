@@ -19,7 +19,7 @@
   <link rel="shortcut icon" sizes="196x196" href="<?php echo $site_url ?>/your-icon.png">
   <link rel="apple-touch-icon" sizes="196x196" href="<?php echo $site_url ?>/your-icon.png">
   
-  <link rel="stylesheet" href="<?php echo $site_url ?>/style.min.css" >
+  <link rel="stylesheet" href="<?php echo $site_url ?>/style.css" >
 
   <!-- Include the minimised modernizer file -->
   <script type="text/javascript" src="<?php echo $site_url ?>/js/modernizer.min.js"></script>
