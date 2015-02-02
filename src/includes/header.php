@@ -19,7 +19,10 @@
   <link rel="shortcut icon" sizes="196x196" href="<?php echo $site_url ?>/your-icon.png">
   <link rel="apple-touch-icon" sizes="196x196" href="<?php echo $site_url ?>/your-icon.png">
   
-  <link rel="stylesheet" href="<?php echo $site_url ?>/style.min.css" >
+  <link rel="stylesheet" href="<?php echo $site_url ?>/style.css" >
+
+  <!-- Include the minimised modernizer file -->
+  <script type="text/javascript" src="<?php echo $site_url ?>/js/modernizer.min.js"></script>
 
   </head>
   <body>
@@ -28,14 +31,7 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     
-    <div class="l-page-holder page-holder">
-    
-    <div class="l-strip">
-      <header>
-        <div class="l-inner">
-          <div class="the-head">
-            <h1 class="the-head-title">Bread and Butter</h1>
-          </div>
-        </div>
-      </header>
-    </div>
+    <header>
+      <h1 class="the-head-title">Bread and Butter</h1>
+    </header>
+

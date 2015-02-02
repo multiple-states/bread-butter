@@ -8,23 +8,19 @@
   $host = gethostname();
   $ip = gethostbyname($host);
   
-  // Test for the first contributers possible ip address ( KB )
-  if ( $ip == '192.168.1.32' || $ip == '192.168.20.179' || $ip == '192.168.1.38' || $ip == '192.168.1.41' ) 
+  // Test for the first contributers possible ip address
+  if ( $ip == '111.111.1.1' ) 
   {
     // Then they can set their site url variable
     $site_url = "http://localhost/bread-butter/app";
-
-    define('SITE_ROOT', '/Users/kevin/Sites/bread-butter/app');
     
   } 
   
-  // Test for the second contributers possible ip addresses ( WM )
-  elseif ( $ip == '192.168.0.2' || $ip == '192.168.0.3' || $ip == '192.168.0.4' || $ip == '192.168.0.6' || $ip == '192.168.0.7' ) 
+  // Test for the second contributers possible ip addresses
+  elseif ( $ip == '222.222.2.2' ) 
   {
     // Then they can set their site url variable
     $site_url = "http://localhost/bread-butter/app";
-
-    define('SITE_ROOT', '/Users/williammclean/WORK/local-sites/bread-butter/app');
   
   } 
   

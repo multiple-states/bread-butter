@@ -1,47 +1,21 @@
-/* Import custom build of bootstrap css by using their less files */
-/* Core variables and mixins */
-@import "bootstrap/less/variables.less";
-@import "bootstrap/less/mixins.less";
 
-/* Reset and dependencies */
-@import "bootstrap/less/normalize.less";
-@import "bootstrap/less/print.less";
-
-/* Core css */
-@import "bootstrap/less/scaffolding.less";
-@import "bootstrap/less/grid.less";
-
-/* -------------------------------------------------------------------*/
 
 /* Variables */
-
-/* Breakpoints */
-/* These use the bootstrap varibles for the grid system */
-@break-1: @screen-sm-min;
-@break-2: @screen-md-min;
-@break-3: @screen-lg-min;
 
 /* Verticle spacing */
 @v-space: 2rem;
 
 /* Colours */
-@primary-dark: #000;
-@secondary-dark: #333;
+@primary-dark: ;
 
-@primary-light: #fff;
-@secondary-light: #f0f0f0;
-
-@highlight-1: #c8c8c8;
-@highlight-2: #a0a0a0;
-@highlight-3: #999999;
+@primary-light: ;
 
 /* Fonts */
-@body-font: 'Arial';
-@body-font-italic: 'Arial';
-@body-font-bold: 'Arial';
+@body-font: ;
+@body-font-italic: ;
+@body-font-bold: ;
 
-@head-font: 'Arial';
-@head-font-bold: 'Arial';
+@head-font: ;
 
 /* -------------------------------------------------------------------*/
 
@@ -50,22 +24,17 @@
 html {
   /* Set font base sizes - source: http://css-tricks.com/rems-ems/ */ 
   font-size: 62.5%;
-	font-family: @body-font;
-	color: #000;
-	
-	background-color: #fff;
 }
 
-img,
-svg {
-	display: block; /* This is to stop the default img behaviour being inline and therefore adding 2px below the image for type descenders. */
-	width: 100%;
-	height: auto;
+body {
+  font-family: @body-font;
+  color: @primary-dark;
 }
 
-.inline-img {
-  display: inline;
-  width: auto;
+.block-img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 svg {
@@ -75,78 +44,84 @@ svg {
 
 h1,
 .h1 {
-  font-size: 2.2rem;
-  line-height: 1.4;
+  font-size: ;
+  line-height: ;
 }
 h2,
 .h2 {
-  font-size: 2rem;
-  line-height: 1.4;
+  font-size: ;
+  line-height: ;
 }
 h3,
 .h3 {
-  font-size: 1.8rem;
-  line-height: 1.4;
+  font-size: ;
+  line-height: ;
 }
 h4,
 .h4 {
-  font-size: 1.6rem;
-  line-height: 1.4;
+  font-size: ;
+  line-height: ;
 }
 h5,
 .h5 {
-  font-size: 1.4rem;
-  line-height: 1.4;
+  font-size: ;
+  line-height: ;
 }
 h6,
 .h6 {
-  font-size: 1.2rem;
-  line-height: 1.4;
+  font-size: ;
+  line-height: ;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-weight: bold;
+	font-weight: ;
 	a {
-		text-decoration: none;
+		
 	}
 	a:hover {
-		text-decoration: none;
+		
 	}
 }
 
 p {
-	font-size: 1.6rem;
+	font-size: ;
 }
 
 ul {
-	list-style: none;
-	padding-left: 0;
-	margin: 0;
+	// list-style: none;
+	// padding-left: 0;
+	// margin: 0;
 }
 
 a {
-	text-decoration: none;
+	
+}
+
+a:hover {
+
+}
+
+a:focus {
+
+}
+
+a:focus {
+
 }
 
 .button,
 input[type=submit],
 button  {
   display: inline-block;
-	padding: 0.2em 10px;
-	
-	font-size: 1.6rem;
-	color: @primary-light;
+
 	text-decoration: none;
   white-space: nowrap;
-	
-  border: none;
-	background-color: @primary-dark;
 }
 
 .button:hover,
 input[type=submit]:hover,
 button:hover {
-	background-color: @highlight-1;
+
 }
 
 sup, sub {
@@ -158,12 +133,7 @@ sup, sub {
 sub { top: 0.4em; }
 
 .browsehappy {
-	padding: 0.2em 0;
-	margin: 0.2em 0;
-	
-	color: #000;
-	
-	background-color: #ccc;
+	// This style relates to a message shown in the header.php file when users are on old IE browsers
 }
 
 /* Default 16:9 video styling. Wrap you video in a div with a video-holder and video-holder-16-9 class */

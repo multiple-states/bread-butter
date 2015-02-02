@@ -1,14 +1,9 @@
 module.exports = {
 
-  // This is step 3 in the four part css process documented in grunt/less.js
-  // 3. We use the cssmin task to minify that css file into a new file with the .min.css extension
+  // Minify the css for production
   minify: {
-    options: {
-      // If you want to add banners to your minified css uncomment the below. This currently is commented out in order to clean up commits in development.
-      // banner: '/* <%= pkg.name %>.css minified <%= grunt.template.today("dd-mm-yyyy") %> */' // Give it a nice banner
-    },
     files: {
-      '<%= app %>/style.min.css': ['<%= app %>/style.css']
+      '<%= app %>/style.min.css': ['<%= src %>/css/style.css']
     }
   },
 

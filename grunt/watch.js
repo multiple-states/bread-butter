@@ -3,35 +3,34 @@ module.exports = {
   // You should adapt this to your specific needs on a per project basis
   pages: {
     files: ['<%= src %>/pages/*.php'],
-    tasks: ['copy:pages'],
+    tasks: ['newer:copy:pages'],
   },
   modules: {
     files: ['<%= src %>/modules/*.php'],
-    tasks: ['copy:modules'],
+    tasks: ['newer:copy:modules'],
   },
   includes: {
     files: ['<%= src %>/includes/*.php'],
-    tasks: ['copy:includes'],
+    tasks: ['newer:copy:includes'],
   },
   images: {
     files: ['<%= src %>/images/*'],
-    tasks: ['copy:images'],
+    tasks: ['newer:copy:images'],
   },
   scripts: {
     files: ['<%= src %>/js/*.js'],
-    tasks: ['jshint'],
+    tasks: ['newer:jshint'],
   },
-  uglify: {
+  js: {
     files: ['<%= src %>/js/*.js'],
-    tasks: ['uglify'],
+    tasks: ['newer:uglify:base', 'newer:copy:js'],
   },
   css: {
     files: ['<%= src %>/**/*.less'],
-    tasks: ['less', 'autoprefixer', 'cssmin', 'pixrem'],
+    tasks: ['less', 'autoprefixer', 'pixrem:base'],
   },
   livereload: {
     // Here we watch the files the watch task will change.
-    // These files are then sent to the live reload server.
     options: { livereload: true },
     files: ['<%= app %>/**/*'],
   },

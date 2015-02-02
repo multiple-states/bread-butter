@@ -1,17 +1,22 @@
 {
   "name": "bread-butter",
-  "version": "0.9.0",
+  "version": "0.10.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/multiple-states/bread-butter.git"
+  },
   "devDependencies": {
     "grunt": "^0.4.4",
-    "grunt-contrib-watch": "^0.6.1",
+    "grunt-autoprefixer": "^0.7.2",
+    "grunt-bower-concat": "^0.3.0",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-cssmin": "^0.9.0",
+    "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-less": "^0.11.0",
     "grunt-contrib-uglify": "^0.4.0",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-copy": "^0.5.0",
-    "grunt-autoprefixer": "^0.7.2",
-    "grunt-contrib-cssmin": "^0.9.0",
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-bower-concat": "^0.3.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-newer": "^1.1.0",
     "grunt-pixrem": "^0.1.2",
     "load-grunt-config": "^0.16.0"
   }

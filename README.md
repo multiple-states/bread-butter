@@ -1,6 +1,6 @@
 Bread and butter
 ====================
-Version 0.10.0 (Beta)
+Version 0.11.0 (Beta)
 
 When you make a sandwich you don't bake the bread, you just add the flavour! A starter template for website builds. Bread and Butter is maintained by Multiple States. 
 
@@ -11,7 +11,6 @@ This starter template is a good place to start for building the type of sites we
 
 * It uses the task automator Grunt (http://gruntjs.com/) for an easy build setup
 * It uses the package manager Bower (http://bower.io/) to install dependencies like jquery and modernizer 
-* It uses the Bootstrap (http://getbootstrap.com/) framework for a mobile first responsive grid system
 * It is designed to be used with a module based workflow (https://github.com/multiple-states/bread-butter/wiki/workflow) for all your website elements
 * It uses the css pre-processor Less (http://lesscss.org/) for more powerful styling
 
@@ -19,11 +18,26 @@ Make sure you read through this wiki ( https://github.com/willmcl/bread-butter/w
 
 As this template is built with php you need to use MAMP (http://www.mamp.info/en/) to run it on your local machine. You also need to have some experience with Git (http://git-scm.com/). If you don't have any experience with _Git_ then take the time to learn it... Change your life that will.
 
+Installation
+--------------
+Visit https://github.com/multiple-states/bread-butter/wiki/home for installation instructions.
+
 Version Log
 --------------
 
+*v0.11.0*
+* Remove bootstrap as a submodule. 
+* Remove all bootstrap styling and structure from the css and html.
+
+*v0.10.1*
+* Remove styling from the html tag
+* Add default code in .htaccess to allow cross domain font requests in all browsers
+* Exclude Modernizer from the bower_concat task and add it to the uglify task and include in header.php
+* Remove old SITE_ROOT variable from functions.php
+* Added grunt-newer plugin to help with grunt-watch speed issues
+
 *v0.10.0*
-* Introduced the grunt-load-config plugin as a way to split our grunt tasks into separate files and make Bread and Butter more maintainable. 
+* Introduce the grunt-load-config plugin as a way to split our grunt tasks into separate files and make Bread and Butter more maintainable. 
 
 *v0.9.1*
 * Bower introduced to workflow

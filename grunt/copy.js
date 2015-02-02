@@ -36,6 +36,18 @@ module.exports = {
     ]
   },
 
+  js: {
+    // This copies the js files from the src/js folder to the app/js folder
+    files: [
+      {
+        expand: true,
+        cwd: '<%= src %>/js/',
+        src: ['*.js', '!vendor.js'],
+        dest: '<%= app %>/js/'
+      }
+    ]
+  },
+
   images: {
     // This copies the includes from the src/images folder to the app/images folder
     files: [

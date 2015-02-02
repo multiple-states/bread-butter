@@ -1,20 +1,22 @@
 module.exports = {
 
-      // Configure the less task
-      // The compilation of our css goes through four stages starting here:
-      // 1. We use this less task to compile the less to css in the src folder
-      // 2. We use the auto-prefixer task to put prefixes for various browsers into our css file and move it to the app folder
-      // 3. We use the cssmin task to minify that css file into a new file with the .min.css extension
-      // 4. Run grunt pixrem to add pixel fallbacks for our use of rem units.
+      // The default compilation of our css goes through three stages starting here:
+      // 1. Run the less task to compile the less
+      // 2. Add prefixes using the auto-prefixer task
+      // 3. Add pixel fallbacks for rem units using pixrem:base task and save the src file to the app folder
 
-      // So here we go...
-      // 1. We use this less task to compile the less to css in the src folder
+      // The production compilation of our css goes through four stages starting here:
+      // 1. Run the less task to compile the less
+      // 2. Add prefixes using the auto-prefixer task
+      // 3. Minifies the css using the cssmin task and save the src file to the app folder with a .min.css extension
+      // 4. Add pixel fallbacks for rem units to the minified css using pixrem:production
+
+      // Configure the less task
       development: {
         options: {
           paths: ["<%= src %>/less"],
         },
         files: {
-          // target.css file: source.less file
           "<%= src %>/css/style.css": "<%= src %>/less/style.less"
         }
       }
