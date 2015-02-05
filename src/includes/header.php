@@ -32,6 +32,6 @@
     <![endif]-->
     
     <header>
-      <h1 class="the-head-title">Bread and Butter</h1>
+      <h1>The title</h1>
     </header>
 

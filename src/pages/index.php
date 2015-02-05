@@ -5,6 +5,8 @@
   include('includes/header.php') 
 ?>
 
-<div class="index-content"><p>Index content</p></div>
+<div>
+  <p>Index content</p>
+</div>
 
 <?php include('includes/footer.php') ?>
