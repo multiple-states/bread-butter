@@ -28,6 +28,7 @@ Version Log
 *v0.11.0*
 * Remove bootstrap as a submodule. 
 * Remove all bootstrap styling and structure from the css and html.
+* Remove the .min file extension from the stylesheet in the grunt production task.
 
 *v0.10.1*
 * Remove styling from the html tag
