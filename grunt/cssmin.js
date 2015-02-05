@@ -3,7 +3,7 @@ module.exports = {
   // Minify the css for production
   minify: {
     files: {
-      '<%= app %>/style.min.css': ['<%= src %>/css/style.css']
+      '<%= app %>/style.css': ['<%= src %>/css/style.css']
     }
   },
 

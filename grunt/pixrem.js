@@ -16,7 +16,7 @@ module.exports = {
       rootvalue: '62.5%' // We set this so that the 1 rem unit equals 10px. Easier to understand.
     },
     files: {
-      '<%= app %>/style.min.css': ['<%= app %>/style.min.css']
+      '<%= app %>/style.css': ['<%= app %>/style.css']
     }
   }
 
