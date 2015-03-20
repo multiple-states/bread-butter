@@ -6,9 +6,9 @@
 @v-space: 2rem;
 
 /* Colours */
-@primary-dark: ;
+@primary-dark: #000;
 
-@primary-light: ;
+@primary-light: #fff;
 
 /* Fonts */
 @body-font: ;
@@ -29,6 +29,12 @@ html {
 body {
   font-family: @body-font;
   color: @primary-dark;
+}
+
+.invert-colour {
+  color: @primary-light;
+  background-color: @primary-dark;
+  -webkit-font-smoothing: antialiased;
 }
 
 .block-img {
