@@ -9,7 +9,7 @@
   $ip = gethostbyname($host);
   
   // Test for the first contributers possible ip address
-  if ( $ip == '111.111.1.1' ) 
+  if ( $ip == 'Williams-iMac' ) 
   {
     // Then they can set their site url variable
     $site_url = "http://localhost/bread-butter/app";

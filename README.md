@@ -1,6 +1,6 @@
 Bread and butter
 ====================
-Version 0.11.0 (Beta)
+Version 0.11.2 (Beta)
 
 When you make a sandwich you don't bake the bread, you just add the flavour! A starter template for website builds. Bread and Butter is maintained by Multiple States. 
 
@@ -24,6 +24,9 @@ Visit https://github.com/multiple-states/bread-butter/wiki/home for installation
 
 Version Log
 --------------
+
+*v0.11.2*
+* Create a better pattern page for typographic elements
 
 *v0.11.0*
 * Remove bootstrap as a submodule. 
