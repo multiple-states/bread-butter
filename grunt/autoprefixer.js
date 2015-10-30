@@ -1,4 +1,4 @@
-module.exports = { 
+module.exports = {
 
   // Put browser prefixes into our css file.
   options: {
