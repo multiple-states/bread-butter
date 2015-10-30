@@ -58,18 +58,6 @@ module.exports = {
         dest: '<%= app %>/images/'
       }
     ]
-  },
-  
-  fontcopy:{ 
-  // This task will find the relevant font files in the src/fonts folder and move them to the app/fonts folder.
-    files: [
-      {
-        expand: true,
-        cwd: '<%= src %>/fonts/',
-        src: ['**/*.eot', '**/*.svg', '**/*.ttf', '**/*.woff'],
-        dest: '<%= app %>/fonts/'
-      }
-    ]
   }
 
 };

@@ -7,24 +7,23 @@ module.exports = {
   'production': [
     'clean',
     'copy:pages',
-    'copy:modules', 
-    'copy:includes', 
-    'copy:images', 
-    'copy:fontcopy', 
+    'copy:modules',
+    'copy:includes',
+    'copy:images',
     'bower_concat',
-    'uglify:production', 
-    'less', 
-    'autoprefixer', 
+    'uglify:production',
+    'less',
+    'autoprefixer',
     'cssmin',
     'pixrem:production'
   ],
 
   'default': [
-    'copy', 
+    'copy',
     'bower_concat',
-    'uglify:base', 
-    'less', 
-    'autoprefixer', 
+    'uglify:base',
+    'less',
+    'autoprefixer',
     'pixrem:base'
   ]
 
