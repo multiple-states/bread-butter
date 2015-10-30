@@ -1,4 +1,4 @@
-module.exports = { 
+module.exports = {
   // Configure the watch task
   // You should adapt this to your specific needs on a per project basis
   pages: {

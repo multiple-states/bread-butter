@@ -10,7 +10,8 @@ module.exports = function(grunt) { // Grunt wrapper - Do grunt-related things in
     // We use <%= src %> or <%= app %>
     data: {
       src:  'src',  // The source folder (where we work)
-      app:  'app'  // The folder where we want to build our application when we run grunt tasks
+      app:  'app', // The folder where we want to build our application when we run grunt tasks
+      dist: 'dist' // The folder where we compile our distribution version of the project
     }
 
   }); // END require('load-grunt-config')
