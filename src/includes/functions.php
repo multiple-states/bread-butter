@@ -1,33 +1,24 @@
 <?php
 
-  // A function to check an IP address and then set the site root variable to the relevant url
-  // To get your server IP create a test.php page and run: $host = gethostname(); $ip = gethostbyname($host); echo  $ip;
+  // A function to check the servername and then set the site root variable to the relevant url
+  
+  $servername = $_SERVER['SERVER_NAME'];
+  
+  if ( $servername == "your-production-url.com" ) {
 
-  // source: http://stackoverflow.com/a/7614272/1202344
-  
-  $host = gethostname();
-  $ip = gethostbyname($host);
-  
-  // Test for the first contributers possible ip address
-  if ( $ip == '111.111.1.1' ) 
-  {
-    // Then they can set their site url variable
-    $site_url = "http://localhost/bread-butter/app";
+    // Production site url variable
+    $site_url = "http://your-production-url.com";
     
-  } 
-  
-  // Test for the second contributers possible ip addresses
-  elseif ( $ip == '222.222.2.2' ) 
-  {
-    // Then they can set their site url variable
-    $site_url = "http://localhost/bread-butter/app";
-  
-  } 
-  
-  // Then for all else we can set the staging url as the site url variable
-  else 
-  {
+  } elseif ( $servername == "your-staging-url.com" ) {
+
+    // Staging site url variable
     $site_url = "http://your-staging-url.com";
+  
+  } else {
+
+    // Local site url variable
+    $site_url = "http://localhost/bread-butter/app";
+
   }
 
 ?>
