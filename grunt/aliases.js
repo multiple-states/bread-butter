@@ -1,11 +1,7 @@
 module.exports = {
 
-  'test': [
-    'copy'
-  ],
-
   'production': [
-    'clean',
+    'clean:app',
     'copy:pages',
     'copy:modules',
     'copy:includes',
@@ -18,8 +14,17 @@ module.exports = {
     'pixrem:production'
   ],
 
+  'deploy': [
+    'production',
+    'clean:dist',
+    'copy:dist',
+  ],
+
   'default': [
-    'copy',
+    'copy:pages',
+    'copy:modules',
+    'copy:includes',
+    'copy:images',
     'bower_concat',
     'uglify:base',
     'less',

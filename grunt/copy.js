@@ -12,7 +12,7 @@ module.exports = {
     ]
   },
 
-  modules: {        
+  modules: {
     // This copies the modules from the src/modules folder to the app/modules folder
     files: [
       {
@@ -56,6 +56,19 @@ module.exports = {
         cwd: '<%= src %>/images/',
         src: ['*.jpg', '*.png', '*.gif'],
         dest: '<%= app %>/images/'
+      }
+    ]
+  },
+
+  dist: {
+    // This copies our production ready theme from the app folder to the dist folder
+    files: [
+      {
+        expand: true,
+        dot: true,
+        cwd: '<%= app %>',
+        src: '**/*',
+        dest: '<%= dist %>'
       }
     ]
   }
