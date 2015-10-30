@@ -54,7 +54,7 @@ html {
 }
 body {
   color: #000000;
-  background-color: #000000;
+  background-color: #ffffff;
 }
 .block-img {
   display: block;
@@ -136,7 +136,6 @@ h1,
   margin-top: 2.48832rem;
   margin-bottom: 2.48832rem;
   font-size: 2.48832rem;
-  text-align: center;
 }
 h2,
 .h2 {
