@@ -6,11 +6,7 @@ module.exports = {
 
   'production': [
     'clean',
-    'copy:pages',
-    'copy:modules', 
-    'copy:includes', 
-    'copy:images', 
-    'copy:fontcopy', 
+    'copy', 
     'bower_concat',
     'uglify:production', 
     'less', 
