@@ -14,13 +14,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">   
 
   <meta name="mobile-web-app-capable" content="yes">
-  <link rel="shortcut icon" sizes="196x196" href="/your-icon.png">
-  <link rel="apple-touch-icon" sizes="196x196" href="/your-icon.png">
+  <link rel="shortcut icon" sizes="196x196" href="your-icon.png">
+  <link rel="apple-touch-icon" sizes="196x196" href="your-icon.png">
   
-  <link rel="stylesheet" href="/style.css" >
+  <link rel="stylesheet" href="style.css" >
 
   <!-- Include the minimised modernizer file -->
-  <script type="text/javascript" src="/js/modernizer.min.js"></script>
+  <script type="text/javascript" src="js/modernizer.min.js"></script>
 
   </head>
   <body>
