@@ -11,18 +11,16 @@
   <title>Bread and Butter - <?php echo $page_title ?></title>
   
   <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <?php include('functions.php') ?>      
+  <meta name="viewport" content="width=device-width, initial-scale=1">   
 
   <meta name="mobile-web-app-capable" content="yes">
-  <link rel="shortcut icon" sizes="196x196" href="<?php echo $site_url ?>/your-icon.png">
-  <link rel="apple-touch-icon" sizes="196x196" href="<?php echo $site_url ?>/your-icon.png">
+  <link rel="shortcut icon" sizes="196x196" href="/your-icon.png">
+  <link rel="apple-touch-icon" sizes="196x196" href="/your-icon.png">
   
-  <link rel="stylesheet" href="<?php echo $site_url ?>/style.css" >
+  <link rel="stylesheet" href="/style.css" >
 
   <!-- Include the minimised modernizer file -->
-  <script type="text/javascript" src="<?php echo $site_url ?>/js/modernizer.min.js"></script>
+  <script type="text/javascript" src="/js/modernizer.min.js"></script>
 
   </head>
   <body>
