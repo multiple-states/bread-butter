@@ -12,7 +12,7 @@ module.exports = {
     ]
   },
 
-  modules: {        
+  modules: {
     // This copies the modules from the src/modules folder to the app/modules folder
     files: [
       {
@@ -59,15 +59,16 @@ module.exports = {
       }
     ]
   },
-  
-  fontcopy:{ 
-  // This task will find the relevant font files in the src/fonts folder and move them to the app/fonts folder.
+
+  dist: {
+    // This copies our production ready theme from the app folder to the dist folder
     files: [
       {
         expand: true,
-        cwd: '<%= src %>/fonts/',
-        src: ['**/*.eot', '**/*.svg', '**/*.ttf', '**/*.woff'],
-        dest: '<%= app %>/fonts/'
+        dot: true,
+        cwd: '<%= app %>',
+        src: '**/*',
+        dest: '<%= dist %>'
       }
     ]
   }

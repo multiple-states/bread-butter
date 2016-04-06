@@ -2,3 +2,5 @@ node_modules
 app
 bower_components
 src/css/style.css
+src/js/vendor.js
+src/css/style.css

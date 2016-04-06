@@ -1,21 +1,47 @@
+/*
+This site is built by Multiple States.
+http://www.multiplestates.co.uk
 
+Suite 3, Level 5 Vantage Point,
+New England Rd,
+Brighton,
+East Sussex, UK
+BN3 1NJ
+info@multiplestates.co.uk
+07769 168880
+*/
 
 /* Variables */
 
-/* Verticle spacing */
-@v-space: 2rem;
+/* Breakpoints */
+@break-1: 500px;
+@break-2: 1100px;
+@break-3: 1400px;
+
+/* Spacing */
+@small-space: 1rem;
+@medium-space: 2rem;
+@large-space: 4rem;
+@giant-space: 8rem;
 
 /* Colours */
 @primary-dark: #000;
-
 @primary-light: #fff;
+@highlight: #f00;
 
 /* Fonts */
-@body-font: ;
-@body-font-italic: ;
-@body-font-bold: ;
+.font-body{ font-family: sans-serif; }
+.font-body-italic{ font-family: sans-serif; font-style: italic; }
+.font-body-bold{ font-family: sans-serif; font-weight: bold; }
 
-@head-font: ;
+.font-heading{ font-family: sans-serif; font-weight: bold; }
+
+.font-mono { font-family: Courier, monospace; }
+
+
+// Set the font scale to use on all typographic elements
+// SRC - http://type-scale.com/
+@font-scale: 1.200;
 
 /* -------------------------------------------------------------------*/
 
@@ -23,18 +49,25 @@
 
 html {
   /* Set font base sizes - source: http://css-tricks.com/rems-ems/ */ 
-  font-size: 62.5%;
+  font-size: 50%; /* 1rem = 8px */
+}
+
+@media ( min-width: @break-1 ) {
+  html {
+    font-size: 56.25%; /* 1rem = 9px */
+  }
+}
+
+@media ( min-width: @break-2 ) {
+  html {
+    font-size: 62.5%; /* 1rem = 10px */
+  }
 }
 
 body {
-  font-family: @body-font;
   color: @primary-dark;
-}
 
-.invert-colour {
-  color: @primary-light;
-  background-color: @primary-dark;
-  -webkit-font-smoothing: antialiased;
+  background-color: @primary-light;
 }
 
 .block-img {
@@ -47,87 +80,140 @@ svg {
   max-height: 100%; /* This is to address a webkit bug on svg heights - https: //bugs.webkit.org/show_bug.cgi?id=82489 */
   max-width: 100%;
 }
+// --------------------------- Typographic Styles
+
+
+// Set the line hieght for all typographic elements
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+p,
+ol, ul, li,
+code, kbd, pre, samp {
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  .font-heading;
+
+  a { text-decoration: none; }
+  a:hover { text-decoration: none; }
+}
 
 h1,
-.h1 {
-  font-size: ;
-  line-height: ;
+.h1 { 
+  margin-top: 1rem * @font-scale * @font-scale * @font-scale * @font-scale * @font-scale;
+  margin-bottom: 1rem * @font-scale * @font-scale * @font-scale * @font-scale * @font-scale;
+
+  font-size: 1rem * @font-scale * @font-scale * @font-scale * @font-scale * @font-scale;
 }
+
 h2,
 .h2 {
-  font-size: ;
-  line-height: ;
+  margin-top: 1rem * @font-scale * @font-scale * @font-scale * @font-scale;
+  margin-bottom: 1rem * @font-scale * @font-scale * @font-scale * @font-scale;
+
+  font-size: 1rem * @font-scale * @font-scale * @font-scale * @font-scale; 
 }
+
 h3,
 .h3 {
-  font-size: ;
-  line-height: ;
+  margin-top: 1rem * @font-scale * @font-scale * @font-scale;
+  margin-bottom: 1rem * @font-scale * @font-scale * @font-scale;
+
+  font-size: 1rem * @font-scale * @font-scale * @font-scale; 
 }
+
 h4,
 .h4 {
-  font-size: ;
-  line-height: ;
+  margin-top: 1rem * @font-scale * @font-scale;
+  margin-bottom: 1rem * @font-scale * @font-scale;
+
+  font-size: 1rem * @font-scale * @font-scale; 
 }
+
+p, ul, ol, li, blockquote {
+  margin-top: 1rem * @font-scale * @font-scale;
+  margin-bottom: 1rem * @font-scale * @font-scale;
+  
+  .font-body;
+  font-size: 1rem * @font-scale * @font-scale;
+}
+
+code, kbd, pre, samp {
+  .font-mono;
+  font-size: 1rem * @font-scale * @font-scale;
+  white-space: normal;
+}
+
+pre {
+  margin-top: 1rem * @font-scale * @font-scale;
+  margin-bottom: 1rem * @font-scale * @font-scale;
+  
+  border: 1px solid;
+  padding: 1rem;
+}
+
 h5,
 .h5 {
-  font-size: ;
-  line-height: ;
+  margin-top: 1rem * @font-scale;
+  margin-bottom: 1rem * @font-scale;
+
+  font-size: 1rem * @font-scale;
 }
+
 h6,
 .h6 {
-  font-size: ;
-  line-height: ;
-}
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 
-h1, h2, h3, h4, h5, h6 {
-	font-weight: ;
-	a {
-		
-	}
-	a:hover {
-		
-	}
-}
-
-p {
-	font-size: ;
+  font-size: 1rem;
 }
 
 ul {
-	// list-style: none;
-	// padding-left: 0;
-	// margin: 0;
+  padding-left: 2rem;
+  list-style-type:circle;
 }
 
-a {
-	
+ol {
+  padding-left: 2rem;
+  list-style-type:decimal;
+}
+
+em, i {
+  .font-body-italic;
+}
+
+strong, b {
+  .font-body-bold;
+}
+
+blockquote {
+  .font-body-bold;
+  padding-left: 3rem;
+}
+
+a { 
+  text-decoration: none;
+  color: inherit;
+}
+
+p a,
+ul a,
+ol a {
+  border-bottom: 1px solid;
+}
+
+a:visited,
+a:active,
+a:focus {
+  color: inherit;
+  text-decoration: none;
 }
 
 a:hover {
-
-}
-
-a:focus {
-
-}
-
-a:focus {
-
-}
-
-.button,
-input[type=submit],
-button  {
-  display: inline-block;
-
-	text-decoration: none;
-  white-space: nowrap;
-}
-
-.button:hover,
-input[type=submit]:hover,
-button:hover {
-
+  color: @highlight;
+  text-decoration: none;
 }
 
 sup, sub {
@@ -138,11 +224,68 @@ sup, sub {
 
 sub { top: 0.4em; }
 
-.browsehappy {
-	// This style relates to a message shown in the header.php file when users are on old IE browsers
+/* Forms */
+
+fieldset {
+  // to be styled
 }
 
-/* Default 16:9 video styling. Wrap you video in a div with a video-holder and video-holder-16-9 class */
+legend {
+  // to be styled
+}
+
+label, .label{
+  // to be styled
+}
+
+.input-text,
+input,
+textarea {
+  // to be styled
+}
+
+.input-text:hover,
+input:hover,
+textarea:hover,
+.input-text:focus,
+input:focus,
+textarea:focus {
+  // to be styled
+}
+
+/* Button Styling */
+
+.button,
+button,
+input[type="submit"] {
+  display: inline-block;
+
+  padding: 0.5rem 1rem;
+  
+  border: 1px solid;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover {
+  text-decoration: none;
+}
+
+button,
+input[type="submit"]{
+  border: none;
+}
+
+.browsehappy {
+  padding: 0.2em 0;
+  margin: 0.2em 0;
+  
+  color: #000;
+  
+  background-color: #ccc;
+}
 
 .video-holder {
   position: relative;

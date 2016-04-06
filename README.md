@@ -1,6 +1,6 @@
 Bread and butter
 ====================
-Version 0.11.2 (Beta)
+Version 1.0.0
 
 When you make a sandwich you don't bake the bread, you just add the flavour! A starter template for website builds. Bread and Butter is maintained by Multiple States. 
 
@@ -24,6 +24,10 @@ Visit https://github.com/multiple-states/bread-butter/wiki/home for installation
 
 Version Log
 --------------
+
+*v1.0.0*
+* Small bug fixes  
+* Create a grunt deploy task
 
 *v0.11.2*
 * Create a better pattern page for typographic elements
@@ -52,54 +56,3 @@ Version Log
 
 *v0.9.0*
 * First Beta release
-
-
-A default readme format for your new project
--------------------------------------------------
-(You can delete all the crap above as that relates directly to Bread and Butter not your amaaazing new project)
-
-
-Title
-==============
-
-One line description
---------------
-
-*client ID 1111*
-
-About Client
---------------
-
-Description. They are great.
-
-Team
---------------
-Design: Eric Gill (eric@multiplestates.co.uk)  
-Development: Mark Zuckerburg (mark@multiplestates.co.uk)  
-PM: David Cameron (david@multiplestates.co.uk)  
-Client Contact: Mark Parker (mark@nike.com)  
-
-Development Notes
---------------
-
-The build is based on Bread and Butter ( https://github.com/multiple-states/bread-butter ) by Multiple States.  
-The wiki for this build setup can be found here: https://github.com/multiple-states/bread-butter/wiki
-
-Plugins
---------------
-
-**Plugin**
-
-*Version 1.1.1*
-
-Link: plugin-link
-Notes: plugin-notes
-
-Log
---------------
-
-01/01/14 - Started build
-
-
-
-
