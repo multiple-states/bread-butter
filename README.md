@@ -25,6 +25,9 @@ Visit https://github.com/multiple-states/bread-butter/wiki/home for installation
 Version Log
 --------------
 
+*v1.0.2*
+* HOTFIX bug from last version - missing grunt task and incorrect js file names
+
 *v1.0.1*
 * Remove the functions file and $site_url variable
 * Always require the latest versions of the Grunt dependencies
