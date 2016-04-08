@@ -3,8 +3,8 @@
   </footer>
 
 <!-- All dependencies installed with Bower in one file via Grunt --> 
-<script type="text/javascript" src="js/vendor.min.js"></script>
-<script type="text/javascript" src="js/custom.min.js"></script>
+<script type="text/javascript" src="js/vendor.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
 
 </body>
 </html>

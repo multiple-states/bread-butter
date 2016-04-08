@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="style.css" >
 
   <!-- Include the minimised modernizer file -->
-  <script type="text/javascript" src="js/modernizer.min.js"></script>
+  <script type="text/javascript" src="js/modernizer.js"></script>
 
   </head>
   <body>
