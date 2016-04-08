@@ -26,6 +26,7 @@ module.exports = {
     'copy:modules',
     'copy:includes',
     'copy:images',
+    'copy:js',
     'bower_concat',
     'uglify:base',
     'less',
