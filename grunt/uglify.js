@@ -6,8 +6,8 @@ module.exports = {
       mangle: false
     },
     files: {
-    '<%= app %>/js/vendor.min.js': ['<%= src %>/js/vendor.js'],
-    '<%= app %>/js/modernizr.min.js': ['bower_components/modernizer/modernizr.js']
+    '<%= app %>/js/vendor.js': ['<%= src %>/js/vendor.js'],
+    '<%= app %>/js/modernizr.js': ['bower_components/modernizer/modernizr.js']
     }
   },
 
@@ -18,8 +18,8 @@ module.exports = {
     },
     files: {
     '<%= app %>/js/custom.js': ['<%= src %>/js/custom.js'],
-    '<%= app %>/js/vendor.min.js': ['<%= src %>/js/vendor.js'],
-    '<%= app %>/js/modernizr.min.js': ['bower_components/modernizer/modernizr.js']
+    '<%= app %>/js/vendor.js': ['<%= src %>/js/vendor.js'],
+    '<%= app %>/js/modernizr.js': ['bower_components/modernizer/modernizr.js']
     }
   }
 

@@ -3,9 +3,10 @@ module.exports = {
   'production': [
     'clean:app',
     'copy:pages',
-    'copy:modules',
-    'copy:includes',
-    'copy:images',
+    'copy:modules', 
+    'copy:includes',   
+    'copy:images', 
+    'copy:fontcopy', 
     'bower_concat',
     'uglify:production',
     'less',
