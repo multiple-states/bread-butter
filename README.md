@@ -1,6 +1,6 @@
 Bread and butter
 ====================
-Version 1.0.0
+Version 1.0.1
 
 When you make a sandwich you don't bake the bread, you just add the flavour! A starter template for website builds. Bread and Butter is maintained by Multiple States. 
 
@@ -24,6 +24,10 @@ Visit https://github.com/multiple-states/bread-butter/wiki/home for installation
 
 Version Log
 --------------
+
+*v1.0.1*
+* Remove the functions file and $site_url variable
+* Always require the latest versions of the Grunt dependencies
 
 *v1.0.0*
 * Small bug fixes  
