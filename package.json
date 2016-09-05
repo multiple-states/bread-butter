@@ -7,7 +7,7 @@
     "url": "https://github.com/multiple-states/bread-butter.git"
   },
   "devDependencies": {
-    "grunt": "*",
+    "grunt": ">=0.4.0",
     "grunt-autoprefixer": "*",
     "grunt-bower-concat": "*",
     "grunt-contrib-clean": "*",
