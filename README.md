@@ -27,6 +27,9 @@ Version Log
 
 *v1.0.3*
 * Remove grunt pixrem as it is no longer maintained and is only used to support <=IE8
+* Remove test.php
+* Fix grunt errors (remove grunt-pixrem and add licence)
+* Leverage browser caching (this was previously resolved on this branch)
 
 *v1.0.2*
 * HOTFIX bug from last version - missing grunt task and incorrect js file names
