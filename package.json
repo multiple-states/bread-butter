@@ -1,12 +1,13 @@
 {
   "name": "bread-butter",
-  "version": "1.0.0",
+  "version": "1.0.3",
+  "license" : "SEE LICENSE IN LICENSE",
   "repository": {
     "type": "git",
     "url": "https://github.com/multiple-states/bread-butter.git"
   },
   "devDependencies": {
-    "grunt": "*",
+    "grunt": ">=0.4.0",
     "grunt-autoprefixer": "*",
     "grunt-bower-concat": "*",
     "grunt-contrib-clean": "*",
@@ -17,7 +18,6 @@
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
     "grunt-newer": "*",
-    "grunt-pixrem": "*",
     "load-grunt-config": "*"
   }
 }
