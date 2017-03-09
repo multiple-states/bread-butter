@@ -27,7 +27,7 @@ module.exports = {
   },
   css: {
     files: ['<%= src %>/**/*.less'],
-    tasks: ['less', 'autoprefixer', 'pixrem:base'],
+    tasks: ['less', 'autoprefixer', 'copy:css'],
   },
   livereload: {
     // Here we watch the files the watch task will change.

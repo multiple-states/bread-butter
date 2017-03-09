@@ -28,7 +28,8 @@ module.exports = {
     'bower_concat',
     'uglify:base',
     'less',
-    'autoprefixer'
+    'autoprefixer',
+    'copy:css',
   ]
 
 };
