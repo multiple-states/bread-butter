@@ -22,8 +22,8 @@ module.exports = {
     tasks: ['newer:jshint'],
   },
   js: {
-    files: ['<%= src %>/js/*.js'],
-    tasks: ['newer:uglify:base', 'newer:copy:js'],
+    files: ['<%= src %>/js/*.js', '<%= src %>/js/components/*.js'],
+    tasks: ['rollup', 'newer:uglify:base', 'newer:copy:js'],
   },
   css: {
     files: ['<%= src %>/**/*.less'],
