@@ -10,8 +10,7 @@ module.exports = {
     'uglify:production',
     'less',
     'autoprefixer',
-    'cssmin',
-    'pixrem:production'
+    'cssmin'
   ],
 
   'deploy': [
@@ -30,7 +29,7 @@ module.exports = {
     'uglify:base',
     'less',
     'autoprefixer',
-    'pixrem:base'
+    'copy:css',
   ]
 
 };

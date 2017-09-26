@@ -1,6 +1,6 @@
 Bread and butter
 ====================
-Version 1.0.1
+Version 1.0.3
 
 When you make a sandwich you don't bake the bread, you just add the flavour! A starter template for website builds. Bread and Butter is maintained by Multiple States. 
 
@@ -24,6 +24,12 @@ Visit https://github.com/multiple-states/bread-butter/wiki/home for installation
 
 Version Log
 --------------
+
+*v1.0.3*
+* Remove grunt pixrem as it is no longer maintained and is only used to support <=IE8
+* Remove test.php
+* Fix grunt errors (remove grunt-pixrem and add licence)
+* Leverage browser caching (this was previously resolved on this branch)
 
 *v1.0.2*
 * HOTFIX bug from last version - missing grunt task and incorrect js file names
