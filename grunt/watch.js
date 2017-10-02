@@ -23,7 +23,7 @@ module.exports = {
   },
   js: {
     files: ['<%= src %>/js/*.js', '<%= src %>/js/components/*.js'],
-    tasks: ['rollup', 'newer:uglify:base', 'newer:copy:js'],
+    tasks: ['rollup', 'babel', 'newer:uglify:base', 'newer:copy:js'],
   },
   css: {
     files: ['<%= src %>/**/*.less'],

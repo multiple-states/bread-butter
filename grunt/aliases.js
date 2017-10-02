@@ -8,6 +8,7 @@ module.exports = {
     'copy:images', 
     'bower_concat',
     'rollup',
+    'babel',
     'uglify:production',
     'less',
     'autoprefixer',
@@ -28,6 +29,7 @@ module.exports = {
     'copy:js',
     'bower_concat',
     'rollup',
+    'babel',
     'uglify:base',
     'less',
     'autoprefixer'
