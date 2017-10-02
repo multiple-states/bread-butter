@@ -60,6 +60,18 @@ module.exports = {
     ]
   },
 
+  css: {
+    // This copies any .css files in the src/css folder to the app/ folder
+    files: [
+      {
+        expand: true,
+        cwd: '<%= src %>/css/',
+        src: ['*.css'],
+        dest: '<%= app %>/'
+      }
+    ]
+  },
+
   dist: {
     // This copies our production ready theme from the app folder to the dist folder
     files: [
