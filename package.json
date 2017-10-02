@@ -7,8 +7,11 @@
     "url": "https://github.com/multiple-states/bread-butter.git"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
     "grunt": ">=0.4.0",
     "grunt-autoprefixer": "*",
+    "grunt-babel": "^7.0.0",
     "grunt-bower-concat": "*",
     "grunt-contrib-clean": "*",
     "grunt-contrib-copy": "*",
@@ -18,7 +21,8 @@
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
     "grunt-newer": "*",
-    "grunt-rollup": "^1.0.1",
+    "grunt-rollup": "^2.0.1",
     "load-grunt-config": "*"
-  }
+  },
+  "dependencies": {}
 }
