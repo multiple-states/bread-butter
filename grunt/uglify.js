@@ -16,7 +16,7 @@ module.exports = {
       mangle: false
     },
     files: {
-    '<%= app %>/js/custom.js': ['<%= src %>/js/custom.js'],
+    '<%= app %>/js/custom.js': ['<%= app %>/js/custom.js'],
     '<%= app %>/js/vendor.js': ['<%= src %>/js/vendor.js'],
     '<%= app %>/js/modernizr.js': ['bower_components/modernizer/modernizr.js']
     }
