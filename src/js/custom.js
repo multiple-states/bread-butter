@@ -1,0 +1,1 @@
+"use strict";"use strict";var test=function(){function helloWorld(){console.log("hello world!")}function multiply(a,b){console.log(a*b)}function init(){helloWorld()}function afterAJAX(){multiply(4,6)}return{init:init,afterAJAX:afterAJAX}}();test.init();

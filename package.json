@@ -1,23 +1,40 @@
 {
   "name": "bread-butter",
   "version": "1.0.4",
-  "license" : "SEE LICENSE IN LICENSE",
+  "license": "SEE LICENSE IN LICENSE",
   "repository": {
     "type": "git",
     "url": "https://github.com/multiple-states/bread-butter.git"
   },
   "devDependencies": {
-    "grunt": ">=0.4.0",
-    "grunt-autoprefixer": "*",
-    "grunt-bower-concat": "*",
-    "grunt-contrib-clean": "*",
-    "grunt-contrib-copy": "*",
-    "grunt-contrib-cssmin": "*",
-    "grunt-contrib-jshint": "*",
-    "grunt-contrib-less": "*",
-    "grunt-contrib-uglify": "*",
-    "grunt-contrib-watch": "*",
-    "grunt-newer": "*",
-    "load-grunt-config": "*"
+    "autoprefixer": "^7.1.5",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "copy-dir": "^0.3.0",
+    "copy-dir-cli": "0.0.3",
+    "copyfiles": "^1.2.0",
+    "cssmin": "^0.4.3",
+    "eslint": "^4.9.0",
+    "less": "^3.0.0-pre.4",
+    "log-color-highlight": "^1.3.0",
+    "postcss": "^6.0.13",
+    "postcss-cli": "^4.1.1",
+    "rollup": "^0.50.0",
+    "uglify-es": "^3.1.3",
+    "watch": "^1.0.2"
+  },
+  "scripts": {
+    "clean:app": "rm -r app/* | echo 'run clean:app' | lch -green 'run'",
+    "clean:dist": "rm -r dist/ | echo 'run clean:dist' | lch -green 'run'",
+    "lint": "eslint app/js/custom.js",
+    "build:less": "lessc src/less/base.less > src/css/style.css | postcss --use autoprefixer -b 'last 2 versions' < src/css/style.css | cssmin > app/style.css | echo 'run build:less' | lch -green 'run'",
+    "build:js": "rollup src/js/custom.js --output.format cjs --output.file app/js/custom.js | eslint app/js/custom.js | babel app/js/custom.js --out-file app/js/custom.js --presets=env | echo 'run build:js' | lch -green 'run'",
+    "build:copy": "copyfiles -f src/pages/*.php app/ | copyfiles -f src/includes/*.php app/includes/ | copyfiles -f src/images/*  app/images/ | echo 'run build:copy' | lch -green 'run'",
+    "build": "npm run build:less && npm run build:js && npm run build:copy",
+    "build:production": "npm run clean:app | npm run build -s && uglifyjs app/js/custom.js --output app/js/custom.js",
+    "deploy": "npm run clean:dist -s && npm run build:production -s && copy app dist",
+    "watch": "watch 'npm run build -s' src/js && src/less src/images src/includes src/pages",
+    "postinstall": "node postinstall.js"
   }
 }
