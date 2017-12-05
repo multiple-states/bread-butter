@@ -1,3 +1,11 @@
+**Notice: Bread and Butter is no longer being maintained or updated as of November 2017**
+
+A recent review of the build setup indicated we should move away from Bower (also no longer being maintained) and to rely on fewer build tools such as Grunt or Gulp for tasks we can achieve just using NPM. 
+
+After some initial tests and development we found that this change would drastically alter this build setup and require an almost complete rewrite of the WIKI. As we have several older projects that were built using this build setup we have decided to start a new GIT repository and keep this one as is for historical reference needed by these older projects.
+
+Once the new build setup is released we will post a link to it here. 
+
 Bread and butter
 ====================
 Version 1.0.4
